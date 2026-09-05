@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="maritime_routes.js"></script>
     <!-- Lucide / FontAwesome icons with thin stroke style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -546,7 +547,8 @@
 
         /* Map Container */
         #portMap {
-            height: 420px;
+            height: 520px;
+            width: 100%;
             border-radius: var(--radius-lg);
             border: 1px solid var(--border-subtle);
         }
@@ -1065,86 +1067,168 @@
             </div>
         </div>
 
-        <!-- PAGE 5: LIVE PORT & VESSEL MAP -->
+        <!-- PAGE 5: LIVE PORT & VESSEL MAP WITH ARCNATICAL ROUTING -->
         <div id="page-map" class="page-content">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 4px;">Maritime Navigation & Vessel Tracking</h3>
+                    <p style="font-size: 13px; color: var(--text-muted);">
+                        Powered by <strong>@arcnautical/maritime-routing</strong>: A* Ocean Pathfinding, chokepoints & OpenStreetMap land-avoidance corridors.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <span class="badge-status badge-green" style="font-size: 12px; padding: 6px 12px;">
+                        <span class="live-dot" style="background: var(--status-emerald);"></span>ArcNautical Engine Active
+                    </span>
+                    <span class="badge-status badge-amber" style="font-size: 12px; padding: 6px 12px;">
+                        <i class="fa-solid fa-compass"></i> 510+ UN/LOCODE Ports
+                    </span>
+                </div>
+            </div>
+
+            <!-- ROUTE CONTROLS STRIP -->
+            <div class="card" style="padding: 16px 20px; margin-bottom: 20px;">
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr auto; gap: 14px; align-items: end;">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label><i class="fa-solid fa-route" style="color: var(--accent-amber);"></i> Maritime Corridor (ArcNautical)</label>
+                        <select id="mapRouteSelect" class="form-control" onchange="renderSelectedMaritimeRoute()" style="padding: 9px 12px; font-size: 13px;">
+                            <optgroup label="Australia Coal Corridors">
+                                <option value="AUHAY_INPAV" selected>Hay Point (AUHAY) → Paradip (INPAV)</option>
+                                <option value="AUHAY_INVTZ">Hay Point (AUHAY) → Visakhapatnam (INVTZ)</option>
+                                <option value="AUHAY_INENN">Hay Point (AUHAY) → Ennore Kamarajar (INENN)</option>
+                                <option value="AUGLT_INPAV">Gladstone (AUGLT) → Paradip (INPAV)</option>
+                                <option value="AUGLT_INVTZ">Gladstone (AUGLT) → Visakhapatnam (INVTZ)</option>
+                            </optgroup>
+                            <optgroup label="South Africa Coal Corridors">
+                                <option value="ZARCB_INPAV">Richards Bay (ZARCB) → Paradip (INPAV)</option>
+                                <option value="ZARCB_INVTZ">Richards Bay (ZARCB) → Visakhapatnam (INVTZ)</option>
+                                <option value="ZARCB_INENN">Richards Bay (ZARCB) → Ennore Kamarajar (INENN)</option>
+                            </optgroup>
+                            <optgroup label="North America (East Coast)">
+                                <option value="USNFK_INPAV">Hampton Roads / Norfolk (USNFK) → Paradip (INPAV)</option>
+                                <option value="USNFK_INVTZ">Hampton Roads / Norfolk (USNFK) → Visakhapatnam (INVTZ)</option>
+                            </optgroup>
+                            <optgroup label="Russia Far East">
+                                <option value="RUVOS_INPAV">Vostochny (RUVOS) → Paradip (INPAV)</option>
+                                <option value="RUVOS_INVTZ">Vostochny (RUVOS) → Visakhapatnam (INVTZ)</option>
+                            </optgroup>
+                            <optgroup label="Southeast Asia Bunkering Hub">
+                                <option value="SGSIN_INPAV">Singapore (SGSIN) → Paradip (INPAV)</option>
+                                <option value="SGSIN_INVTZ">Singapore (SGSIN) → Visakhapatnam (INVTZ)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label><i class="fa-solid fa-gauge-high" style="color: var(--accent-amber);"></i> Steaming Speed</label>
+                        <select id="mapSpeedSelect" class="form-control" onchange="renderSelectedMaritimeRoute()" style="padding: 9px 12px; font-size: 13px;">
+                            <option value="11.5">Eco Steaming (11.5 kts)</option>
+                            <option value="12.5" selected>Standard Voyage (12.5 kts)</option>
+                            <option value="14.0">ArcNautical Baseline (14.0 kts)</option>
+                            <option value="15.5">Express Steaming (15.5 kts)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label><i class="fa-solid fa-ship" style="color: var(--accent-amber);"></i> Vessel Type</label>
+                        <select id="mapVesselType" class="form-control" onchange="renderSelectedMaritimeRoute()" style="padding: 9px 12px; font-size: 13px;">
+                            <option value="capesize" selected>Capesize (180,000 DWT)</option>
+                            <option value="panamax">Panamax (82,000 DWT)</option>
+                            <option value="supramax">Supramax (64,000 DWT)</option>
+                            <option value="handysize">Handysize (38,000 DWT)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label><i class="fa-solid fa-cloud-sun" style="color: var(--accent-amber);"></i> Weather Condition</label>
+                        <select id="mapWeatherSelect" class="form-control" onchange="renderSelectedMaritimeRoute()" style="padding: 9px 12px; font-size: 13px;">
+                            <option value="calm">Calm (Beaufort 2 - 0% loss)</option>
+                            <option value="moderate" selected>Moderate (Beaufort 4 - 4% loss)</option>
+                            <option value="monsoon">Monsoon / Heavy (Beaufort 7 - 14% loss)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn-primary" onclick="fitRouteBounds()" style="height: 38px; padding: 0 16px; white-space: nowrap;">
+                        <i class="fa-solid fa-expand"></i> Focus Route
+                    </button>
+                </div>
+            </div>
+
+            <!-- ROUTE SUMMARY METRICS -->
+            <div class="grid-4" style="margin-bottom: 20px;">
+                <div class="card" style="padding: 16px;">
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">A* Nautical Distance</div>
+                    <div id="routeDistNm" class="mono" style="font-size: 24px; font-weight: 700; color: var(--accent-amber); margin-top: 4px;">4,806.4 NM</div>
+                    <span style="font-size: 11px; color: var(--text-secondary);"><i class="fa-solid fa-shield-halved" style="color: var(--status-emerald);"></i> 0% Land Crossing Validated</span>
+                </div>
+                <div class="card" style="padding: 16px;">
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Ocean Steaming Time</div>
+                    <div id="routeTransitDays" class="mono" style="font-size: 24px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">16.0 Days</div>
+                    <span id="routeHoursSpan" style="font-size: 11px; color: var(--text-muted);">384.5 sailing hours @ 12.5 kts</span>
+                </div>
+                <div class="card" style="padding: 16px;">
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Chokepoints & Straits</div>
+                    <div id="routeChokepoints" class="mono" style="font-size: 16px; font-weight: 600; color: var(--accent-amber-bright); margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Torres, Lombok</div>
+                    <span style="font-size: 11px; color: var(--text-secondary);"><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-amber);"></i> Monitored Maritime Straits</span>
+                </div>
+                <div class="card" style="padding: 16px;">
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Fuel Consumption (VLSFO)</div>
+                    <div id="routeFuelEst" class="mono" style="font-size: 24px; font-weight: 700; color: #38BDF8; margin-top: 4px;">672 MT</div>
+                    <span style="font-size: 11px; color: var(--text-muted);">~ $396k total bunker outlay</span>
+                </div>
+            </div>
+
+            <!-- MAP CONTAINER & TERMINAL STATUS -->
             <div class="grid-2">
                 <div class="card" style="padding: 18px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                        <h4>East Coast Maritime AIS Feed</h4>
-                        <span class="badge-status badge-green"><span class="live-dot" style="background: var(--status-emerald);"></span>Live AIS</span>
+                        <div>
+                            <h4 id="mapTitle">Hay Point (AUHAY) → Paradip (INPAV)</h4>
+                            <span style="font-size: 11px; color: var(--text-muted);">GeoJSON LineString rendered with live vessel position interpolation</span>
+                        </div>
+                        <span class="badge-status badge-green"><span class="live-dot" style="background: var(--status-emerald);"></span>High-Res Ocean Grid</span>
                     </div>
                     <div id="portMap"></div>
                 </div>
 
                 <div class="card">
-                    <h4 style="margin-bottom: 16px;">East Coast Terminal Status</h4>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="background: var(--bg-surface); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
+                    <h4 style="margin-bottom: 16px;">Waypoints & Chokepoint Sequence</h4>
+                    <div id="waypointTimeline" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                        <!-- Generated dynamically by JavaScript -->
+                    </div>
+
+                    <h4 style="margin: 20px 0 12px 0;">East Coast Discharge Terminal Status</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <div style="background: var(--bg-surface); padding: 12px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
                             <div style="display: flex; justify-content: space-between;">
-                                <strong>Paradip Port Authority</strong>
+                                <strong>Paradip Port Authority (INPAV)</strong>
                                 <span class="badge-status badge-green">2.1d Queue</span>
                             </div>
                             <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
-                                Max Draft: 17.5m | Active Berths: 14 | Coal Vessels Waiting: 3
+                                Max Draft: 17.5m | Deep Draft Berths: 3 | Capesize Allowed
                             </div>
                         </div>
 
-                        <div style="background: var(--bg-surface); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--accent-amber);">
+                        <div style="background: var(--bg-surface); padding: 12px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--accent-amber);">
                             <div style="display: flex; justify-content: space-between;">
-                                <strong>Visakhapatnam Port</strong>
+                                <strong>Visakhapatnam Port (INVTZ)</strong>
                                 <span class="badge-status badge-amber">3.8d Queue</span>
                             </div>
                             <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
-                                Outer Harbour Draft: 16.5m | Berths: 9 | Waiting: 5
+                                Outer Harbour Draft: 16.5m | Inner Harbour Draft: 14.5m
                             </div>
                         </div>
 
-                        <div style="background: var(--bg-surface); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
+                        <div style="background: var(--bg-surface); padding: 12px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
                             <div style="display: flex; justify-content: space-between;">
-                                <strong>Kamarajar (Ennore) Port</strong>
+                                <strong>Kamarajar Ennore (INENN)</strong>
                                 <span class="badge-status badge-green">1.4d Queue</span>
                             </div>
                             <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
-                                Max Draft: 15.5m | Dedicated Coal Berths: 4 | Waiting: 1
+                                Max Draft: 15.5m | Dedicated Coal Berths: 4
                             </div>
                         </div>
                     </div>
-
-                    <h5 style="margin: 20px 0 12px 0; font-size: 14px;">Consortium Vessel Lineup</h5>
-                    <table class="table-custom">
-                        <thead>
-                            <tr>
-                                <th>Vessel</th>
-                                <th>Cargo</th>
-                                <th>DWT</th>
-                                <th>ETA</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>MV Kalinga Star</td>
-                                <td>Coking Coal</td>
-                                <td class="mono">178k</td>
-                                <td>Sep 09</td>
-                                <td><span class="badge-status badge-green">On Schedule</span></td>
-                            </tr>
-                            <tr>
-                                <td>MV Steel Glory</td>
-                                <td>Met Coal</td>
-                                <td class="mono">82k</td>
-                                <td>Sep 12</td>
-                                <td><span class="badge-status badge-amber">1d Delay</span></td>
-                            </tr>
-                            <tr>
-                                <td>MV Bay Trader</td>
-                                <td>PCI Coal</td>
-                                <td class="mono">64k</td>
-                                <td>Sep 14</td>
-                                <td><span class="badge-status badge-green">On Schedule</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
@@ -1668,45 +1752,183 @@
             }
         });
 
-        // Map Setup
-        const map = L.map('portMap').setView([18.5, 84.5], 6);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-            maxZoom: 18
-        }).addTo(map);
+        // Map Setup & ArcNautical Routing Engine Integration
+        let map = null;
+        let routeLayer = null;
+        let originMarker = null;
+        let destMarker = null;
+        let activeVesselMarker = null;
+        let waypointMarkers = [];
 
-        const ports = [
-            { name: "Paradip Port Authority", coords: [20.2644, 86.6667], congestion: "Normal (3 vessels)", draft: "17.5m" },
-            { name: "Visakhapatnam Port", coords: [17.6868, 83.2185], congestion: "Moderate (5 vessels)", draft: "16.5m" },
-            { name: "Kamarajar (Ennore) Port", coords: [13.2625, 80.3340], congestion: "Low (1 vessel)", draft: "15.5m" }
-        ];
-
-        ports.forEach(p => {
-            const marker = L.circleMarker(p.coords, {
-                radius: 7,
-                fillColor: "#F59E0B",
-                color: "#FAFAFA",
-                weight: 1.5,
-                opacity: 1,
-                fillOpacity: 0.9
+        function initMap() {
+            if (map) return;
+            map = L.map('portMap').setView([5.0, 100.0], 3);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO &copy; ArcNautical',
+                maxZoom: 18
             }).addTo(map);
-            marker.bindPopup(`<strong style="font-family: 'Space Grotesk', sans-serif;">${p.name}</strong><br>Max Draft: ${p.draft}<br>Anchorage Queue: ${p.congestion}`);
-        });
 
-        const vessels = [
-            { name: "MV Kalinga Star (Capesize)", coords: [19.2, 85.8], status: "Approaching Paradip Berth, ETA 24h" },
-            { name: "MV Steel Glory (Panamax)", coords: [16.8, 83.9], status: "Inbound Vizag Outer Anchorage, ETA 48h" },
-            { name: "MV Bay Trader (Supramax)", coords: [14.0, 81.2], status: "Discharging Ennore Berth 2" }
-        ];
+            renderSelectedMaritimeRoute();
+        }
 
-        vessels.forEach(v => {
-            const shipIcon = L.divIcon({
-                html: '<i class="fa-solid fa-ship" style="color: #F59E0B; font-size: 15px; filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6));"></i>',
-                iconSize: [20, 20],
-                className: 'ship-marker'
+        const PORT_GEO_LOCATIONS = {
+            AUHAY: { name: "Hay Point (AUHAY)", coords: [-21.28, 149.30], type: "Origin Loading Terminal", country: "Australia" },
+            AUGLT: { name: "Gladstone (AUGLT)", coords: [-23.85, 151.27], type: "Origin Loading Terminal", country: "Australia" },
+            ZARCB: { name: "Richards Bay (ZARCB)", coords: [-28.80, 32.08], type: "Origin Loading Terminal", country: "South Africa" },
+            USNFK: { name: "Norfolk / Hampton Roads (USNFK)", coords: [36.95, -76.33], type: "Origin Loading Terminal", country: "USA" },
+            RUVOS: { name: "Vostochny (RUVOS)", coords: [42.75, 133.07], type: "Origin Loading Terminal", country: "Russia" },
+            SGSIN: { name: "Singapore (SGSIN)", coords: [1.26, 103.84], type: "Bunkering & Chokepoint Hub", country: "Singapore" },
+            INPAV: { name: "Paradip Port Authority (INPAV)", coords: [20.26, 86.67], type: "Destination Discharge Terminal", country: "India" },
+            INVTZ: { name: "Visakhapatnam Port (INVTZ)", coords: [17.69, 83.30], type: "Destination Discharge Terminal", country: "India" },
+            INENN: { name: "Kamarajar Port Ennore (INENN)", coords: [13.22, 80.32], type: "Destination Discharge Terminal", country: "India" }
+        };
+
+        function renderSelectedMaritimeRoute() {
+            if (!map) return;
+            const selectEl = document.getElementById('mapRouteSelect');
+            if (!selectEl) return;
+            const routeKey = selectEl.value;
+            const speedKnots = parseFloat(document.getElementById('mapSpeedSelect').value) || 12.5;
+            const vesselType = document.getElementById('mapVesselType').value;
+            const weather = document.getElementById('mapWeatherSelect').value;
+
+            const routeInfo = (window.ARC_NAUTICAL_ROUTES && window.ARC_NAUTICAL_ROUTES[routeKey]);
+            if (!routeInfo) {
+                console.warn("Route not found in ArcNautical registry:", routeKey);
+                return;
+            }
+
+            // Weather adjustment factor (Beaufort model)
+            let weatherPenalty = 1.0;
+            if (weather === 'moderate') weatherPenalty = 1.04;
+            else if (weather === 'monsoon') weatherPenalty = 1.14;
+
+            const effectiveSpeed = speedKnots / weatherPenalty;
+            const transitHours = routeInfo.distance_nm / effectiveSpeed;
+            const transitDays = transitHours / 24;
+
+            // Daily fuel consumption based on vessel type
+            const fuelDailyRates = { capesize: 42, panamax: 28, supramax: 22, handysize: 16 };
+            const dailyFuel = fuelDailyRates[vesselType] || 35;
+            const totalFuel = Math.round(transitDays * dailyFuel);
+            const bunkerCostUsd = totalFuel * 590;
+
+            // Update UI KPI Cards
+            document.getElementById('routeDistNm').innerText = Number(routeInfo.distance_nm).toLocaleString() + ' NM';
+            document.getElementById('routeTransitDays').innerText = transitDays.toFixed(1) + ' Days';
+            document.getElementById('routeHoursSpan').innerText = `${transitHours.toFixed(0)} sailing hours @ ${speedKnots} kts (${weather})`;
+            document.getElementById('routeChokepoints').innerText = routeInfo.hazard_zones.length > 0 ? routeInfo.hazard_zones.join(', ') : 'Open Ocean Corridors';
+            document.getElementById('routeFuelEst').innerText = totalFuel.toLocaleString() + ' MT';
+            document.getElementById('mapTitle').innerText = routeInfo.label;
+
+            // Update Waypoint Timeline
+            const tl = document.getElementById('waypointTimeline');
+            if (tl) {
+                tl.innerHTML = '';
+                routeInfo.waypoints.forEach((wp, idx) => {
+                    const isFirst = idx === 0;
+                    const isLast = idx === routeInfo.waypoints.length - 1;
+                    const color = isFirst ? 'var(--status-emerald)' : (isLast ? 'var(--accent-amber)' : '#38BDF8');
+                    const icon = isFirst ? 'fa-anchor' : (isLast ? 'fa-flag-checkered' : 'fa-diamond');
+                    const item = document.createElement('div');
+                    item.style.cssText = 'background: var(--bg-surface); padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;';
+                    item.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid ${icon}" style="color: ${color}; font-size: 13px;"></i>
+                            <div>
+                                <strong style="font-size: 13px;">${wp.name}</strong>
+                                <div style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono);">${wp.lat.toFixed(2)}°, ${wp.lng.toFixed(2)}°</div>
+                            </div>
+                        </div>
+                        <span class="badge-status ${isFirst || isLast ? 'badge-green' : 'badge-amber'}">${isFirst ? 'Origin' : (isLast ? 'Discharge' : 'Chokepoint')}</span>
+                    `;
+                    tl.appendChild(item);
+                });
+            }
+
+            // Remove old layers
+            if (routeLayer) map.removeLayer(routeLayer);
+            if (originMarker) map.removeLayer(originMarker);
+            if (destMarker) map.removeLayer(destMarker);
+            if (activeVesselMarker) map.removeLayer(activeVesselMarker);
+            waypointMarkers.forEach(m => map.removeLayer(m));
+            waypointMarkers = [];
+
+            // Convert GeoJSON coordinates [lon, lat] -> Leaflet [lat, lon]
+            const latlngs = routeInfo.coordinates.map(c => [c[1], c[0]]);
+
+            // Draw glowing maritime route polyline
+            routeLayer = L.polyline(latlngs, {
+                color: '#F59E0B',
+                weight: 3.5,
+                opacity: 0.9,
+                dashArray: null,
+                lineCap: 'round',
+                lineJoin: 'round'
+            }).addTo(map);
+
+            // Add Origin & Destination markers
+            const originPort = PORT_GEO_LOCATIONS[routeInfo.origin];
+            const destPort = PORT_GEO_LOCATIONS[routeInfo.dest];
+
+            if (originPort) {
+                originMarker = L.circleMarker(originPort.coords, {
+                    radius: 8,
+                    fillColor: '#10B981',
+                    color: '#FAFAFA',
+                    weight: 2,
+                    fillOpacity: 0.95
+                }).addTo(map).bindPopup(`<strong>${originPort.name}</strong><br>${originPort.type}<br><em>${originPort.country}</em>`);
+            }
+
+            if (destPort) {
+                destMarker = L.circleMarker(destPort.coords, {
+                    radius: 8,
+                    fillColor: '#F59E0B',
+                    color: '#FAFAFA',
+                    weight: 2,
+                    fillOpacity: 0.95
+                }).addTo(map).bindPopup(`<strong>${destPort.name}</strong><br>${destPort.type}<br><em>${destPort.country}</em>`);
+            }
+
+            // Add Waypoints (Chokepoints / Straits)
+            routeInfo.waypoints.slice(1, -1).forEach(wp => {
+                const wm = L.circleMarker([wp.lat, wp.lng], {
+                    radius: 5,
+                    fillColor: '#38BDF8',
+                    color: '#0A0A0F',
+                    weight: 1.5,
+                    fillOpacity: 0.9
+                }).addTo(map).bindPopup(`<strong>Chokepoint: ${wp.name}</strong><br>ArcNautical Navigation Waypoint`);
+                waypointMarkers.push(wm);
             });
-            L.marker(v.coords, { icon: shipIcon }).addTo(map).bindPopup(`<strong>${v.name}</strong><br>${v.status}`);
-        });
+
+            // Add Simulated Active Vessel along 65% of the route
+            if (latlngs.length > 5) {
+                const shipPosIndex = Math.floor(latlngs.length * 0.65);
+                const shipPos = latlngs[shipPosIndex];
+                const shipIcon = L.divIcon({
+                    html: '<i class="fa-solid fa-ship" style="color: #F59E0B; font-size: 16px; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8));"></i>',
+                    iconSize: [22, 22],
+                    className: 'ship-marker'
+                });
+                activeVesselMarker = L.marker(shipPos, { icon: shipIcon }).addTo(map)
+                    .bindPopup(`<strong>MV Kalinga Ocean (${vesselType.toUpperCase()})</strong><br>Current Speed: ${speedKnots} kts<br>Voyage Progress: 65% complete<br>Remaining ETA: ${(transitDays * 0.35).toFixed(1)} days`);
+            }
+
+            fitRouteBounds();
+        }
+
+        function fitRouteBounds() {
+            if (map && routeLayer) {
+                map.fitBounds(routeLayer.getBounds(), { padding: [40, 40] });
+            }
+        }
+
+        // Initialize map on switch to tab 'map' or on page load
+        setTimeout(() => {
+            initMap();
+        }, 300);
 
         // Interactive What-If Scenario Calculation
         let baseRate = 17.40;
