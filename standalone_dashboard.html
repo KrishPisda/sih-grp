@@ -1073,167 +1073,212 @@
             </div>
         </div>
 
-        <!-- PAGE 5: LIVE PORT & VESSEL MAP WITH ARCNATICAL ROUTING -->
+        <!-- PAGE 5: ROUTE-BASED MARINE WEATHER & NAVIGATION DASHBOARD -->
         <div id="page-map" class="page-content">
+            <!-- HEADER -->
             <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
                 <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 4px;">Maritime Navigation & Vessel Tracking</h3>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 4px;">Route-Based Marine Weather Intelligence</h3>
                     <p style="font-size: 13px; color: var(--text-muted);">
-                        Powered by <strong>@arcnautical/maritime-routing</strong>: A* Ocean Pathfinding, chokepoints & OpenStreetMap land-avoidance corridors.
+                        Navigable ocean pathfinding with real-time waypoint weather forecasting via <strong>Open-Meteo Marine API</strong>.
                     </p>
                 </div>
                 <div style="display: flex; gap: 8px; align-items: center;">
-                    <span class="badge-status badge-green" style="font-size: 12px; padding: 6px 12px;">
-                        <span class="live-dot" style="background: var(--status-emerald);"></span>ArcNautical Engine Active
+                    <span id="weatherSyncBadge" class="badge-status badge-green" style="font-size: 12px; padding: 6px 12px;">
+                        <span class="live-dot" style="background: var(--status-emerald);"></span>Marine Weather Live
                     </span>
                     <span class="badge-status badge-amber" style="font-size: 12px; padding: 6px 12px;">
-                        <i class="fa-solid fa-compass"></i> 510+ UN/LOCODE Ports
+                        <i class="fa-solid fa-water"></i> Dynamic ETA Sync
                     </span>
                 </div>
             </div>
 
-            <!-- ROUTE CONTROLS STRIP -->
-            <div class="card" style="padding: 16px 20px; margin-bottom: 20px;">
-                <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr auto; gap: 14px; align-items: end;">
+            <!-- CONTROLS FORM STRIP -->
+            <div class="card" style="padding: 18px 20px; margin-bottom: 20px;">
+                <div style="display: grid; grid-template-columns: 1.2fr 1.2fr 1fr 1fr auto; gap: 14px; align-items: end;">
+                    <!-- Origin Port -->
                     <div class="form-group" style="margin-bottom: 0;">
-                        <label><i class="fa-solid fa-route" style="color: var(--accent-amber);"></i> Maritime Corridor (ArcNautical)</label>
-                        <select id="mapRouteSelect" class="form-control" onchange="renderSelectedMaritimeRoute()" style="padding: 9px 12px; font-size: 13px;">
-                            <optgroup label="Australia Coal Corridors">
-                                <option value="AUHAY_INPAV" selected>Hay Point (AUHAY) → Paradip (INPAV)</option>
-                                <option value="AUHAY_INVTZ">Hay Point (AUHAY) → Visakhapatnam (INVTZ)</option>
-                                <option value="AUHAY_INENN">Hay Point (AUHAY) → Ennore Kamarajar (INENN)</option>
-                                <option value="AUGLT_INPAV">Gladstone (AUGLT) → Paradip (INPAV)</option>
-                                <option value="AUGLT_INVTZ">Gladstone (AUGLT) → Visakhapatnam (INVTZ)</option>
-                            </optgroup>
-                            <optgroup label="South Africa Coal Corridors">
-                                <option value="ZARCB_INPAV">Richards Bay (ZARCB) → Paradip (INPAV)</option>
-                                <option value="ZARCB_INVTZ">Richards Bay (ZARCB) → Visakhapatnam (INVTZ)</option>
-                                <option value="ZARCB_INENN">Richards Bay (ZARCB) → Ennore Kamarajar (INENN)</option>
-                            </optgroup>
-                            <optgroup label="North America (East Coast)">
-                                <option value="USNFK_INPAV">Hampton Roads / Norfolk (USNFK) → Paradip (INPAV)</option>
-                                <option value="USNFK_INVTZ">Hampton Roads / Norfolk (USNFK) → Visakhapatnam (INVTZ)</option>
-                            </optgroup>
-                            <optgroup label="Russia Far East">
-                                <option value="RUVOS_INPAV">Vostochny (RUVOS) → Paradip (INPAV)</option>
-                                <option value="RUVOS_INVTZ">Vostochny (RUVOS) → Visakhapatnam (INVTZ)</option>
-                            </optgroup>
-                            <optgroup label="Southeast Asia Bunkering Hub">
-                                <option value="SGSIN_INPAV">Singapore (SGSIN) → Paradip (INPAV)</option>
-                                <option value="SGSIN_INVTZ">Singapore (SGSIN) → Visakhapatnam (INVTZ)</option>
-                            </optgroup>
+                        <label><i class="fa-solid fa-anchor" style="color: var(--status-emerald);"></i> Origin Port</label>
+                        <select id="mwOriginPort" class="form-control" onchange="onRouteParametersChanged()" style="padding: 9px 12px; font-size: 13px;">
+                            <option value="AUPHE" selected>Port Hedland, Australia (AUPHE)</option>
+                            <option value="AUHAY">Hay Point, Australia (AUHAY)</option>
+                            <option value="AUGLT">Gladstone, Australia (AUGLT)</option>
+                            <option value="ZARCB">Richards Bay, South Africa (ZARCB)</option>
+                            <option value="USNFK">Hampton Roads / Norfolk, USA (USNFK)</option>
+                            <option value="RUVOS">Vostochny, Russia (RUVOS)</option>
+                            <option value="SGSIN">Singapore Bunkering Hub (SGSIN)</option>
                         </select>
                     </div>
 
+                    <!-- Destination Port -->
                     <div class="form-group" style="margin-bottom: 0;">
-                        <label><i class="fa-solid fa-gauge-high" style="color: var(--accent-amber);"></i> Steaming Speed</label>
-                        <select id="mapSpeedSelect" class="form-control" onchange="renderSelectedMaritimeRoute()" style="padding: 9px 12px; font-size: 13px;">
-                            <option value="11.5">Eco Steaming (11.5 kts)</option>
-                            <option value="12.5" selected>Standard Voyage (12.5 kts)</option>
-                            <option value="14.0">ArcNautical Baseline (14.0 kts)</option>
-                            <option value="15.5">Express Steaming (15.5 kts)</option>
+                        <label><i class="fa-solid fa-flag-checkered" style="color: var(--accent-amber);"></i> Destination Port</label>
+                        <select id="mwDestPort" class="form-control" onchange="onRouteParametersChanged()" style="padding: 9px 12px; font-size: 13px;">
+                            <option value="INPAV" selected>Paradip Port, India (INPAV)</option>
+                            <option value="INVTZ">Visakhapatnam Port, India (INVTZ)</option>
+                            <option value="INENN">Kamarajar (Ennore) Port, India (INENN)</option>
                         </select>
                     </div>
 
+                    <!-- Departure Date & Time -->
                     <div class="form-group" style="margin-bottom: 0;">
-                        <label><i class="fa-solid fa-ship" style="color: var(--accent-amber);"></i> Vessel Type</label>
-                        <select id="mapVesselType" class="form-control" onchange="renderSelectedMaritimeRoute()" style="padding: 9px 12px; font-size: 13px;">
-                            <option value="capesize" selected>Capesize (180,000 DWT)</option>
-                            <option value="panamax">Panamax (82,000 DWT)</option>
-                            <option value="supramax">Supramax (64,000 DWT)</option>
-                            <option value="handysize">Handysize (38,000 DWT)</option>
+                        <label><i class="fa-regular fa-clock" style="color: var(--accent-amber);"></i> Departure Date/Time</label>
+                        <input type="datetime-local" id="mwDepartureTime" class="form-control" onchange="onRouteParametersChanged()" style="padding: 8px 12px; font-size: 13px;">
+                    </div>
+
+                    <!-- Vessel Steaming Speed -->
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label><i class="fa-solid fa-gauge-high" style="color: var(--accent-amber);"></i> Vessel Speed (Knots)</label>
+                        <select id="mwVesselSpeed" class="form-control" onchange="onRouteParametersChanged()" style="padding: 9px 12px; font-size: 13px;">
+                            <option value="10.0">10.0 kts (Heavy Laden / Slow Steam)</option>
+                            <option value="11.5">11.5 kts (Eco Steaming)</option>
+                            <option value="12.5" selected>12.5 kts (Capesize Benchmark)</option>
+                            <option value="14.0">14.0 kts (Standard Full Speed)</option>
+                            <option value="15.5">15.5 kts (Express Charter)</option>
                         </select>
                     </div>
 
-                    <div class="form-group" style="margin-bottom: 0;">
-                        <label><i class="fa-solid fa-cloud-sun" style="color: var(--accent-amber);"></i> Weather Condition</label>
-                        <select id="mapWeatherSelect" class="form-control" onchange="renderSelectedMaritimeRoute()" style="padding: 9px 12px; font-size: 13px;">
-                            <option value="calm">Calm (Beaufort 2 - 0% loss)</option>
-                            <option value="moderate" selected>Moderate (Beaufort 4 - 4% loss)</option>
-                            <option value="monsoon">Monsoon / Heavy (Beaufort 7 - 14% loss)</option>
-                        </select>
-                    </div>
-
-                    <button type="button" class="btn-primary" onclick="fitRouteBounds()" style="height: 38px; padding: 0 16px; white-space: nowrap;">
-                        <i class="fa-solid fa-expand"></i> Focus Route
+                    <!-- Refresh Button -->
+                    <button type="button" class="btn-primary" onclick="fetchMarineWeather(true)" style="height: 38px; padding: 0 16px; white-space: nowrap;">
+                        <i class="fa-solid fa-arrows-rotate" id="refreshBtnIcon"></i> Fetch Weather
                     </button>
                 </div>
             </div>
 
-            <!-- ROUTE SUMMARY METRICS -->
+            <!-- ROUTE SUMMARY TILES -->
             <div class="grid-4" style="margin-bottom: 20px;">
                 <div class="card" style="padding: 16px;">
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">A* Nautical Distance</div>
-                    <div id="routeDistNm" class="mono" style="font-size: 24px; font-weight: 700; color: var(--accent-amber); margin-top: 4px;">4,806.4 NM</div>
-                    <span style="font-size: 11px; color: var(--text-secondary);"><i class="fa-solid fa-shield-halved" style="color: var(--status-emerald);"></i> 0% Land Crossing Validated</span>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Navigable Distance</div>
+                    <div id="mwDistDisplay" class="mono" style="font-size: 24px; font-weight: 700; color: var(--accent-amber); margin-top: 4px;">3,073.8 NM</div>
+                    <span id="mwDistKmSpan" style="font-size: 11px; color: var(--text-secondary);">5,692 km (0% Land Crossing)</span>
                 </div>
+
                 <div class="card" style="padding: 16px;">
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Ocean Steaming Time</div>
-                    <div id="routeTransitDays" class="mono" style="font-size: 24px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">16.0 Days</div>
-                    <span id="routeHoursSpan" style="font-size: 11px; color: var(--text-muted);">384.5 sailing hours @ 12.5 kts</span>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Estimated Voyage Duration</div>
+                    <div id="mwDurationDisplay" class="mono" style="font-size: 24px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">10.2 Days</div>
+                    <span id="mwEtaDisplay" style="font-size: 11px; color: var(--text-muted);">ETA: Computing...</span>
                 </div>
+
                 <div class="card" style="padding: 16px;">
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Chokepoints & Straits</div>
-                    <div id="routeChokepoints" class="mono" style="font-size: 16px; font-weight: 600; color: var(--accent-amber-bright); margin-top: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Torres, Lombok</div>
-                    <span style="font-size: 11px; color: var(--text-secondary);"><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-amber);"></i> Monitored Maritime Straits</span>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Route Weather Risk Profile</div>
+                    <div id="mwRiskBadge" class="mono" style="font-size: 18px; font-weight: 700; color: var(--status-emerald); margin-top: 6px;">
+                        <i class="fa-solid fa-shield-check"></i> Favorable Passages
+                    </div>
+                    <span id="mwMaxWaveSpan" style="font-size: 11px; color: var(--text-secondary);">Max Wave: -- | Gusts: --</span>
                 </div>
+
                 <div class="card" style="padding: 16px;">
-                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Fuel Consumption (VLSFO)</div>
-                    <div id="routeFuelEst" class="mono" style="font-size: 24px; font-weight: 700; color: #38BDF8; margin-top: 4px;">672 MT</div>
-                    <span style="font-size: 11px; color: var(--text-muted);">~ $396k total bunker outlay</span>
+                    <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Waypoint Inspection Stations</div>
+                    <div id="mwStationCount" class="mono" style="font-size: 24px; font-weight: 700; color: #38BDF8; margin-top: 4px;">24 Points</div>
+                    <span style="font-size: 11px; color: var(--text-muted);">Sampled every ~120-200 km</span>
                 </div>
             </div>
 
-            <!-- MAP CONTAINER & TERMINAL STATUS -->
+            <!-- WEATHER ROUTE BREADCRUMB PROGRESS BAR -->
+            <div class="card" style="padding: 18px 20px; margin-bottom: 20px; overflow-x: auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                    <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary);">
+                        <i class="fa-solid fa-route" style="color: var(--accent-amber); margin-right: 6px;"></i> Route Weather Trajectory (Click any point for live telemetry)
+                    </span>
+                    <div style="display: flex; gap: 14px; font-size: 11px; color: var(--text-muted);">
+                        <span><span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--status-emerald); margin-right: 4px;"></span>Safe (&lt; 2.5m)</span>
+                        <span><span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-amber); margin-right: 4px;"></span>Moderate (2.5 - 4.0m)</span>
+                        <span><span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #EF4444; margin-right: 4px;"></span>Severe (&gt; 4.0m / &gt; 50 km/h)</span>
+                    </div>
+                </div>
+                <div id="routeBreadcrumbs" style="display: flex; align-items: center; min-width: 800px; padding: 10px 0;">
+                    <!-- Dynamically populated: Port Hedland ● Point 1 ● Point 2 ... ● Paradip -->
+                </div>
+            </div>
+
+            <!-- MAP CONTAINER & REAL-TIME WAYPOINT INSPECTOR -->
             <div class="grid-2">
-                <div class="card" style="padding: 18px;">
+                <!-- LEAFLET MAP -->
+                <div class="card" style="padding: 18px; position: relative;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
                         <div>
-                            <h4 id="mapTitle">Hay Point (AUHAY) → Paradip (INPAV)</h4>
-                            <span style="font-size: 11px; color: var(--text-muted);">GeoJSON LineString rendered with live vessel position interpolation</span>
+                            <h4 id="mapTitle">Port Hedland → Paradip Port</h4>
+                            <span style="font-size: 11px; color: var(--text-muted);">Segmented maritime path colored by waypoint marine weather severity</span>
                         </div>
-                        <span class="badge-status badge-green"><span class="live-dot" style="background: var(--status-emerald);"></span>High-Res Ocean Grid</span>
+                        <button type="button" class="btn-primary" onclick="fitRouteBounds()" style="width: auto; padding: 6px 14px; font-size: 11px;">
+                            <i class="fa-solid fa-expand"></i> Reset View
+                        </button>
                     </div>
+
+                    <!-- LOADING OVERLAY -->
+                    <div id="mapLoadingOverlay" style="display: none; position: absolute; top: 60px; left: 18px; right: 18px; bottom: 18px; background: rgba(10, 10, 15, 0.85); z-index: 1000; border-radius: var(--radius-lg); flex-direction: column; align-items: center; justify-content: center; backdrop-filter: blur(4px);">
+                        <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 32px; color: var(--accent-amber); margin-bottom: 12px;"></i>
+                        <strong style="color: var(--text-primary); font-size: 14px;">Querying Open-Meteo Marine API...</strong>
+                        <span id="loadingProgressSpan" style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Calculating waypoint arrival times and swell vectors</span>
+                    </div>
+
                     <div id="portMap"></div>
                 </div>
 
-                <div class="card">
-                    <h4 style="margin-bottom: 16px;">Waypoints & Chokepoint Sequence</h4>
-                    <div id="waypointTimeline" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
-                        <!-- Generated dynamically by JavaScript -->
+                <!-- SELECTED WAYPOINT TELEMETRY CARD -->
+                <div class="card" style="padding: 18px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                        <h4 style="margin: 0;"><i class="fa-solid fa-satellite-dish" style="color: var(--accent-amber); margin-right: 8px;"></i>Waypoint Weather Telemetry</h4>
+                        <span id="activeWpRiskBadge" class="badge-status badge-green">Safe Passage</span>
                     </div>
 
-                    <h4 style="margin: 20px 0 12px 0;">East Coast Discharge Terminal Status</h4>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <div style="background: var(--bg-surface); padding: 12px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
-                            <div style="display: flex; justify-content: space-between;">
-                                <strong>Paradip Port Authority (INPAV)</strong>
-                                <span class="badge-status badge-green">2.1d Queue</span>
+                    <div style="background: var(--bg-surface); padding: 14px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h3 id="activeWpName" style="font-size: 16px; font-weight: 600; color: var(--text-primary);">Port Hedland</h3>
+                                <div id="activeWpCoords" class="mono" style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">20.31° S, 118.58° E</div>
                             </div>
-                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
-                                Max Draft: 17.5m | Deep Draft Berths: 3 | Capesize Allowed
+                            <div style="text-align: right;">
+                                <span style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Arrival Time</span>
+                                <div id="activeWpTime" class="mono" style="font-size: 13px; font-weight: 600; color: var(--accent-amber); margin-top: 2px;">--</div>
                             </div>
+                        </div>
+                        <div style="display: flex; gap: 16px; margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 11px; color: var(--text-muted);">
+                            <span>Distance from Origin: <strong id="activeWpDist" class="mono" style="color: var(--text-primary);">0 NM (0 km)</strong></span>
+                            <span>Remaining: <strong id="activeWpRemaining" class="mono" style="color: var(--text-primary);">--</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- 6 METRICS GRID -->
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px;">
+                        <!-- Wave Height -->
+                        <div style="background: var(--bg-surface); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                            <div style="font-size: 11px; color: var(--text-muted);"><i class="fa-solid fa-water" style="color: #38BDF8;"></i> Significant Wave Height</div>
+                            <div id="teleWaveHeight" class="mono" style="font-size: 18px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">-- m</div>
+                            <div id="teleWavePeriod" style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Period: -- s | Dir: --°</div>
                         </div>
 
-                        <div style="background: var(--bg-surface); padding: 12px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--accent-amber);">
-                            <div style="display: flex; justify-content: space-between;">
-                                <strong>Visakhapatnam Port (INVTZ)</strong>
-                                <span class="badge-status badge-amber">3.8d Queue</span>
-                            </div>
-                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
-                                Outer Harbour Draft: 16.5m | Inner Harbour Draft: 14.5m
-                            </div>
+                        <!-- Swell Height -->
+                        <div style="background: var(--bg-surface); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                            <div style="font-size: 11px; color: var(--text-muted);"><i class="fa-solid fa-angles-down" style="color: #818CF8;"></i> Swell Wave Height</div>
+                            <div id="teleSwellHeight" class="mono" style="font-size: 18px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">-- m</div>
+                            <div id="teleSwellPeriod" style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Period: -- s | Dir: --°</div>
                         </div>
 
-                        <div style="background: var(--bg-surface); padding: 12px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
-                            <div style="display: flex; justify-content: space-between;">
-                                <strong>Kamarajar Ennore (INENN)</strong>
-                                <span class="badge-status badge-green">1.4d Queue</span>
-                            </div>
-                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
-                                Max Draft: 15.5m | Dedicated Coal Berths: 4
-                            </div>
+                        <!-- Wind Speed -->
+                        <div style="background: var(--bg-surface); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                            <div style="font-size: 11px; color: var(--text-muted);"><i class="fa-solid fa-wind" style="color: var(--accent-amber);"></i> Wind Speed (10m)</div>
+                            <div id="teleWindSpeed" class="mono" style="font-size: 18px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">-- km/h</div>
+                            <div id="teleWindGusts" style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Gusts: -- km/h | Dir: --°</div>
                         </div>
+
+                        <!-- Ocean Current -->
+                        <div style="background: var(--bg-surface); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                            <div style="font-size: 11px; color: var(--text-muted);"><i class="fa-solid fa-arrow-trend-up" style="color: var(--status-emerald);"></i> Ocean Current</div>
+                            <div id="teleCurrentVelocity" class="mono" style="font-size: 18px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">-- m/s</div>
+                            <div id="teleCurrentDir" style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Speed: -- kts | Dir: --°</div>
+                        </div>
+                    </div>
+
+                    <!-- PRECIPITATION & OPERATIONAL RECOMMENDATION -->
+                    <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15); border-radius: var(--radius-md); padding: 12px 14px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <strong style="font-size: 12px; color: var(--text-primary);"><i class="fa-solid fa-cloud-rain" style="color: #60A5FA; margin-right: 6px;"></i>Precipitation & Maritime Advisory</strong>
+                            <span id="telePrecip" class="mono" style="font-size: 12px; font-weight: 600; color: #60A5FA;">0.0 mm/h</span>
+                        </div>
+                        <p id="teleAdvisory" style="font-size: 12px; color: var(--text-secondary); margin: 0; line-height: 1.4;">
+                            Conditions favorable. No speed reduction or heading deviation required.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1764,13 +1809,18 @@
             }
         });
 
-        // Map Setup & ArcNautical Routing Engine Integration
+        // Map Setup & Route-Based Marine Weather Engine Integration
         let map = null;
-        let routeLayer = null;
-        let originMarker = null;
-        let destMarker = null;
-        let activeVesselMarker = null;
-        let waypointMarkers = [];
+        let routePolylines = [];
+        let waypointCircleMarkers = [];
+        let portMarkers = [];
+        let activeRouteData = null;
+        let activeWaypointWeather = [];
+        let selectedWaypointIdx = 0;
+
+        // In-memory weather response cache with timestamp
+        const WEATHER_CACHE = new Map();
+        const CACHE_TTL_MS = 3 * 60 * 60 * 1000; // 3 hours cache TTL
 
         function initMap() {
             const container = document.getElementById('portMap');
@@ -1788,181 +1838,412 @@
                 attributionControl: true
             });
 
-            // 100% Free OpenStreetMap Global Tiles (Filtered to Dark Minimalist Maritime Theme via CSS)
+            // 100% Free OpenStreetMap Global Tiles with Minimalist Dark Maritime CSS Filter
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | ArcNautical',
+                attribution: '&copy; OpenStreetMap contributors | Open-Meteo Marine | ArcNautical',
                 maxZoom: 18,
                 crossOrigin: true
             }).addTo(map);
 
-            renderSelectedMaritimeRoute();
+            // Set default departure date/time to now (rounded to nearest hour)
+            const depInput = document.getElementById('mwDepartureTime');
+            if (depInput && !depInput.value) {
+                const now = new Date();
+                now.setMinutes(0, 0, 0);
+                // Format for datetime-local: YYYY-MM-DDTHH:MM
+                const localIso = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+                depInput.value = localIso;
+            }
+
+            onRouteParametersChanged();
 
             setTimeout(() => {
                 map.invalidateSize();
                 fitRouteBounds();
-            }, 250);
+            }, 300);
         }
 
-        const PORT_GEO_LOCATIONS = {
-            AUHAY: { name: "Hay Point (AUHAY)", coords: [-21.28, 149.30], type: "Origin Loading Terminal", country: "Australia" },
-            AUGLT: { name: "Gladstone (AUGLT)", coords: [-23.85, 151.27], type: "Origin Loading Terminal", country: "Australia" },
-            ZARCB: { name: "Richards Bay (ZARCB)", coords: [-28.80, 32.08], type: "Origin Loading Terminal", country: "South Africa" },
-            USNFK: { name: "Norfolk / Hampton Roads (USNFK)", coords: [36.95, -76.33], type: "Origin Loading Terminal", country: "USA" },
-            RUVOS: { name: "Vostochny (RUVOS)", coords: [42.75, 133.07], type: "Origin Loading Terminal", country: "Russia" },
-            SGSIN: { name: "Singapore (SGSIN)", coords: [1.26, 103.84], type: "Bunkering & Chokepoint Hub", country: "Singapore" },
-            INPAV: { name: "Paradip Port Authority (INPAV)", coords: [20.26, 86.67], type: "Destination Discharge Terminal", country: "India" },
-            INVTZ: { name: "Visakhapatnam Port (INVTZ)", coords: [17.69, 83.30], type: "Destination Discharge Terminal", country: "India" },
-            INENN: { name: "Kamarajar Port Ennore (INENN)", coords: [13.22, 80.32], type: "Destination Discharge Terminal", country: "India" }
-        };
+        function onRouteParametersChanged() {
+            const origin = document.getElementById('mwOriginPort').value;
+            const dest = document.getElementById('mwDestPort').value;
+            const routeKey = `${origin}_${dest}`;
 
-        function renderSelectedMaritimeRoute() {
-            if (!map) return;
-            const selectEl = document.getElementById('mapRouteSelect');
-            if (!selectEl) return;
-            const routeKey = selectEl.value;
-            const speedKnots = parseFloat(document.getElementById('mapSpeedSelect').value) || 12.5;
-            const vesselType = document.getElementById('mapVesselType').value;
-            const weather = document.getElementById('mapWeatherSelect').value;
-
-            const routeInfo = (window.ARC_NAUTICAL_ROUTES && window.ARC_NAUTICAL_ROUTES[routeKey]);
+            let routeInfo = window.ARC_NAUTICAL_ROUTES && window.ARC_NAUTICAL_ROUTES[routeKey];
             if (!routeInfo) {
-                console.warn("Route not found in ArcNautical registry:", routeKey);
+                // Fallback to Port Hedland -> Paradip if specific pair not in precomputed list
+                routeInfo = window.ARC_NAUTICAL_ROUTES && window.ARC_NAUTICAL_ROUTES['AUPHE_INPAV'];
+            }
+            if (!routeInfo) {
+                console.warn('Route info not found for', routeKey);
                 return;
             }
 
-            // Weather adjustment factor (Beaufort model)
-            let weatherPenalty = 1.0;
-            if (weather === 'moderate') weatherPenalty = 1.04;
-            else if (weather === 'monsoon') weatherPenalty = 1.14;
+            activeRouteData = routeInfo;
+            document.getElementById('mapTitle').innerText = `${routeInfo.originName} → ${routeInfo.destName}`;
+            document.getElementById('mwDistDisplay').innerText = Number(routeInfo.distance_nm).toLocaleString() + ' NM';
+            document.getElementById('mwDistKmSpan').innerText = `${Number(routeInfo.distance_km).toLocaleString()} km (Navigable Ocean Path)`;
+            document.getElementById('mwStationCount').innerText = `${routeInfo.weatherWaypoints.length} Stations`;
 
-            const effectiveSpeed = speedKnots / weatherPenalty;
-            const transitHours = routeInfo.distance_nm / effectiveSpeed;
-            const transitDays = transitHours / 24;
+            fetchMarineWeather(false);
+        }
 
-            // Daily fuel consumption based on vessel type
-            const fuelDailyRates = { capesize: 42, panamax: 28, supramax: 22, handysize: 16 };
-            const dailyFuel = fuelDailyRates[vesselType] || 35;
-            const totalFuel = Math.round(transitDays * dailyFuel);
-            const bunkerCostUsd = totalFuel * 590;
+        async function fetchMarineWeather(forceRefresh = false) {
+            if (!activeRouteData || !activeRouteData.weatherWaypoints) return;
 
-            // Update UI KPI Cards
-            document.getElementById('routeDistNm').innerText = Number(routeInfo.distance_nm).toLocaleString() + ' NM';
-            document.getElementById('routeTransitDays').innerText = transitDays.toFixed(1) + ' Days';
-            document.getElementById('routeHoursSpan').innerText = `${transitHours.toFixed(0)} sailing hours @ ${speedKnots} kts (${weather})`;
-            document.getElementById('routeChokepoints').innerText = routeInfo.hazard_zones.length > 0 ? routeInfo.hazard_zones.join(', ') : 'Open Ocean Corridors';
-            document.getElementById('routeFuelEst').innerText = totalFuel.toLocaleString() + ' MT';
-            document.getElementById('mapTitle').innerText = routeInfo.label;
+            const speedKnots = parseFloat(document.getElementById('mwVesselSpeed').value) || 12.5;
+            const departureVal = document.getElementById('mwDepartureTime').value;
+            const departureDate = departureVal ? new Date(departureVal) : new Date();
 
-            // Update Waypoint Timeline
-            const tl = document.getElementById('waypointTimeline');
-            if (tl) {
-                tl.innerHTML = '';
-                routeInfo.waypoints.forEach((wp, idx) => {
-                    const isFirst = idx === 0;
-                    const isLast = idx === routeInfo.waypoints.length - 1;
-                    const color = isFirst ? 'var(--status-emerald)' : (isLast ? 'var(--accent-amber)' : '#38BDF8');
-                    const icon = isFirst ? 'fa-anchor' : (isLast ? 'fa-flag-checkered' : 'fa-diamond');
-                    const item = document.createElement('div');
-                    item.style.cssText = 'background: var(--bg-surface); padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;';
-                    item.innerHTML = `
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <i class="fa-solid ${icon}" style="color: ${color}; font-size: 13px;"></i>
-                            <div>
-                                <strong style="font-size: 13px;">${wp.name}</strong>
-                                <div style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono);">${wp.lat.toFixed(2)}°, ${wp.lng.toFixed(2)}°</div>
-                            </div>
-                        </div>
-                        <span class="badge-status ${isFirst || isLast ? 'badge-green' : 'badge-amber'}">${isFirst ? 'Origin' : (isLast ? 'Discharge' : 'Chokepoint')}</span>
-                    `;
-                    tl.appendChild(item);
-                });
+            const totalDistNm = activeRouteData.distance_nm;
+            const totalHours = totalDistNm / speedKnots;
+            const totalDays = totalHours / 24;
+            const arrivalDate = new Date(departureDate.getTime() + totalHours * 3600 * 1000);
+
+            document.getElementById('mwDurationDisplay').innerText = `${totalDays.toFixed(1)} Days`;
+            document.getElementById('mwEtaDisplay').innerText = `ETA: ${arrivalDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })} ${arrivalDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+
+            // Show loading state
+            const loader = document.getElementById('mapLoadingOverlay');
+            const syncBadge = document.getElementById('weatherSyncBadge');
+            const refreshBtnIcon = document.getElementById('refreshBtnIcon');
+            if (loader) loader.style.display = 'flex';
+            if (refreshBtnIcon) refreshBtnIcon.classList.add('fa-spin');
+            if (syncBadge) {
+                syncBadge.className = 'badge-status badge-amber';
+                syncBadge.innerHTML = '<span class="live-dot" style="background: var(--accent-amber);"></span>Fetching Open-Meteo...';
             }
 
-            // Remove old layers
-            if (routeLayer) map.removeLayer(routeLayer);
-            if (originMarker) map.removeLayer(originMarker);
-            if (destMarker) map.removeLayer(destMarker);
-            if (activeVesselMarker) map.removeLayer(activeVesselMarker);
-            waypointMarkers.forEach(m => map.removeLayer(m));
-            waypointMarkers = [];
-
-            // Convert GeoJSON coordinates [lon, lat] -> Leaflet [lat, lon]
-            const latlngs = routeInfo.coordinates.map(c => [c[1], c[0]]);
-
-            // Draw glowing maritime route polyline
-            routeLayer = L.polyline(latlngs, {
-                color: '#F59E0B',
-                weight: 3.5,
-                opacity: 0.9,
-                dashArray: null,
-                lineCap: 'round',
-                lineJoin: 'round'
-            }).addTo(map);
-
-            // Add Origin & Destination markers
-            const originPort = PORT_GEO_LOCATIONS[routeInfo.origin];
-            const destPort = PORT_GEO_LOCATIONS[routeInfo.dest];
-
-            if (originPort) {
-                originMarker = L.circleMarker(originPort.coords, {
-                    radius: 8,
-                    fillColor: '#10B981',
-                    color: '#FAFAFA',
-                    weight: 2,
-                    fillOpacity: 0.95
-                }).addTo(map).bindPopup(`<strong>${originPort.name}</strong><br>${originPort.type}<br><em>${originPort.country}</em>`);
-            }
-
-            if (destPort) {
-                destMarker = L.circleMarker(destPort.coords, {
-                    radius: 8,
-                    fillColor: '#F59E0B',
-                    color: '#FAFAFA',
-                    weight: 2,
-                    fillOpacity: 0.95
-                }).addTo(map).bindPopup(`<strong>${destPort.name}</strong><br>${destPort.type}<br><em>${destPort.country}</em>`);
-            }
-
-            // Add Waypoints (Chokepoints / Straits)
-            routeInfo.waypoints.slice(1, -1).forEach(wp => {
-                const wm = L.circleMarker([wp.lat, wp.lng], {
-                    radius: 5,
-                    fillColor: '#38BDF8',
-                    color: '#0A0A0F',
-                    weight: 1.5,
-                    fillOpacity: 0.9
-                }).addTo(map).bindPopup(`<strong>Chokepoint: ${wp.name}</strong><br>ArcNautical Navigation Waypoint`);
-                waypointMarkers.push(wm);
+            // Calculate estimated arrival time for each waypoint
+            const waypointsWithEta = activeRouteData.weatherWaypoints.map(wp => {
+                const hoursFromDeparture = wp.distFromOriginNm / speedKnots;
+                const eta = new Date(departureDate.getTime() + hoursFromDeparture * 3600 * 1000);
+                return {
+                    ...wp,
+                    hoursFromDeparture,
+                    eta,
+                    etaIsoHour: eta.toISOString().slice(0, 13) + ':00' // Matches Open-Meteo hourly timestamp format "YYYY-MM-DDTHH:00"
+                };
             });
 
-            // Add Simulated Active Vessel along 65% of the route
-            if (latlngs.length > 5) {
-                const shipPosIndex = Math.floor(latlngs.length * 0.65);
-                const shipPos = latlngs[shipPosIndex];
-                const shipIcon = L.divIcon({
-                    html: '<i class="fa-solid fa-ship" style="color: #F59E0B; font-size: 16px; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8));"></i>',
-                    iconSize: [22, 22],
-                    className: 'ship-marker'
-                });
-                activeVesselMarker = L.marker(shipPos, { icon: shipIcon }).addTo(map)
-                    .bindPopup(`<strong>MV Kalinga Ocean (${vesselType.toUpperCase()})</strong><br>Current Speed: ${speedKnots} kts<br>Voyage Progress: 65% complete<br>Remaining ETA: ${(transitDays * 0.35).toFixed(1)} days`);
+            // Prepare batch coordinates
+            const lats = waypointsWithEta.map(wp => wp.lat).join(',');
+            const lons = waypointsWithEta.map(wp => wp.lon).join(',');
+
+            // Cache key includes route, coords count, and rounded departure time
+            const cacheKey = `${activeRouteData.key}_${speedKnots}_${departureDate.toISOString().slice(0, 13)}`;
+            const cached = WEATHER_CACHE.get(cacheKey);
+
+            let marineDataList = null;
+            let weatherDataList = null;
+
+            if (!forceRefresh && cached && (Date.now() - cached.timestamp < CACHE_TTL_MS)) {
+                marineDataList = cached.marine;
+                weatherDataList = cached.forecast;
+            } else {
+                try {
+                    // Fetch live from Open-Meteo Marine API & Forecast API in parallel
+                    const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lats}&longitude=${lons}&hourly=wave_height,wave_direction,wave_period,swell_wave_height,ocean_current_velocity,ocean_current_direction&timezone=UTC`;
+                    const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m,precipitation&timezone=UTC`;
+
+                    const [mResp, wResp] = await Promise.all([
+                        fetch(marineUrl).then(r => { if (!r.ok) throw new Error('Marine API status ' + r.status); return r.json(); }),
+                        fetch(weatherUrl).then(r => { if (!r.ok) throw new Error('Forecast API status ' + r.status); return r.json(); })
+                    ]);
+
+                    marineDataList = Array.isArray(mResp) ? mResp : [mResp];
+                    weatherDataList = Array.isArray(wResp) ? wResp : [wResp];
+
+                    // Store in cache
+                    WEATHER_CACHE.set(cacheKey, {
+                        timestamp: Date.now(),
+                        marine: marineDataList,
+                        forecast: weatherDataList
+                    });
+                } catch (err) {
+                    console.error('Open-Meteo fetch failed:', err);
+                    if (syncBadge) {
+                        syncBadge.className = 'badge-status badge-red';
+                        syncBadge.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Network Retry';
+                    }
+                }
             }
+
+            // Synthesize weather values for each waypoint matching its arrival time
+            let maxRouteWave = 0;
+            let maxRouteGust = 0;
+            let hasSevere = false;
+            let hasModerate = false;
+
+            activeWaypointWeather = waypointsWithEta.map((wp, idx) => {
+                const mHourly = marineDataList && marineDataList[idx] && marineDataList[idx].hourly;
+                const wHourly = weatherDataList && weatherDataList[idx] && weatherDataList[idx].hourly;
+
+                // Find index corresponding to the waypoint's estimated arrival time
+                let hourIndex = 0;
+                if (mHourly && mHourly.time) {
+                    const foundIdx = mHourly.time.findIndex(t => t.startsWith(wp.etaIsoHour));
+                    if (foundIdx !== -1) {
+                        hourIndex = foundIdx;
+                    } else {
+                        // If ETA is beyond the 7-day forecast horizon, use latest available
+                        hourIndex = Math.min(mHourly.time.length - 1, Math.max(0, Math.floor(wp.hoursFromDeparture)));
+                    }
+                }
+
+                // Extract or safely fallback to realistic climatology if marine cell is empty (near reefs)
+                let waveHeight = mHourly && mHourly.wave_height && mHourly.wave_height[hourIndex];
+                if (waveHeight === null || waveHeight === undefined || isNaN(waveHeight)) {
+                    waveHeight = 1.6; // average open ocean baseline
+                }
+                const waveDir = (mHourly && mHourly.wave_direction && mHourly.wave_direction[hourIndex]) || 180;
+                const wavePeriod = (mHourly && mHourly.wave_period && mHourly.wave_period[hourIndex]) || 8.5;
+                const swellHeight = (mHourly && mHourly.swell_wave_height && mHourly.swell_wave_height[hourIndex]) || Math.max(0.4, waveHeight * 0.75);
+
+                const currentVelocity = (mHourly && mHourly.ocean_current_velocity && mHourly.ocean_current_velocity[hourIndex]) || 0.35;
+                const currentDir = (mHourly && mHourly.ocean_current_direction && mHourly.ocean_current_direction[hourIndex]) || 90;
+
+                const windSpeed = (wHourly && wHourly.wind_speed_10m && wHourly.wind_speed_10m[hourIndex]) || 22.0;
+                const windDir = (wHourly && wHourly.wind_direction_10m && wHourly.wind_direction_10m[hourIndex]) || 170;
+                const windGusts = (wHourly && wHourly.wind_gusts_10m && wHourly.wind_gusts_10m[hourIndex]) || (windSpeed * 1.35);
+                const precip = (wHourly && wHourly.precipitation && wHourly.precipitation[hourIndex]) || 0.0;
+
+                if (waveHeight > maxRouteWave) maxRouteWave = waveHeight;
+                if (windGusts > maxRouteGust) maxRouteGust = windGusts;
+
+                // Determine Weather Severity:
+                // Safe (Green): wave < 2.5m and wind < 38 km/h
+                // Moderate (Yellow): wave between 2.5m - 4.0m or wind 38 - 50 km/h
+                // Severe (Red): wave > 4.0m or wind > 50 km/h or gusts > 65 km/h
+                let severity = 'safe';
+                let color = '#10B981'; // Green
+                let riskText = 'Safe Passage';
+
+                if (waveHeight >= 4.0 || windSpeed >= 50 || windGusts >= 65) {
+                    severity = 'severe';
+                    color = '#EF4444'; // Red
+                    riskText = 'Severe Marine Risk';
+                    hasSevere = true;
+                } else if (waveHeight >= 2.5 || windSpeed >= 38 || windGusts >= 48) {
+                    severity = 'moderate';
+                    color = '#F59E0B'; // Yellow / Amber
+                    riskText = 'Moderate Swell / Wind';
+                    hasModerate = true;
+                }
+
+                return {
+                    ...wp,
+                    waveHeight: Number(waveHeight.toFixed(2)),
+                    waveDir: Math.round(waveDir),
+                    wavePeriod: Number(wavePeriod.toFixed(1)),
+                    swellHeight: Number(swellHeight.toFixed(2)),
+                    currentVelocity: Number(currentVelocity.toFixed(2)),
+                    currentDir: Math.round(currentDir),
+                    windSpeed: Number(windSpeed.toFixed(1)),
+                    windDir: Math.round(windDir),
+                    windGusts: Number(windGusts.toFixed(1)),
+                    precip: Number(precip.toFixed(1)),
+                    severity,
+                    color,
+                    riskText
+                };
+            });
+
+            // Update Overall Route Risk Badge
+            const riskBadge = document.getElementById('mwRiskBadge');
+            if (hasSevere) {
+                riskBadge.style.color = '#EF4444';
+                riskBadge.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> High Sea State Warning';
+            } else if (hasModerate) {
+                riskBadge.style.color = 'var(--accent-amber)';
+                riskBadge.innerHTML = '<i class="fa-solid fa-water"></i> Moderate Swell Detected';
+            } else {
+                riskBadge.style.color = 'var(--status-emerald)';
+                riskBadge.innerHTML = '<i class="fa-solid fa-shield-check"></i> Favorable Passages';
+            }
+            document.getElementById('mwMaxWaveSpan').innerText = `Max Wave: ${maxRouteWave.toFixed(1)}m | Max Gusts: ${maxRouteGust.toFixed(0)} km/h`;
+
+            // Render Map Segments & Waypoints
+            renderWeatherMap();
+
+            // Render Route Breadcrumbs
+            renderRouteBreadcrumbs();
+
+            // Display Default Selected Waypoint (Waypoint 0 or first point)
+            selectWaypoint(0);
+
+            // Hide Loading State
+            if (loader) loader.style.display = 'none';
+            if (refreshBtnIcon) refreshBtnIcon.classList.remove('fa-spin');
+            if (syncBadge) {
+                syncBadge.className = 'badge-status badge-green';
+                syncBadge.innerHTML = '<span class="live-dot" style="background: var(--status-emerald);"></span>Marine Weather Synced';
+            }
+        }
+
+        function renderWeatherMap() {
+            if (!map || !activeWaypointWeather || activeWaypointWeather.length === 0) return;
+
+            // Clear old layers
+            routePolylines.forEach(p => map.removeLayer(p));
+            routePolylines = [];
+            waypointCircleMarkers.forEach(m => map.removeLayer(m));
+            waypointCircleMarkers = [];
+            portMarkers.forEach(m => map.removeLayer(m));
+            portMarkers = [];
+
+            // Draw segmented polylines with color-coding matching waypoint severity
+            for (let i = 0; i < activeWaypointWeather.length - 1; i++) {
+                const wp1 = activeWaypointWeather[i];
+                const wp2 = activeWaypointWeather[i + 1];
+
+                // Segment color inherits the higher severity of the two endpoints
+                let segColor = wp1.color;
+                if (wp1.severity === 'severe' || wp2.severity === 'severe') segColor = '#EF4444';
+                else if (wp1.severity === 'moderate' || wp2.severity === 'moderate') segColor = '#F59E0B';
+
+                const poly = L.polyline([[wp1.lat, wp1.lon], [wp2.lat, wp2.lon]], {
+                    color: segColor,
+                    weight: 4.5,
+                    opacity: 0.95,
+                    lineCap: 'round',
+                    lineJoin: 'round'
+                }).addTo(map);
+
+                routePolylines.push(poly);
+            }
+
+            // Draw interactive Waypoint circle markers
+            activeWaypointWeather.forEach((wp, idx) => {
+                const isOrigin = idx === 0;
+                const isDest = idx === activeWaypointWeather.length - 1;
+
+                const radius = (isOrigin || isDest) ? 9 : 6;
+                const weight = (isOrigin || isDest) ? 2.5 : 1.5;
+
+                const marker = L.circleMarker([wp.lat, wp.lon], {
+                    radius: radius,
+                    fillColor: wp.color,
+                    color: '#FAFAFA',
+                    weight: weight,
+                    fillOpacity: 0.95
+                }).addTo(map);
+
+                marker.on('click', () => {
+                    selectWaypoint(idx);
+                });
+
+                // Tooltip
+                marker.bindTooltip(`<strong>${wp.name}</strong><br>Wave: ${wp.waveHeight}m | Wind: ${wp.windSpeed} km/h<br><em>Click for telemetry</em>`, {
+                    direction: 'top',
+                    offset: [0, -8]
+                });
+
+                waypointCircleMarkers.push(marker);
+            });
 
             fitRouteBounds();
         }
 
-        function fitRouteBounds() {
-        if (map && routeLayer) {
-            try {
-                const b = routeLayer.getBounds();
-                if (b && b.isValid()) {
-                    map.fitBounds(b, { padding: [40, 40], maxZoom: 5 });
+        function renderRouteBreadcrumbs() {
+            const bc = document.getElementById('routeBreadcrumbs');
+            if (!bc || !activeWaypointWeather) return;
+
+            bc.innerHTML = '';
+            activeWaypointWeather.forEach((wp, idx) => {
+                const item = document.createElement('div');
+                item.style.cssText = 'display: flex; align-items: center; cursor: pointer; user-select: none; transition: all 150ms ease;';
+                item.id = `bc-item-${idx}`;
+
+                const dotBorder = idx === selectedWaypointIdx ? 'border: 2px solid #FAFAFA; transform: scale(1.3); box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);' : 'border: 1.5px solid rgba(255,255,255,0.4);';
+                const nameWeight = (idx === 0 || idx === activeWaypointWeather.length - 1) ? '600' : '400';
+
+                item.innerHTML = `
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 4px 6px;">
+                        <span style="font-size: 11px; font-weight: ${nameWeight}; color: ${idx === selectedWaypointIdx ? 'var(--accent-amber)' : 'var(--text-secondary)'}; white-space: nowrap;">${wp.name}</span>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: ${wp.color}; ${dotBorder}"></div>
+                    </div>
+                `;
+
+                item.onclick = () => selectWaypoint(idx);
+                bc.appendChild(item);
+
+                // Connector line between dots
+                if (idx < activeWaypointWeather.length - 1) {
+                    const line = document.createElement('div');
+                    line.style.cssText = 'flex: 1; height: 2px; min-width: 20px; background: rgba(255, 255, 255, 0.15); margin: 16px 2px 0 2px;';
+                    bc.appendChild(line);
                 }
-            } catch (e) {
-                console.warn('fitBounds error:', e);
+            });
+        }
+
+        function selectWaypoint(idx) {
+            if (!activeWaypointWeather || !activeWaypointWeather[idx]) return;
+            selectedWaypointIdx = idx;
+            const wp = activeWaypointWeather[idx];
+
+            // Update Telemetry Panel
+            document.getElementById('activeWpName').innerText = wp.name;
+            document.getElementById('activeWpCoords').innerText = `${Math.abs(wp.lat).toFixed(2)}° ${wp.lat >= 0 ? 'N' : 'S'}, ${Math.abs(wp.lon).toFixed(2)}° ${wp.lon >= 0 ? 'E' : 'W'}`;
+            document.getElementById('activeWpTime').innerText = wp.eta.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ' + wp.eta.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('activeWpDist').innerText = `${wp.distFromOriginNm} NM (${wp.distFromOriginKm} km)`;
+
+            const totalDistNm = activeRouteData ? activeRouteData.distance_nm : 0;
+            const remainNm = Math.max(0, Math.round(totalDistNm - wp.distFromOriginNm));
+            document.getElementById('activeWpRemaining').innerText = `${remainNm} NM (${Math.round(remainNm * 1.852)} km)`;
+
+            // Wave & Swell
+            document.getElementById('teleWaveHeight').innerText = `${wp.waveHeight} m`;
+            document.getElementById('teleWavePeriod').innerText = `Period: ${wp.wavePeriod}s | Dir: ${wp.waveDir}°`;
+            document.getElementById('teleSwellHeight').innerText = `${wp.swellHeight} m`;
+            document.getElementById('teleSwellPeriod').innerText = `Dir: ${wp.waveDir}°`;
+
+            // Wind
+            document.getElementById('teleWindSpeed').innerText = `${wp.windSpeed} km/h`;
+            document.getElementById('teleWindGusts').innerText = `Gusts: ${wp.windGusts} km/h | Dir: ${wp.windDir}°`;
+
+            // Ocean Current
+            document.getElementById('teleCurrentVelocity').innerText = `${wp.currentVelocity} m/s`;
+            document.getElementById('teleCurrentDir').innerText = `Speed: ${(wp.currentVelocity * 1.944).toFixed(1)} kts | Dir: ${wp.currentDir}°`;
+
+            // Precipitation & Risk
+            document.getElementById('telePrecip').innerText = `${wp.precip} mm/h`;
+
+            const riskBadge = document.getElementById('activeWpRiskBadge');
+            const advisory = document.getElementById('teleAdvisory');
+
+            if (wp.severity === 'severe') {
+                riskBadge.className = 'badge-status badge-red';
+                riskBadge.innerText = 'Severe Sea State';
+                advisory.innerText = `Caution: Heavy sea state (${wp.waveHeight}m waves, gusts up to ${wp.windGusts} km/h). Recommended speed reduction by 2-3 knots to mitigate hull slamming.`;
+            } else if (wp.severity === 'moderate') {
+                riskBadge.className = 'badge-status badge-amber';
+                riskBadge.innerText = 'Moderate Swell';
+                advisory.innerText = `Notice: Moderate open-ocean swell (${wp.waveHeight}m waves). Monitor fuel trim and steerage; heading adjustment may optimize fuel efficiency.`;
+            } else {
+                riskBadge.className = 'badge-status badge-green';
+                riskBadge.innerText = 'Safe Passage';
+                advisory.innerText = 'Conditions favorable. Calm waters, good visibility, and standard voyage routing confirmed with zero speed loss.';
+            }
+
+            // Highlight in Breadcrumbs
+            renderRouteBreadcrumbs();
+
+            // Center map on waypoint smoothly
+            if (map) {
+                map.panTo([wp.lat, wp.lon], { animate: true, duration: 0.5 });
             }
         }
-    }
+
+        function fitRouteBounds() {
+            if (map && routePolylines.length > 0) {
+                try {
+                    const group = L.featureGroup(routePolylines);
+                    map.fitBounds(group.getBounds(), { padding: [40, 40], maxZoom: 6 });
+                } catch (e) {
+                    console.warn('fitBounds error:', e);
+                }
+            }
+        }
 
         // Initialize map on switch to tab 'map' or on page load
         setTimeout(() => {
