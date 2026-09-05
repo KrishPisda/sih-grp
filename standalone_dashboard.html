@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreightAI — Intelligent Freight Forecasting & Bulk Chartering</title>
+    
+    <!-- Google Fonts: Space Grotesk (Headings), Inter (Body), JetBrains Mono (Technical/Data) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js and Leaflet CSS/JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Lucide / FontAwesome icons with thin stroke style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* =========================================================
+           MINIMALIST DARK DESIGN SYSTEM TOKENS (LINEAR / RAYCAST STYLE)
+           ========================================================= */
+        :root {
+            /* Layered Slate Darkness */
+            --bg-deep: #0A0A0F;
+            --bg-elevated: #12121A;
+            --bg-surface: #1A1A24;
+            --card-bg: rgba(26, 26, 36, 0.6);
+            --card-hover-bg: rgba(26, 26, 36, 0.85);
+
+            /* Typography Colors */
+            --text-primary: #FAFAFA;
+            --text-secondary: #A1A1AA;
+            --text-muted: #71717A;
+
+            /* Warm Glowing Amber Accent */
+            --accent-amber: #F59E0B;
+            --accent-amber-glow: rgba(245, 158, 11, 0.15);
+            --accent-amber-bright: #FBBF24;
+            --accent-amber-intense: 0 0 20px rgba(245, 158, 11, 0.4);
+            
+            /* Status Accents (Refined & Soft) */
+            --status-emerald: #10B981;
+            --status-emerald-glow: rgba(16, 185, 129, 0.15);
+            --status-rose: #F43F5E;
+            --status-rose-glow: rgba(244, 63, 94, 0.15);
+
+            /* Subtle Borders */
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.16);
+            --border-accent: rgba(245, 158, 11, 0.3);
+
+            /* Typography Stacks */
+            --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            /* Radii */
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-full: 9999px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            letter-spacing: -0.01em;
+            position: relative;
+        }
+
+        /* Ambient Orbs (Soft, Distant Atmosphere) */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -120px;
+            left: 20%;
+            width: 600px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.035) 0%, transparent 70%);
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -150px;
+            right: 10%;
+            width: 700px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.025) 0%, transparent 70%);
+            filter: blur(140px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            letter-spacing: -0.03em;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .mono {
+            font-family: var(--font-mono);
+            letter-spacing: -0.02em;
+        }
+
+        /* =========================================================
+           SIDEBAR NAVIGATION (MINIMALIST & SPACIOUS)
+           ========================================================= */
+        .sidebar {
+            width: 270px;
+            background: var(--bg-elevated);
+            border-right: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            z-index: 10;
+        }
+
+        .brand-container {
+            padding: 24px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .brand-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-md);
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-amber);
+            font-size: 14px;
+            box-shadow: 0 0 16px rgba(245, 158, 11, 0.15);
+        }
+
+        .brand-info h2 {
+            font-size: 16px;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .brand-info span {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .badge-sih {
+            margin-left: auto;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            padding: 2px 7px;
+            border-radius: var(--radius-full);
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            color: var(--accent-amber);
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 16px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 200ms ease-out;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .nav-item i {
+            font-size: 14px;
+            width: 18px;
+            text-align: center;
+            color: var(--text-muted);
+            transition: color 200ms ease-out;
+        }
+
+        .nav-item:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .nav-item:hover i {
+            color: var(--accent-amber);
+        }
+
+        .nav-item.active {
+            background: rgba(245, 158, 11, 0.08);
+            color: var(--text-primary);
+            font-weight: 600;
+            border-left: 2px solid var(--accent-amber);
+        }
+
+        .nav-item.active i {
+            color: var(--accent-amber);
+        }
+
+        .sidebar-footer {
+            padding: 18px 20px;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 11px;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .live-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: var(--radius-full);
+            background: var(--accent-amber);
+            box-shadow: 0 0 8px var(--accent-amber);
+            margin-right: 6px;
+        }
+
+        /* =========================================================
+           TOP HEADER & TICKER
+           ========================================================= */
+        .main-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .header {
+            height: 64px;
+            background: rgba(18, 18, 26, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+        }
+
+        .market-ticker {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .ticker-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 12px;
+            border-radius: var(--radius-full);
+            background: rgba(26, 26, 36, 0.6);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .ticker-up { color: var(--status-emerald); font-weight: 500; font-family: var(--font-mono); }
+        .ticker-down { color: var(--status-rose); font-weight: 500; font-family: var(--font-mono); }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 7px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 200ms ease-out;
+        }
+
+        .btn-outline:hover {
+            color: var(--text-primary);
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* =========================================================
+           GLASS CARDS & CONTENT CONTAINERS
+           ========================================================= */
+        .page-content {
+            flex-grow: 1;
+            padding: 32px 36px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+            animation: fadeIn 250ms ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: all 300ms ease-out;
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--border-hover);
+            background: var(--card-hover-bg);
+        }
+
+        /* Highlighted Banner */
+        .banner-decision {
+            background: linear-gradient(135deg, rgba(26, 26, 36, 0.9) 0%, rgba(30, 25, 20, 0.6) 100%);
+            border: 1px solid var(--border-accent);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .banner-decision h3 {
+            font-size: 16px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .banner-decision p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 6px;
+            max-width: 680px;
+            line-height: 1.5;
+        }
+
+        /* KPI Metrics */
+        .grid-kpi {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .kpi-title {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .kpi-value {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .kpi-sub {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            margin-bottom: 28px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        /* Tables */
+        .table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .table-custom th {
+            text-align: left;
+            padding: 12px 14px;
+            color: var(--text-muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border-subtle);
+            font-weight: 500;
+        }
+
+        .table-custom td {
+            padding: 13px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: var(--text-secondary);
+        }
+
+        .table-custom tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-primary);
+        }
+
+        /* Status Pills */
+        .badge-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px;
+            border-radius: var(--radius-full);
+            font-size: 11px;
+            font-weight: 500;
+            font-family: var(--font-mono);
+        }
+
+        .badge-green { background: var(--status-emerald-glow); color: var(--status-emerald); }
+        .badge-amber { background: var(--accent-amber-glow); color: var(--accent-amber); }
+        .badge-red { background: var(--status-rose-glow); color: var(--status-rose); }
+
+        /* Form Controls */
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .input-control {
+            width: 100%;
+            background: rgba(26, 26, 36, 0.8);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            padding: 11px 14px;
+            font-family: var(--font-body);
+            font-size: 13px;
+            outline: none;
+            transition: all 200ms ease-out;
+        }
+
+        .input-control:focus {
+            border-color: rgba(245, 158, 11, 0.5);
+            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.15), 0 0 20px rgba(245, 158, 11, 0.1);
+        }
+
+        select.input-control option {
+            background: #14141E;
+            color: var(--text-primary);
+        }
+
+        /* Warm Amber Primary Button */
+        .btn-primary {
+            background: var(--accent-amber);
+            color: #0A0A0F;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 13px;
+            border: none;
+            border-radius: var(--radius-md);
+            padding: 12px 20px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 200ms ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            box-shadow: var(--accent-amber-intense);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        /* Map Container */
+        #portMap {
+            height: 420px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="brand-container">
+            <div class="brand-icon">
+                <i class="fa-solid fa-ship"></i>
+            </div>
+            <div class="brand-info">
+                <h2>FreightAI</h2>
+                <span>Ministry of Steel</span>
+            </div>
+            <span class="badge-sih">SIH26006</span>
+        </div>
+
+        <ul class="nav-links">
+            <li class="nav-item active" onclick="switchTab('dashboard')">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Executive Dashboard</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('forecast')">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Freight Rate Forecast</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('optimizer')">
+                <i class="fa-solid fa-calculator"></i>
+                <span>Vessel Charter Optimizer</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('procurement')">
+                <i class="fa-solid fa-cubes"></i>
+                <span>Procurement Planner</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('map')">
+                <i class="fa-solid fa-map"></i>
+                <span>Live Port & Vessel Map</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('intelligence')">
+                <i class="fa-solid fa-newspaper"></i>
+                <span>Market Intelligence</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('analytics')">
+                <i class="fa-solid fa-brain"></i>
+                <span>Explainable AI (XAI)</span>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <div><span class="live-dot"></span>ML Model: <strong style="color: var(--text-primary);">LSTM + Prophet</strong></div>
+            <div>Predictive Accuracy: <strong style="color: var(--accent-amber);">92.4% MAPE</strong></div>
+            <div>Target: East Coast India (Paradip/Vizag)</div>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTAINER -->
+    <div class="main-container">
+        <!-- TOP HEADER -->
+        <div class="header">
+            <div class="market-ticker">
+                <span style="color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;">Live Indices:</span>
+                <div class="ticker-pill">
+                    <span>BDI: <strong>1,842</strong></span>
+                    <span class="ticker-up">+3.2%</span>
+                </div>
+                <div class="ticker-pill">
+                    <span>Capesize (C5): <strong>$11.85/MT</strong></span>
+                    <span class="ticker-up">+4.1%</span>
+                </div>
+                <div class="ticker-pill">
+                    <span>Panamax: <strong>$14,250/d</strong></span>
+                    <span class="ticker-down">-1.3%</span>
+                </div>
+                <div class="ticker-pill">
+                    <span>VLSFO Bunker: <strong>$592/MT</strong></span>
+                    <span class="ticker-down">-0.8%</span>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="btn-outline"><i class="fa-solid fa-arrows-rotate"></i> Sync Data</button>
+                <button class="btn-outline"><i class="fa-solid fa-shield-halved"></i> SAIL / RINL</button>
+            </div>
+        </div>
+
+        <!-- PAGE 1: EXECUTIVE DASHBOARD -->
+        <div id="page-dashboard" class="page-content active">
+            <!-- Decision Banner -->
+            <div class="banner-decision">
+                <div>
+                    <h3>
+                        <i class="fa-solid fa-circle-check" style="color: var(--status-emerald);"></i>
+                        Recommended Action: Charter Now (Next 5 Days)
+                    </h3>
+                    <p>
+                        Forward forecast anticipates a <strong>12.4% rise</strong> in Capesize & Panamax spot fixtures by late September due to Australian terminal maintenance and post-monsoon stockbuilding.
+                    </p>
+                </div>
+                <div style="text-align: right;">
+                    <span style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Projected Cost Savings</span>
+                    <h2 style="color: var(--accent-amber); font-size: 28px; margin-top: 4px;">₹ 42.8 Cr</h2>
+                </div>
+            </div>
+
+            <!-- KPI Row -->
+            <div class="grid-kpi">
+                <div class="card">
+                    <div class="kpi-title">
+                        <span>Baltic Dry Index (BDI)</span>
+                        <i class="fa-solid fa-water text-muted"></i>
+                    </div>
+                    <div class="kpi-value">
+                        1,842
+                        <span class="ticker-up" style="font-size: 14px;">+3.2%</span>
+                    </div>
+                    <div class="kpi-sub">30d target: <strong style="color: var(--text-primary);">2,080 (+13%)</strong></div>
+                </div>
+
+                <div class="card">
+                    <div class="kpi-title">
+                        <span>Aus → Paradip Capesize</span>
+                        <i class="fa-solid fa-ship text-muted"></i>
+                    </div>
+                    <div class="kpi-value">
+                        $17.40 <span style="font-size: 14px; font-weight: normal; color: var(--text-muted);">/ MT</span>
+                    </div>
+                    <div class="kpi-sub">Model Confidence: <span class="badge-status badge-amber">87% High</span></div>
+                </div>
+
+                <div class="card">
+                    <div class="kpi-title">
+                        <span>Active Fleet Inbound</span>
+                        <i class="fa-solid fa-route text-muted"></i>
+                    </div>
+                    <div class="kpi-value">
+                        6 Vessels
+                    </div>
+                    <div class="kpi-sub">3 Transit, 2 Anchorage, 1 Berth</div>
+                </div>
+
+                <div class="card">
+                    <div class="kpi-title">
+                        <span>Port Wait Time (East Coast)</span>
+                        <i class="fa-solid fa-clock text-muted"></i>
+                    </div>
+                    <div class="kpi-value">
+                        3.2 Days
+                    </div>
+                    <div class="kpi-sub" style="color: var(--status-emerald);">-0.8d vs last week</div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="grid-2">
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                        <h4>Freight Rate 90-Day Trajectory ($/MT)</h4>
+                        <span style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono);">LSTM + Prophet Ensemble</span>
+                    </div>
+                    <canvas id="dashboardTrendChart" height="150"></canvas>
+                </div>
+
+                <div class="card">
+                    <h4 style="margin-bottom: 16px;">Core Trade Routes</h4>
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Route</th>
+                                <th>Class</th>
+                                <th>Rate</th>
+                                <th>Trend</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Australia → Paradip</td>
+                                <td>Capesize</td>
+                                <td class="mono">$17.40/T</td>
+                                <td><span class="badge-status badge-amber">Rising</span></td>
+                            </tr>
+                            <tr>
+                                <td>Indonesia → Vizag</td>
+                                <td>Supramax</td>
+                                <td class="mono">$11.20/T</td>
+                                <td><span class="badge-status badge-green">Stable</span></td>
+                            </tr>
+                            <tr>
+                                <td>USA East Coast → Vizag</td>
+                                <td>Panamax</td>
+                                <td class="mono">$34.50/T</td>
+                                <td><span class="badge-status badge-amber">Rising</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mozambique → Ennore</td>
+                                <td>Supramax</td>
+                                <td class="mono">$16.80/T</td>
+                                <td><span class="badge-status badge-green">Softening</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2: FREIGHT RATE FORECAST -->
+        <div id="page-forecast" class="page-content">
+            <div class="grid-2">
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+                        <h4>90-Day Multi-Factor Rate Forecast</h4>
+                        <div style="display: flex; gap: 6px;">
+                            <button class="btn-outline" style="padding: 4px 10px; font-size: 11px;" onclick="updateForecastHorizon(7)">7d</button>
+                            <button class="btn-outline" style="padding: 4px 10px; font-size: 11px;" onclick="updateForecastHorizon(30)">30d</button>
+                            <button class="btn-outline" style="padding: 4px 10px; font-size: 11px; border-color: var(--accent-amber); color: var(--accent-amber);" onclick="updateForecastHorizon(90)">90d</button>
+                        </div>
+                    </div>
+                    <canvas id="forecastDetailChart" height="160"></canvas>
+                    <div style="margin-top: 18px; font-size: 12px; color: var(--text-muted); display: flex; gap: 24px;">
+                        <span><i class="fa-solid fa-circle" style="color: #F59E0B; font-size: 10px;"></i> Mean Forecast</span>
+                        <span><i class="fa-solid fa-circle" style="color: rgba(245, 158, 11, 0.2); font-size: 10px;"></i> 95% Confidence Band</span>
+                        <span><i class="fa-solid fa-circle" style="color: #F43F5E; font-size: 10px;"></i> Anomaly Spike Level</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 style="margin-bottom: 18px;">Forecast Parameters</h4>
+                    <div class="input-group">
+                        <label>Trade Corridor</label>
+                        <select class="input-control" id="fcRoute">
+                            <option value="aus_paradip">Gladstone (Aus) → Paradip (Coking Coal)</option>
+                            <option value="indo_vizag">Kalimantan (Indo) → Visakhapatnam (Thermal Coal)</option>
+                            <option value="usa_vizag">Hampton Roads (USA) → Vizag (Met Coal)</option>
+                            <option value="moz_ennore">Maputo (Mozambique) → Ennore</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Vessel Class</label>
+                        <select class="input-control" id="fcVessel">
+                            <option value="capesize">Capesize (120,000 - 180,000 DWT)</option>
+                            <option value="panamax">Panamax (65,000 - 85,000 DWT)</option>
+                            <option value="supramax">Supramax (50,000 - 64,000 DWT)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Cargo Quantity (Metric Tonnes)</label>
+                        <input type="number" class="input-control mono" value="150000" id="fcVolume">
+                    </div>
+
+                    <button class="btn-primary" onclick="runCustomForecast()"><i class="fa-solid fa-bolt"></i> Generate Forecast</button>
+
+                    <div style="margin-top: 22px; padding: 14px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: var(--radius-md);">
+                        <div style="font-size: 12px; font-weight: 600; color: var(--accent-amber);">Anomaly Detection Alert</div>
+                        <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.4;">
+                            Isolation Forest model identifies unusual short-term spot spikes around Panama Canal. Capesize around Cape of Good Hope recommended.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 3: VESSEL CHARTER OPTIMIZER -->
+        <div id="page-optimizer" class="page-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4 style="margin-bottom: 10px;">Fleet Optimization & Terminal Constraints</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 22px; line-height: 1.5;">
+                        Linear Programming (PuLP) evaluates cargo parcel requirements against East Coast draft restrictions (Paradip 17.5m, Vizag 16.5m/14.5m) to minimize landed unit cost.
+                    </p>
+
+                    <div class="grid-3" style="margin-bottom: 22px;">
+                        <div style="background: rgba(245, 158, 11, 0.06); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 18px;">
+                            <span class="badge-status badge-amber">Optimal Choice</span>
+                            <h5 style="margin: 12px 0 4px 0; font-size: 15px;">2 × Capesize</h5>
+                            <div class="mono" style="font-size: 22px; font-weight: 700; color: var(--accent-amber);">$17.40 / MT</div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Total Outlay: ₹198.4 Cr</div>
+                            <div style="font-size: 11px; color: var(--status-emerald); margin-top: 4px;">Paradip Deep Berth (17.5m Draft) OK</div>
+                        </div>
+
+                        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px;">
+                            <span class="badge-status badge-amber">Sub-Optimal</span>
+                            <h5 style="margin: 12px 0 4px 0; font-size: 15px;">4 × Panamax</h5>
+                            <div class="mono" style="font-size: 22px; font-weight: 700; color: var(--text-primary);">$21.10 / MT</div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Total Outlay: ₹240.5 Cr</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Cost delta: +₹42.1 Cr</div>
+                        </div>
+
+                        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px;">
+                            <span class="badge-status badge-red">Inefficient</span>
+                            <h5 style="margin: 12px 0 4px 0; font-size: 15px;">6 × Supramax</h5>
+                            <div class="mono" style="font-size: 22px; font-weight: 700; color: var(--text-primary);">$24.50 / MT</div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Total Outlay: ₹279.3 Cr</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Excess demurrage & handling fees</div>
+                        </div>
+                    </div>
+
+                    <canvas id="vesselComparisonChart" height="130"></canvas>
+                </div>
+
+                <div class="card">
+                    <h4 style="margin-bottom: 18px;">Consignment Input</h4>
+                    <div class="input-group">
+                        <label>Consignment Cargo</label>
+                        <select class="input-control">
+                            <option>Prime Hard Coking Coal (Australia)</option>
+                            <option>PCI Metallurgical Coal (Russia)</option>
+                            <option>Thermal Coal (Indonesia)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Volume (Metric Tonnes)</label>
+                        <input type="number" class="input-control mono" value="300000">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Discharge Port</label>
+                        <select class="input-control">
+                            <option>Paradip Port (Draft: 17.5m - Capesize)</option>
+                            <option>Visakhapatnam (Outer: 16.5m, Inner: 14.5m)</option>
+                            <option>Ennore / Kamarajar (Draft: 15.5m - Panamax)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Required Arrival Window</label>
+                        <input type="date" class="input-control mono" value="2026-10-15">
+                    </div>
+
+                    <button class="btn-primary"><i class="fa-solid fa-play"></i> Run PuLP Solver</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 4: PROCUREMENT PLANNER -->
+        <div id="page-procurement" class="page-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4 style="margin-bottom: 10px;">Quarterly Procurement Split: Buy Now vs. Defer</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5;">
+                        Inventory holding cost vs. forward freight rate contango optimization for steel plant blast furnaces.
+                    </p>
+                    <canvas id="procurementSplitChart" height="150"></canvas>
+                </div>
+
+                <div class="card">
+                    <h4 style="margin-bottom: 16px;">Total Landed Cost Breakdown</h4>
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Cost Component</th>
+                                <th>$/MT</th>
+                                <th>Share</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FOB Coal Price</td>
+                                <td class="mono">$135.00</td>
+                                <td>75.4%</td>
+                            </tr>
+                            <tr>
+                                <td>Ocean Freight (Charter)</td>
+                                <td class="mono">$17.40</td>
+                                <td>9.7%</td>
+                            </tr>
+                            <tr>
+                                <td>Port Handling & Customs</td>
+                                <td class="mono">$14.20</td>
+                                <td>7.9%</td>
+                            </tr>
+                            <tr>
+                                <td>Demurrage Risk Provision</td>
+                                <td class="mono">$3.50</td>
+                                <td>2.0%</td>
+                            </tr>
+                            <tr>
+                                <td>Inland Freight to Plant</td>
+                                <td class="mono">$8.90</td>
+                                <td>5.0%</td>
+                            </tr>
+                            <tr style="font-weight: 600; color: var(--text-primary); border-top: 1px solid var(--border-subtle);">
+                                <td>Net Landed Unit Cost</td>
+                                <td class="mono" style="color: var(--accent-amber);">$179.00 / MT</td>
+                                <td>100.0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="margin-top: 24px; text-align: center; padding: 18px; background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15); border-radius: var(--radius-md);">
+                        <span style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">1,000,000 MT Total Procurement Cost</span>
+                        <div class="mono" style="font-size: 26px; font-weight: 700; color: var(--accent-amber); margin-top: 4px;">₹ 1,503.6 Cr</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 5: LIVE PORT & VESSEL MAP -->
+        <div id="page-map" class="page-content">
+            <div class="grid-2">
+                <div class="card" style="padding: 18px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                        <h4>East Coast Maritime AIS Feed</h4>
+                        <span class="badge-status badge-green"><span class="live-dot" style="background: var(--status-emerald);"></span>Live AIS</span>
+                    </div>
+                    <div id="portMap"></div>
+                </div>
+
+                <div class="card">
+                    <h4 style="margin-bottom: 16px;">East Coast Terminal Status</h4>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="background: var(--bg-surface); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
+                            <div style="display: flex; justify-content: space-between;">
+                                <strong>Paradip Port Authority</strong>
+                                <span class="badge-status badge-green">2.1d Queue</span>
+                            </div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+                                Max Draft: 17.5m | Active Berths: 14 | Coal Vessels Waiting: 3
+                            </div>
+                        </div>
+
+                        <div style="background: var(--bg-surface); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--accent-amber);">
+                            <div style="display: flex; justify-content: space-between;">
+                                <strong>Visakhapatnam Port</strong>
+                                <span class="badge-status badge-amber">3.8d Queue</span>
+                            </div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+                                Outer Harbour Draft: 16.5m | Berths: 9 | Waiting: 5
+                            </div>
+                        </div>
+
+                        <div style="background: var(--bg-surface); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
+                            <div style="display: flex; justify-content: space-between;">
+                                <strong>Kamarajar (Ennore) Port</strong>
+                                <span class="badge-status badge-green">1.4d Queue</span>
+                            </div>
+                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+                                Max Draft: 15.5m | Dedicated Coal Berths: 4 | Waiting: 1
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 style="margin: 20px 0 12px 0; font-size: 14px;">Consortium Vessel Lineup</h5>
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Vessel</th>
+                                <th>Cargo</th>
+                                <th>DWT</th>
+                                <th>ETA</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MV Kalinga Star</td>
+                                <td>Coking Coal</td>
+                                <td class="mono">178k</td>
+                                <td>Sep 09</td>
+                                <td><span class="badge-status badge-green">On Schedule</span></td>
+                            </tr>
+                            <tr>
+                                <td>MV Steel Glory</td>
+                                <td>Met Coal</td>
+                                <td class="mono">82k</td>
+                                <td>Sep 12</td>
+                                <td><span class="badge-status badge-amber">1d Delay</span></td>
+                            </tr>
+                            <tr>
+                                <td>MV Bay Trader</td>
+                                <td>PCI Coal</td>
+                                <td class="mono">64k</td>
+                                <td>Sep 14</td>
+                                <td><span class="badge-status badge-green">On Schedule</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 6: MARKET INTELLIGENCE & NEWS FEED -->
+        <div id="page-intelligence" class="page-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4 style="margin-bottom: 18px;">NLP News Sentiment Analysis (FinBERT)</h4>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <div style="background: var(--bg-surface); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-rose);">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <strong style="font-size: 13px;">Queensland Port Rail Workers Issue Strike Warning</strong>
+                                <span class="badge-status badge-red">Score: -0.74</span>
+                            </div>
+                            <p style="font-size: 12px; color: var(--text-muted); margin-top: 6px; line-height: 1.4;">
+                                Threats of coal rail disruption in Dalrymple Bay terminal may restrict outbound tonnage and trigger spot Capesize surcharges.
+                            </p>
+                            <span style="font-size: 11px; color: var(--accent-amber); margin-top: 6px; display: inline-block; font-family: var(--font-mono);">Forecast impact: +4.2% spot rate</span>
+                        </div>
+
+                        <div style="background: var(--bg-surface); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--status-emerald);">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <strong style="font-size: 13px;">Singapore Bunker Fuel Stocks Reach 6-Month High</strong>
+                                <span class="badge-status badge-green">Score: +0.62</span>
+                            </div>
+                            <p style="font-size: 12px; color: var(--text-muted); margin-top: 6px; line-height: 1.4;">
+                                Robust supply of VLSFO cools bunker spot rates to $592/MT, reducing total voyage operating costs for Indian Ocean transits.
+                            </p>
+                            <span style="font-size: 11px; color: var(--accent-amber); margin-top: 6px; display: inline-block; font-family: var(--font-mono);">Voyage savings: -$0.35/MT</span>
+                        </div>
+
+                        <div style="background: var(--bg-surface); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 3px solid var(--accent-amber);">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <strong style="font-size: 13px;">Bay of Bengal Monsoon Retreat Tracking Normally</strong>
+                                <span class="badge-status badge-amber">Score: +0.45</span>
+                            </div>
+                            <p style="font-size: 12px; color: var(--text-muted); margin-top: 6px; line-height: 1.4;">
+                                IMD reports calm sea states expected around Paradip and Dhamra anchorage areas through late September.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 style="margin-bottom: 18px;">Geopolitical & Trade Indicators</h4>
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Indicator</th>
+                                <th>Current Value</th>
+                                <th>Risk Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Panama Canal Daily Transits</td>
+                                <td class="mono">34 slots/day</td>
+                                <td><span class="badge-status badge-amber">Moderate</span></td>
+                            </tr>
+                            <tr>
+                                <td>Red Sea Bab-el-Mandeb Diverted %</td>
+                                <td class="mono">68% Bulk</td>
+                                <td><span class="badge-status badge-red">Critical</span></td>
+                            </tr>
+                            <tr>
+                                <td>USD / INR Exchange Rate</td>
+                                <td class="mono">₹83.95</td>
+                                <td><span class="badge-status badge-amber">Inflationary</span></td>
+                            </tr>
+                            <tr>
+                                <td>China Crude Steel Monthly Output</td>
+                                <td class="mono">88.2 MT</td>
+                                <td><span class="badge-status badge-green">Expanding</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 7: EXPLAINABLE AI (XAI) & WHAT-IF -->
+        <div id="page-analytics" class="page-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h4 style="margin-bottom: 10px;">SHAP Feature Attribution Matrix</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5;">
+                        Relative factor contribution underlying the current $17.40/MT rate forecast for September:
+                    </p>
+                    <canvas id="shapChart" height="150"></canvas>
+                </div>
+
+                <div class="card">
+                    <h4 style="margin-bottom: 18px;"><i class="fa-solid fa-sliders" style="color: var(--accent-amber); margin-right: 6px;"></i> Interactive "What-If" Scenario Lab</h4>
+                    <div class="input-group">
+                        <label>VLSFO Bunker Fuel Price (<span id="bunkerVal" class="mono">$592</span>/MT)</label>
+                        <input type="range" class="input-control" min="400" max="800" value="592" oninput="updateScenario(this.value, 'bunker')">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Indian Steel Demand Growth (<span id="demandVal" class="mono">+0%</span>)</label>
+                        <input type="range" class="input-control" min="-20" max="40" value="0" oninput="updateScenario(this.value, 'demand')">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Paradip Port Waiting Queue (<span id="waitVal" class="mono">3</span> days)</label>
+                        <input type="range" class="input-control" min="1" max="10" value="3" oninput="updateScenario(this.value, 'wait')">
+                    </div>
+
+                    <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: var(--radius-md); padding: 18px; margin-top: 24px; text-align: center;">
+                        <span style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Dynamic Forecast Output</span>
+                        <h2 id="simulatedRate" class="mono" style="color: var(--accent-amber); font-size: 30px; margin: 6px 0;">$17.40 / MT</h2>
+                        <span id="simulatedSavings" style="font-size: 12px; color: var(--status-emerald); font-family: var(--font-mono);">Baseline delta: ±$0.00 / MT</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Benchmark Cards -->
+            <div class="card">
+                <h4 style="margin-bottom: 16px;">Model Benchmarking & Validation (3-Year Backtesting)</h4>
+                <div class="grid-kpi" style="margin-bottom: 0;">
+                    <div style="background: var(--bg-surface); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                        <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">RMSE (Root Mean Sq Error)</div>
+                        <div class="mono" style="font-size: 24px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">$0.84 / MT</div>
+                    </div>
+                    <div style="background: var(--bg-surface); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                        <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">MAPE (Mean Abs % Error)</div>
+                        <div class="mono" style="font-size: 24px; font-weight: 700; color: var(--accent-amber); margin-top: 4px;">5.12%</div>
+                    </div>
+                    <div style="background: var(--bg-surface); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                        <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">R² Goodness of Fit</div>
+                        <div class="mono" style="font-size: 24px; font-weight: 700; color: var(--text-primary); margin-top: 4px;">0.934</div>
+                    </div>
+                    <div style="background: var(--bg-surface); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                        <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Directional Accuracy</div>
+                        <div class="mono" style="font-size: 24px; font-weight: 700; color: var(--status-emerald); margin-top: 4px;">88.6%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.page-content').forEach(el => el.classList.remove('active'));
+            
+            event.currentTarget.classList.add('active');
+            const target = document.getElementById('page-' + tabId);
+            if (target) {
+                target.classList.add('active');
+                if (tabId === 'map' && map) {
+                    setTimeout(() => { map.invalidateSize(); }, 200);
+                }
+            }
+        }
+
+        // Minimalist Dark Palette Colors for Charts
+        const amberColor = '#F59E0B';
+        const amberGlow = 'rgba(245, 158, 11, 0.12)';
+        const textMuted = '#71717A';
+        const gridColor = 'rgba(255, 255, 255, 0.04)';
+
+        // Chart 1: Trend & Forecast
+        const ctx1 = document.getElementById('dashboardTrendChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['Jul 1', 'Jul 15', 'Aug 1', 'Aug 15', 'Sep 1 (Now)', 'Sep 15 (Est)', 'Sep 30 (Est)', 'Oct 15 (Est)'],
+                datasets: [
+                    {
+                        label: 'Historical Actual ($/MT)',
+                        data: [15.2, 16.1, 15.8, 16.9, 17.4, null, null, null],
+                        borderColor: '#A1A1AA',
+                        backgroundColor: 'transparent',
+                        tension: 0.2,
+                        borderWidth: 2,
+                        pointRadius: 3
+                    },
+                    {
+                        label: 'AI Forecast (LSTM+Prophet)',
+                        data: [null, null, null, null, 17.4, 18.9, 19.8, 20.4],
+                        borderColor: amberColor,
+                        backgroundColor: amberGlow,
+                        borderDash: [5, 4],
+                        tension: 0.2,
+                        borderWidth: 2,
+                        fill: true,
+                        pointRadius: 3
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { labels: { color: '#FAFAFA', font: { family: 'Inter', size: 12 } } } },
+                scales: {
+                    x: { grid: { color: gridColor }, ticks: { color: textMuted, font: { family: 'Inter' } } },
+                    y: { grid: { color: gridColor }, ticks: { color: textMuted, font: { family: 'Inter' } } }
+                }
+            }
+        });
+
+        // Chart 2: Detailed 90d Forecast with Confidence Band
+        const ctx2 = document.getElementById('forecastDetailChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['Day 0', 'Day 10', 'Day 20', 'Day 30', 'Day 45', 'Day 60', 'Day 75', 'Day 90'],
+                datasets: [
+                    {
+                        label: 'Upper 95% Confidence',
+                        data: [17.4, 18.5, 19.8, 21.2, 22.5, 23.8, 24.5, 25.2],
+                        borderColor: 'transparent',
+                        backgroundColor: 'rgba(245, 158, 11, 0.08)',
+                        fill: '+1',
+                        pointRadius: 0
+                    },
+                    {
+                        label: 'Predicted Mean Rate',
+                        data: [17.4, 18.0, 18.9, 19.8, 20.7, 21.5, 22.1, 22.6],
+                        borderColor: amberColor,
+                        backgroundColor: 'transparent',
+                        borderWidth: 2.5,
+                        pointRadius: 2
+                    },
+                    {
+                        label: 'Lower 95% Confidence',
+                        data: [17.4, 17.5, 18.0, 18.4, 18.9, 19.2, 19.7, 20.0],
+                        borderColor: 'transparent',
+                        backgroundColor: 'transparent',
+                        pointRadius: 0
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { labels: { color: '#FAFAFA', font: { family: 'Inter' } } } },
+                scales: {
+                    x: { grid: { color: gridColor }, ticks: { color: textMuted, font: { family: 'Inter' } } },
+                    y: { grid: { color: gridColor }, ticks: { color: textMuted, font: { family: 'Inter' } } }
+                }
+            }
+        });
+
+        // Chart 3: Vessel Cost Comparison
+        const ctx3 = document.getElementById('vesselComparisonChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['Capesize (170k DWT)', 'Panamax (80k DWT)', 'Supramax (58k DWT)'],
+                datasets: [
+                    {
+                        label: 'Unit Landed Cost ($/MT)',
+                        data: [17.4, 21.1, 24.5],
+                        backgroundColor: [amberColor, '#3F3F46', '#27272A'],
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { color: '#FAFAFA', font: { family: 'Inter' } } },
+                    y: { grid: { color: gridColor }, ticks: { color: textMuted, font: { family: 'Inter' } } }
+                }
+            }
+        });
+
+        // Chart 4: Procurement Split
+        const ctx4 = document.getElementById('procurementSplitChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+                labels: ['Spot Charter Q1 (500k MT - Optimum)', 'Forward Hedged Q2 (300k MT)', 'Deferred Q3 (200k MT)'],
+                datasets: [{
+                    data: [500000, 300000, 200000],
+                    backgroundColor: [amberColor, '#52525B', '#27272A'],
+                    borderColor: '#0A0A0F',
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { labels: { color: '#FAFAFA', font: { family: 'Inter' } }, position: 'bottom' } }
+            }
+        });
+
+        // Chart 5: SHAP Factor Attribution
+        const ctx5 = document.getElementById('shapChart').getContext('2d');
+        new Chart(ctx5, {
+            type: 'bar',
+            data: {
+                labels: ['Newcastle Coal Benchmark', 'BDI Momentum (14d)', 'Bunker Fuel (VLSFO)', 'Monsoon Climatology Factor', 'Paradip Congestion Lag', 'FinBERT News Sentiment'],
+                datasets: [{
+                    label: 'Contribution %',
+                    data: [34, 28, 16, 11, 7, 4],
+                    backgroundColor: amberColor,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { grid: { color: gridColor }, ticks: { color: textMuted, font: { family: 'Inter' } } },
+                    y: { grid: { display: false }, ticks: { color: '#FAFAFA', font: { family: 'Inter' } } }
+                }
+            }
+        });
+
+        // Map Setup
+        const map = L.map('portMap').setView([18.5, 84.5], 6);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+            maxZoom: 18
+        }).addTo(map);
+
+        const ports = [
+            { name: "Paradip Port Authority", coords: [20.2644, 86.6667], congestion: "Normal (3 vessels)", draft: "17.5m" },
+            { name: "Visakhapatnam Port", coords: [17.6868, 83.2185], congestion: "Moderate (5 vessels)", draft: "16.5m" },
+            { name: "Kamarajar (Ennore) Port", coords: [13.2625, 80.3340], congestion: "Low (1 vessel)", draft: "15.5m" }
+        ];
+
+        ports.forEach(p => {
+            const marker = L.circleMarker(p.coords, {
+                radius: 7,
+                fillColor: "#F59E0B",
+                color: "#FAFAFA",
+                weight: 1.5,
+                opacity: 1,
+                fillOpacity: 0.9
+            }).addTo(map);
+            marker.bindPopup(`<strong style="font-family: 'Space Grotesk', sans-serif;">${p.name}</strong><br>Max Draft: ${p.draft}<br>Anchorage Queue: ${p.congestion}`);
+        });
+
+        const vessels = [
+            { name: "MV Kalinga Star (Capesize)", coords: [19.2, 85.8], status: "Approaching Paradip Berth, ETA 24h" },
+            { name: "MV Steel Glory (Panamax)", coords: [16.8, 83.9], status: "Inbound Vizag Outer Anchorage, ETA 48h" },
+            { name: "MV Bay Trader (Supramax)", coords: [14.0, 81.2], status: "Discharging Ennore Berth 2" }
+        ];
+
+        vessels.forEach(v => {
+            const shipIcon = L.divIcon({
+                html: '<i class="fa-solid fa-ship" style="color: #F59E0B; font-size: 15px; filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6));"></i>',
+                iconSize: [20, 20],
+                className: 'ship-marker'
+            });
+            L.marker(v.coords, { icon: shipIcon }).addTo(map).bindPopup(`<strong>${v.name}</strong><br>${v.status}`);
+        });
+
+        // Interactive What-If Scenario Calculation
+        let baseRate = 17.40;
+        function updateScenario(val, type) {
+            if (type === 'bunker') {
+                document.getElementById('bunkerVal').innerText = '$' + val;
+            } else if (type === 'demand') {
+                document.getElementById('demandVal').innerText = (val >= 0 ? '+' : '') + val + '%';
+            } else if (type === 'wait') {
+                document.getElementById('waitVal').innerText = val;
+            }
+
+            const bunkerDelta = (parseFloat(document.getElementById('bunkerVal').innerText.replace('$', '')) - 592) * 0.008;
+            const demandDelta = parseFloat(document.getElementById('demandVal').innerText.replace('%', '')) * 0.12;
+            const waitDelta = (parseFloat(document.getElementById('waitVal').innerText) - 3) * 0.35;
+
+            const newRate = (baseRate + bunkerDelta + demandDelta + waitDelta).toFixed(2);
+            document.getElementById('simulatedRate').innerText = '$' + newRate + ' / MT';
+
+            const diff = (newRate - baseRate).toFixed(2);
+            const sign = diff >= 0 ? '+' : '';
+            document.getElementById('simulatedSavings').innerText = `Baseline delta: ${sign}$${diff} / MT`;
+        }
+    </script>
+</body>
+</html>
