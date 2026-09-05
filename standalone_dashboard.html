@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="maritime_routes.js"></script>
+    <script src="dynamic_routes_engine.js"></script>
     <!-- FontAwesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -889,6 +890,7 @@
                                 <option value="AUPHE" selected>Port Hedland, Australia (AUPHE)</option>
                                 <option value="AUHAY">Hay Point, Australia (AUHAY)</option>
                                 <option value="AUGLT">Gladstone, Australia (AUGLT)</option>
+                                <option value="IDBPN">Kalimantan / Balikpapan, Indonesia (IDBPN)</option>
                                 <option value="ZARCB">Richards Bay, South Africa (ZARCB)</option>
                                 <option value="USNFK">Hampton Roads / Norfolk, USA (USNFK)</option>
                                 <option value="RUVOS">Vostochny, Russia (RUVOS)</option>
@@ -902,6 +904,7 @@
                                 <option value="INPAV" selected>Paradip Port (17.5m Draft)</option>
                                 <option value="INVTZ">Visakhapatnam Port (16.5m Draft)</option>
                                 <option value="INENN">Kamarajar Ennore Port (15.5m Draft)</option>
+                                <option value="INMAA">Chennai Port (16.5m Draft)</option>
                             </select>
                         </div>
 
@@ -974,8 +977,8 @@
                             Estimated Landed Cost: <strong class="mono gold" id="tab1LandedDisplay" style="font-size: 16px;">$176.40 / MT</strong>
                             <span style="color: var(--text-muted); margin-left: 8px;">(Total: <strong class="mono" id="tab1TotalCrDisplay">₹ 222.1 Cr</strong>)</span>
                         </div>
-                        <button class="btn-gold" onclick="switchWorkflowTab(2)">
-                            Continue to Route & Weather <i class="fa-solid fa-arrow-right"></i>
+                        <button class="btn-gold" id="btnAnalyzeVoyage" onclick="triggerAnalyzeVoyage()">
+                            <i class="fa-solid fa-compass"></i> Analyze Voyage & Weather <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
@@ -1161,7 +1164,7 @@
                         </div>
                         <div style="text-align: right;">
                             <span style="font-size: 11px; color: var(--text-muted);">BEST DATE:</span>
-                            <strong class="gold mono" style="font-size: 14px; margin-left: 6px;">20 SEPTEMBER 2026</strong>
+                            <strong class="gold mono" style="font-size: 14px; margin-left: 6px;" id="tab3BestDateDisplay">20 SEPTEMBER 2026</strong>
                         </div>
                     </div>
 
@@ -1181,24 +1184,24 @@
 
                     <div class="reason-grid">
                         <div class="reason-box">
-                            <div class="rb-title">1. BDI & FREIGHT TIMING</div>
-                            <div class="rb-text up">Optimal Spot Window</div>
-                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Sailing 21 Sep saves $40,115 vs day 0</div>
+                            <div class="rb-title">1. MARKET & TIMING</div>
+                            <div class="rb-text up" id="xaiReason1Val">Optimal Spot Window</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;" id="xaiReason1Desc">Market forecast models favourable bunker/TCE spread</div>
                         </div>
                         <div class="reason-box">
-                            <div class="rb-title">2. VESSEL SCALE FIT</div>
-                            <div class="rb-text up">Capesize (180k DWT)</div>
-                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Max scale for 150k MT at Paradip (17.5m draft)</div>
+                            <div class="rb-title">2. VESSEL SCALE & DRAFT</div>
+                            <div class="rb-text up" id="xaiReason2Val">Optimal Capacity Match</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;" id="xaiReason2Desc">Fits permissible berth draft at discharge terminal</div>
                         </div>
                         <div class="reason-box">
-                            <div class="rb-title">3. BUNKER OPTIMIZATION</div>
-                            <div class="rb-text up">516 MT VLSFO Burn</div>
-                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Paradip benchmark ($638/MT) locks voyage fuel</div>
+                            <div class="rb-title">3. BUNKER & WEATHER</div>
+                            <div class="rb-text up" id="xaiReason3Val">Low Weather Drag</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;" id="xaiReason3Desc">Ocean swells under safety limits across corridor</div>
                         </div>
                         <div class="reason-box">
                             <div class="rb-title">4. COMPOSITE RISK INDEX</div>
-                            <div class="rb-text up">32.4% (Threshold: 35%)</div>
-                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Open-Meteo waves < 1.6m; port wait 1.2 days</div>
+                            <div class="rb-text up" id="xaiReason4Val">Risk < 35% Threshold</div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;" id="xaiReason4Desc">Combined weather, port wait, and route hazard score</div>
                         </div>
                     </div>
 
@@ -1460,106 +1463,27 @@
             });
         }
 
-        // AUTOMATIC VOYAGE STATE CALCULATION
-        function updateVoyageState() {
-            const origin = document.getElementById('vOrigin').value;
-            const dest = document.getElementById('vDest').value;
-            const qty = parseFloat(document.getElementById('vQuantity').value) || 150000;
-            const cargo = document.getElementById('vCargo').value;
+        // Dynamic logic handled by dynamic_routes_engine.js
+</script>
 
-            let dist = 3074;
-            if (origin === 'AUHAY') dist = 4806;
-            else if (origin === 'AUGLT') dist = 4995;
-            else if (origin === 'ZARCB') dist = 4321;
-            else if (origin === 'USNFK') dist = 9056;
+    <!-- DYNAMIC ROUTE & WEATHER CALCULATION OVERLAY -->
+    <div id="routeLoadingOverlay" style="display: none; position: fixed; inset: 0; background: rgba(9, 11, 16, 0.85); backdrop-filter: blur(8px); z-index: 9999; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <div style="background: var(--bg-elevated); border: 1px solid var(--gold-border); border-radius: 12px; padding: 32px 48px; box-shadow: 0 0 50px rgba(0,0,0,0.8); max-width: 440px; width: 90%;">
+            <div style="font-size: 32px; color: var(--gold); margin-bottom: 16px;">
+                <i class="fa-solid fa-circle-notch fa-spin"></i>
+            </div>
+            <h3 id="overlayStatusTitle" style="font-family: var(--font-display); font-size: 18px; color: #FFF; margin-bottom: 8px;">CALCULATING MARITIME ROUTE...</h3>
+            <p id="overlayStatusDesc" style="font-size: 12px; color: var(--text-secondary); line-height: 1.6;">
+                Solving A* ocean waypoints avoiding land masses, checking draft chokepoints, and dispatching live marine weather stations.
+            </p>
+            <div style="margin-top: 18px; display: flex; gap: 8px; justify-content: center; font-size: 11px; font-family: var(--font-mono); color: var(--gold);">
+                <span id="loadStep1"><i class="fa-solid fa-check"></i> ROUTE</span> ?
+                <span id="loadStep2"><i class="fa-solid fa-spinner fa-spin"></i> WEATHER</span> ?
+                <span id="loadStep3">PORT QUEUES</span> ?
+                <span id="loadStep4">AI SCORING</span>
+            </div>
+        </div>
+    </div>
 
-            const baseRate = (dist / 3074) * 17.40;
-            const landedPerTon = 135.00 + baseRate + 14.20 + 9.80; // Commodity + Freight + Port + Demurrage/Inland
-            const totalOutlay = (landedPerTon * qty * 83.95) / 10000000;
-
-            document.getElementById('tab1LandedDisplay').innerText = `$${landedPerTon.toFixed(2)} / MT`;
-            document.getElementById('tab1TotalCrDisplay').innerText = `₹ ${totalOutlay.toFixed(1)} Cr`;
-
-            document.getElementById('sidebarCargoLabel').innerText = `${document.getElementById('vCargo').selectedOptions[0].text} (${(qty/1000).toFixed(0)}k MT)`;
-            document.getElementById('sidebarRouteLabel').innerText = `${document.getElementById('vOrigin').selectedOptions[0].text.split(',')[0]} → ${dest === 'INPAV' ? 'Paradip' : 'Vizag'}`;
-        }
-
-        // TAB 2 MAP
-        function initMap() {
-            if (map) { map.invalidateSize(); return; }
-
-            map = L.map('routeMap', { center: [5.0, 95.0], zoom: 3 });
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18 }).addTo(map);
-
-            renderNavigableRoute();
-        }
-
-        function renderNavigableRoute() {
-            if (!map) return;
-            if (mapRouteLayer) map.removeLayer(mapRouteLayer);
-
-            const rData = (window.ARC_NAUTICAL_ROUTES && window.ARC_NAUTICAL_ROUTES['AUPHE_INPAV']);
-            if (!rData) return;
-
-            const latlngs = rData.coordinates.map(c => [c[1], c[0]]);
-            mapRouteLayer = L.polyline(latlngs, {
-                color: '#10B981',
-                weight: 4,
-                opacity: 0.95
-            }).addTo(map);
-
-            // Origin marker
-            L.circleMarker(latlngs[0], { radius: 7, fillColor: '#10B981', color: '#FFF', weight: 2, fillOpacity: 1 }).addTo(map).bindPopup("<strong>Port Hedland</strong><br>Loading Port");
-            // Dest marker
-            L.circleMarker(latlngs[latlngs.length - 1], { radius: 7, fillColor: '#F59E0B', color: '#FFF', weight: 2, fillOpacity: 1 }).addTo(map).bindPopup("<strong>Paradip Port</strong><br>Discharge Port");
-
-            fitRouteBounds();
-        }
-
-        function fitRouteBounds() {
-            if (map && mapRouteLayer) {
-                map.fitBounds(mapRouteLayer.getBounds(), { padding: [30, 30] });
-            }
-        }
-
-        function pickRoute(letter) {
-            document.querySelectorAll('.route-option-card').forEach((c, i) => {
-                c.classList.toggle('selected', (letter === 'A' && i === 0) || (letter === 'B' && i === 1) || (letter === 'C' && i === 2));
-            });
-        }
-
-        // TAB 3 DATE CHART
-        function initDateChart() {
-            const ctx = document.getElementById('cleanDateChart').getContext('2d');
-            if (dateChart) dateChart.destroy();
-
-            dateChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['10 Sep', '14 Sep', '18 Sep', '20 Sep (BEST)', '24 Sep', '28 Sep', '4 Oct', '10 Oct'],
-                    datasets: [{
-                        label: 'Total Expected Outlay (₹ Cr)',
-                        data: [225.4, 224.1, 222.6, 222.1, 224.8, 228.2, 232.5, 236.1],
-                        borderColor: '#F59E0B',
-                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
-                        fill: true,
-                        tension: 0.3,
-                        borderWidth: 2.5,
-                        pointRadius: [3, 3, 3, 7, 3, 3, 3, 3],
-                        pointBackgroundColor: ['#94A3B8', '#94A3B8', '#94A3B8', '#10B981', '#F59E0B', '#EF4444', '#EF4444', '#EF4444']
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        x: { grid: { color: 'rgba(255, 255, 255, 0.04)' }, ticks: { color: '#64748B' } },
-                        y: { grid: { color: 'rgba(255, 255, 255, 0.04)' }, ticks: { color: '#64748B', font: { family: 'JetBrains Mono' } } }
-                    }
-                }
-            });
-        }
-    </script>
 </body>
 </html>

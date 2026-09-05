@@ -6,7 +6,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INPAV",
     "originName": "Port Hedland",
     "destName": "Paradip Port",
-    "label": "Port Hedland, Australia → Paradip Port, India",
+    "label": "Port Hedland, Australia -> Paradip Port, India",
     "distance_nm": 3073.8,
     "distance_km": 5693,
     "hazard_zones": [],
@@ -849,7 +849,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -18.7221,
@@ -859,7 +859,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -17.105,
@@ -869,7 +869,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -15.495,
@@ -879,7 +879,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -13.885,
@@ -889,7 +889,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -12.275,
@@ -899,7 +899,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.665,
@@ -909,7 +909,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -9.055,
@@ -919,7 +919,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.49,
@@ -929,7 +929,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -5.9074,
@@ -939,7 +939,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.325,
@@ -949,7 +949,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.755,
@@ -959,7 +959,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -1.1985,
@@ -969,7 +969,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": 0.825,
@@ -979,7 +979,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.475,
@@ -989,7 +989,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.075,
@@ -999,7 +999,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.875,
@@ -1009,7 +1009,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": 8.075,
@@ -1019,7 +1019,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.2476,
@@ -1029,7 +1029,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.256,
@@ -1039,7 +1039,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.8685,
@@ -1049,7 +1049,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.481,
@@ -1059,7 +1059,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": 17.0935,
@@ -1085,7 +1085,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INVTZ",
     "originName": "Port Hedland",
     "destName": "Visakhapatnam Port",
-    "label": "Port Hedland, Australia → Visakhapatnam Port, India",
+    "label": "Port Hedland, Australia -> Visakhapatnam Port, India",
     "distance_nm": 3085.9,
     "distance_km": 5715,
     "hazard_zones": [],
@@ -1912,7 +1912,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -18.7221,
@@ -1922,7 +1922,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -17.105,
@@ -1932,7 +1932,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -15.495,
@@ -1942,7 +1942,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -13.885,
@@ -1952,7 +1952,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -12.275,
@@ -1962,7 +1962,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.665,
@@ -1972,7 +1972,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -9.055,
@@ -1982,7 +1982,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.49,
@@ -1992,7 +1992,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -5.9074,
@@ -2002,7 +2002,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.325,
@@ -2012,7 +2012,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.755,
@@ -2022,7 +2022,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -1.1985,
@@ -2032,7 +2032,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": 0.825,
@@ -2042,7 +2042,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.475,
@@ -2052,7 +2052,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.075,
@@ -2062,7 +2062,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.725,
@@ -2072,7 +2072,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.325,
@@ -2082,7 +2082,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": 8.945,
@@ -2092,7 +2092,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.555,
@@ -2102,7 +2102,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.165,
@@ -2112,7 +2112,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.775,
@@ -2122,7 +2122,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.421,
@@ -2148,7 +2148,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INENN",
     "originName": "Port Hedland",
     "destName": "Ennore Port",
-    "label": "Port Hedland, Australia → Ennore Port, India",
+    "label": "Port Hedland, Australia -> Ennore Port, India",
     "distance_nm": 3025.7,
     "distance_km": 5604,
     "hazard_zones": [],
@@ -3255,7 +3255,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -20.275,
@@ -3265,7 +3265,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -20.1344,
@@ -3275,7 +3275,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -18.5177,
@@ -3285,7 +3285,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -16.9009,
@@ -3295,7 +3295,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -15.2842,
@@ -3305,7 +3305,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -13.6675,
@@ -3315,7 +3315,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -12.121,
@@ -3325,7 +3325,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.5746,
@@ -3335,7 +3335,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -9.0281,
@@ -3345,7 +3345,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.4817,
@@ -3355,7 +3355,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -5.9353,
@@ -3365,7 +3365,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.3888,
@@ -3375,7 +3375,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.8473,
@@ -3385,7 +3385,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -1.3128,
@@ -3395,7 +3395,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": 0.2216,
@@ -3405,7 +3405,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.7561,
@@ -3415,7 +3415,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": 3.2905,
@@ -3425,7 +3425,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.825,
@@ -3435,7 +3435,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.365,
@@ -3445,7 +3445,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.905,
@@ -3455,7 +3455,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.5033,
@@ -3465,7 +3465,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.075,
@@ -3485,13 +3485,1352 @@ window.ARC_NAUTICAL_ROUTES = {
       }
     ]
   },
+  "AUPHE_INMAA": {
+    "key": "AUPHE_INMAA",
+    "origin": "AUPHE",
+    "dest": "INMAA",
+    "originName": "Port Hedland",
+    "destName": "Chennai Port",
+    "label": "Port Hedland, Australia -> Chennai Port, India",
+    "distance_nm": 3022.3,
+    "distance_km": 5597,
+    "hazard_zones": [],
+    "chokepoints": [
+      {
+        "lat": -20.31,
+        "lng": 118.58,
+        "name": "Port Hedland"
+      },
+      {
+        "lat": 13.1,
+        "lng": 80.29,
+        "name": "Chennai"
+      }
+    ],
+    "coordinates": [
+      [
+        118.58,
+        -20.31
+      ],
+      [
+        118.475,
+        -20.275
+      ],
+      [
+        118.375,
+        -20.275
+      ],
+      [
+        118.275,
+        -20.275
+      ],
+      [
+        118.175,
+        -20.275
+      ],
+      [
+        118.075,
+        -20.275
+      ],
+      [
+        117.975,
+        -20.275
+      ],
+      [
+        117.8036,
+        -20.275
+      ],
+      [
+        117.6321,
+        -20.275
+      ],
+      [
+        117.4607,
+        -20.275
+      ],
+      [
+        117.2792,
+        -20.275
+      ],
+      [
+        117.0875,
+        -20.275
+      ],
+      [
+        116.8958,
+        -20.275
+      ],
+      [
+        116.7042,
+        -20.275
+      ],
+      [
+        116.5125,
+        -20.275
+      ],
+      [
+        116.3208,
+        -20.275
+      ],
+      [
+        116.1292,
+        -20.275
+      ],
+      [
+        115.9375,
+        -20.275
+      ],
+      [
+        115.7458,
+        -20.275
+      ],
+      [
+        115.5542,
+        -20.275
+      ],
+      [
+        115.3625,
+        -20.275
+      ],
+      [
+        115.1708,
+        -20.275
+      ],
+      [
+        114.9792,
+        -20.275
+      ],
+      [
+        114.7875,
+        -20.275
+      ],
+      [
+        114.5958,
+        -20.275
+      ],
+      [
+        114.4042,
+        -20.275
+      ],
+      [
+        114.2125,
+        -20.275
+      ],
+      [
+        114.0208,
+        -20.275
+      ],
+      [
+        113.8541,
+        -20.2045
+      ],
+      [
+        113.7123,
+        -20.0636
+      ],
+      [
+        113.5706,
+        -19.9227
+      ],
+      [
+        113.4288,
+        -19.7818
+      ],
+      [
+        113.287,
+        -19.6408
+      ],
+      [
+        113.1453,
+        -19.4999
+      ],
+      [
+        113.0035,
+        -19.359
+      ],
+      [
+        112.8617,
+        -19.218
+      ],
+      [
+        112.7199,
+        -19.0771
+      ],
+      [
+        112.5782,
+        -18.9362
+      ],
+      [
+        112.4364,
+        -18.7953
+      ],
+      [
+        112.2946,
+        -18.6543
+      ],
+      [
+        112.1528,
+        -18.5134
+      ],
+      [
+        112.0111,
+        -18.3725
+      ],
+      [
+        111.8693,
+        -18.2315
+      ],
+      [
+        111.7275,
+        -18.0906
+      ],
+      [
+        111.5858,
+        -17.9497
+      ],
+      [
+        111.444,
+        -17.8088
+      ],
+      [
+        111.3022,
+        -17.6678
+      ],
+      [
+        111.1604,
+        -17.5269
+      ],
+      [
+        111.0187,
+        -17.386
+      ],
+      [
+        110.8769,
+        -17.245
+      ],
+      [
+        110.7351,
+        -17.1041
+      ],
+      [
+        110.5934,
+        -16.9632
+      ],
+      [
+        110.4516,
+        -16.8223
+      ],
+      [
+        110.3098,
+        -16.6813
+      ],
+      [
+        110.168,
+        -16.5404
+      ],
+      [
+        110.0263,
+        -16.3995
+      ],
+      [
+        109.8845,
+        -16.2585
+      ],
+      [
+        109.7427,
+        -16.1176
+      ],
+      [
+        109.6009,
+        -15.9767
+      ],
+      [
+        109.4592,
+        -15.8358
+      ],
+      [
+        109.3174,
+        -15.6948
+      ],
+      [
+        109.1756,
+        -15.5539
+      ],
+      [
+        109.0339,
+        -15.413
+      ],
+      [
+        108.8921,
+        -15.272
+      ],
+      [
+        108.7503,
+        -15.1311
+      ],
+      [
+        108.6085,
+        -14.9902
+      ],
+      [
+        108.4668,
+        -14.8493
+      ],
+      [
+        108.325,
+        -14.7083
+      ],
+      [
+        108.1832,
+        -14.5674
+      ],
+      [
+        108.0415,
+        -14.4265
+      ],
+      [
+        107.8997,
+        -14.2855
+      ],
+      [
+        107.7579,
+        -14.1446
+      ],
+      [
+        107.6161,
+        -14.0037
+      ],
+      [
+        107.4744,
+        -13.8628
+      ],
+      [
+        107.3326,
+        -13.7218
+      ],
+      [
+        107.1908,
+        -13.5809
+      ],
+      [
+        107.0491,
+        -13.44
+      ],
+      [
+        106.9073,
+        -13.2991
+      ],
+      [
+        106.7655,
+        -13.1581
+      ],
+      [
+        106.6237,
+        -13.0172
+      ],
+      [
+        106.482,
+        -12.8763
+      ],
+      [
+        106.3402,
+        -12.7353
+      ],
+      [
+        106.1984,
+        -12.5944
+      ],
+      [
+        106.0566,
+        -12.4535
+      ],
+      [
+        105.9149,
+        -12.3126
+      ],
+      [
+        105.7731,
+        -12.1716
+      ],
+      [
+        105.6313,
+        -12.0307
+      ],
+      [
+        105.4896,
+        -11.8898
+      ],
+      [
+        105.3478,
+        -11.7488
+      ],
+      [
+        105.206,
+        -11.6079
+      ],
+      [
+        105.0642,
+        -11.467
+      ],
+      [
+        104.9225,
+        -11.3261
+      ],
+      [
+        104.7807,
+        -11.1851
+      ],
+      [
+        104.6389,
+        -11.0442
+      ],
+      [
+        104.4972,
+        -10.9033
+      ],
+      [
+        104.3554,
+        -10.7623
+      ],
+      [
+        104.2136,
+        -10.6214
+      ],
+      [
+        104.0718,
+        -10.4805
+      ],
+      [
+        103.9301,
+        -10.3396
+      ],
+      [
+        103.7883,
+        -10.1986
+      ],
+      [
+        103.6465,
+        -10.0577
+      ],
+      [
+        103.5047,
+        -9.9168
+      ],
+      [
+        103.363,
+        -9.7758
+      ],
+      [
+        103.2212,
+        -9.6349
+      ],
+      [
+        103.0794,
+        -9.494
+      ],
+      [
+        102.9377,
+        -9.3531
+      ],
+      [
+        102.7959,
+        -9.2121
+      ],
+      [
+        102.6541,
+        -9.0712
+      ],
+      [
+        102.5123,
+        -8.9303
+      ],
+      [
+        102.3706,
+        -8.7893
+      ],
+      [
+        102.2288,
+        -8.6484
+      ],
+      [
+        102.087,
+        -8.5075
+      ],
+      [
+        101.9453,
+        -8.3666
+      ],
+      [
+        101.8035,
+        -8.2256
+      ],
+      [
+        101.6617,
+        -8.0847
+      ],
+      [
+        101.5199,
+        -7.9438
+      ],
+      [
+        101.3782,
+        -7.8028
+      ],
+      [
+        101.2364,
+        -7.6619
+      ],
+      [
+        101.0946,
+        -7.521
+      ],
+      [
+        100.9528,
+        -7.3801
+      ],
+      [
+        100.8111,
+        -7.2391
+      ],
+      [
+        100.6693,
+        -7.0982
+      ],
+      [
+        100.5275,
+        -6.9573
+      ],
+      [
+        100.3858,
+        -6.8164
+      ],
+      [
+        100.244,
+        -6.6754
+      ],
+      [
+        100.1022,
+        -6.5345
+      ],
+      [
+        99.9604,
+        -6.3936
+      ],
+      [
+        99.8187,
+        -6.2526
+      ],
+      [
+        99.6769,
+        -6.1117
+      ],
+      [
+        99.5351,
+        -5.9708
+      ],
+      [
+        99.3934,
+        -5.8299
+      ],
+      [
+        99.2516,
+        -5.6889
+      ],
+      [
+        99.1098,
+        -5.548
+      ],
+      [
+        98.968,
+        -5.4071
+      ],
+      [
+        98.8263,
+        -5.2661
+      ],
+      [
+        98.6845,
+        -5.1252
+      ],
+      [
+        98.5427,
+        -4.9843
+      ],
+      [
+        98.4009,
+        -4.8434
+      ],
+      [
+        98.2592,
+        -4.7024
+      ],
+      [
+        98.1174,
+        -4.5615
+      ],
+      [
+        97.9756,
+        -4.4206
+      ],
+      [
+        97.8339,
+        -4.2796
+      ],
+      [
+        97.6921,
+        -4.1387
+      ],
+      [
+        97.5503,
+        -3.9978
+      ],
+      [
+        97.4085,
+        -3.8569
+      ],
+      [
+        97.2668,
+        -3.7159
+      ],
+      [
+        97.125,
+        -3.575
+      ],
+      [
+        96.9826,
+        -3.4352
+      ],
+      [
+        96.8403,
+        -3.2953
+      ],
+      [
+        96.6979,
+        -3.1555
+      ],
+      [
+        96.5555,
+        -3.0157
+      ],
+      [
+        96.4131,
+        -2.8758
+      ],
+      [
+        96.2708,
+        -2.736
+      ],
+      [
+        96.1284,
+        -2.5962
+      ],
+      [
+        95.986,
+        -2.4564
+      ],
+      [
+        95.8436,
+        -2.3165
+      ],
+      [
+        95.7013,
+        -2.1767
+      ],
+      [
+        95.5589,
+        -2.0369
+      ],
+      [
+        95.4165,
+        -1.897
+      ],
+      [
+        95.2742,
+        -1.7572
+      ],
+      [
+        95.1318,
+        -1.6174
+      ],
+      [
+        94.9894,
+        -1.4775
+      ],
+      [
+        94.847,
+        -1.3377
+      ],
+      [
+        94.7047,
+        -1.1979
+      ],
+      [
+        94.5623,
+        -1.0581
+      ],
+      [
+        94.4199,
+        -0.9182
+      ],
+      [
+        94.2775,
+        -0.7784
+      ],
+      [
+        94.1352,
+        -0.6386
+      ],
+      [
+        93.9928,
+        -0.4987
+      ],
+      [
+        93.8504,
+        -0.3589
+      ],
+      [
+        93.7081,
+        -0.2191
+      ],
+      [
+        93.5657,
+        -0.0792
+      ],
+      [
+        93.4233,
+        0.0606
+      ],
+      [
+        93.2809,
+        0.2004
+      ],
+      [
+        93.1386,
+        0.3403
+      ],
+      [
+        92.9962,
+        0.4801
+      ],
+      [
+        92.8538,
+        0.6199
+      ],
+      [
+        92.7114,
+        0.7597
+      ],
+      [
+        92.5691,
+        0.8996
+      ],
+      [
+        92.4267,
+        1.0394
+      ],
+      [
+        92.2843,
+        1.1792
+      ],
+      [
+        92.1419,
+        1.3191
+      ],
+      [
+        91.9996,
+        1.4589
+      ],
+      [
+        91.8572,
+        1.5987
+      ],
+      [
+        91.7148,
+        1.7386
+      ],
+      [
+        91.5725,
+        1.8784
+      ],
+      [
+        91.4301,
+        2.0182
+      ],
+      [
+        91.2877,
+        2.1581
+      ],
+      [
+        91.1453,
+        2.2979
+      ],
+      [
+        91.003,
+        2.4377
+      ],
+      [
+        90.8606,
+        2.5775
+      ],
+      [
+        90.7182,
+        2.7174
+      ],
+      [
+        90.5758,
+        2.8572
+      ],
+      [
+        90.4335,
+        2.997
+      ],
+      [
+        90.2911,
+        3.1369
+      ],
+      [
+        90.1487,
+        3.2767
+      ],
+      [
+        90.0064,
+        3.4165
+      ],
+      [
+        89.864,
+        3.5564
+      ],
+      [
+        89.7216,
+        3.6962
+      ],
+      [
+        89.5792,
+        3.836
+      ],
+      [
+        89.4369,
+        3.9758
+      ],
+      [
+        89.2945,
+        4.1157
+      ],
+      [
+        89.1521,
+        4.2555
+      ],
+      [
+        89.0097,
+        4.3953
+      ],
+      [
+        88.8674,
+        4.5352
+      ],
+      [
+        88.725,
+        4.675
+      ],
+      [
+        88.585,
+        4.815
+      ],
+      [
+        88.445,
+        4.955
+      ],
+      [
+        88.305,
+        5.095
+      ],
+      [
+        88.165,
+        5.235
+      ],
+      [
+        88.025,
+        5.375
+      ],
+      [
+        87.885,
+        5.515
+      ],
+      [
+        87.745,
+        5.655
+      ],
+      [
+        87.605,
+        5.795
+      ],
+      [
+        87.465,
+        5.935
+      ],
+      [
+        87.325,
+        6.075
+      ],
+      [
+        87.185,
+        6.215
+      ],
+      [
+        87.045,
+        6.355
+      ],
+      [
+        86.905,
+        6.495
+      ],
+      [
+        86.765,
+        6.635
+      ],
+      [
+        86.625,
+        6.775
+      ],
+      [
+        86.485,
+        6.915
+      ],
+      [
+        86.345,
+        7.055
+      ],
+      [
+        86.205,
+        7.195
+      ],
+      [
+        86.065,
+        7.335
+      ],
+      [
+        85.925,
+        7.475
+      ],
+      [
+        85.785,
+        7.615
+      ],
+      [
+        85.645,
+        7.755
+      ],
+      [
+        85.505,
+        7.895
+      ],
+      [
+        85.365,
+        8.035
+      ],
+      [
+        85.225,
+        8.175
+      ],
+      [
+        85.085,
+        8.315
+      ],
+      [
+        84.945,
+        8.455
+      ],
+      [
+        84.805,
+        8.595
+      ],
+      [
+        84.665,
+        8.735
+      ],
+      [
+        84.525,
+        8.875
+      ],
+      [
+        84.385,
+        9.0117
+      ],
+      [
+        84.245,
+        9.1483
+      ],
+      [
+        84.105,
+        9.285
+      ],
+      [
+        83.965,
+        9.4217
+      ],
+      [
+        83.825,
+        9.5583
+      ],
+      [
+        83.685,
+        9.695
+      ],
+      [
+        83.545,
+        9.8317
+      ],
+      [
+        83.405,
+        9.9683
+      ],
+      [
+        83.265,
+        10.105
+      ],
+      [
+        83.125,
+        10.2417
+      ],
+      [
+        82.985,
+        10.3783
+      ],
+      [
+        82.845,
+        10.515
+      ],
+      [
+        82.705,
+        10.6517
+      ],
+      [
+        82.565,
+        10.7883
+      ],
+      [
+        82.425,
+        10.925
+      ],
+      [
+        82.285,
+        11.065
+      ],
+      [
+        82.145,
+        11.205
+      ],
+      [
+        82.005,
+        11.345
+      ],
+      [
+        81.865,
+        11.485
+      ],
+      [
+        81.725,
+        11.625
+      ],
+      [
+        81.585,
+        11.765
+      ],
+      [
+        81.445,
+        11.905
+      ],
+      [
+        81.3063,
+        12.0438
+      ],
+      [
+        81.1687,
+        12.1813
+      ],
+      [
+        81.0313,
+        12.3188
+      ],
+      [
+        80.8937,
+        12.4563
+      ],
+      [
+        80.7625,
+        12.5875
+      ],
+      [
+        80.6375,
+        12.7125
+      ],
+      [
+        80.525,
+        12.825
+      ],
+      [
+        80.425,
+        12.925
+      ],
+      [
+        80.3325,
+        13.0375
+      ],
+      [
+        80.29,
+        13.1
+      ]
+    ],
+    "weatherWaypoints": [
+      {
+        "index": 0,
+        "name": "Port Hedland",
+        "isPort": true,
+        "type": "origin",
+        "lat": -20.31,
+        "lon": 118.58,
+        "distFromOriginNm": 0,
+        "distFromOriginKm": 0
+      },
+      {
+        "index": 1,
+        "name": "Station 1",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -20.275,
+        "lon": 116.225,
+        "distFromOriginNm": 133,
+        "distFromOriginKm": 247
+      },
+      {
+        "index": 2,
+        "name": "Station 2",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -20.2045,
+        "lon": 113.8541,
+        "distFromOriginNm": 269,
+        "distFromOriginKm": 498
+      },
+      {
+        "index": 3,
+        "name": "Station 3",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -18.5839,
+        "lon": 112.2237,
+        "distFromOriginNm": 403,
+        "distFromOriginKm": 746
+      },
+      {
+        "index": 4,
+        "name": "Station 4",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -16.9632,
+        "lon": 110.5934,
+        "distFromOriginNm": 538,
+        "distFromOriginKm": 995
+      },
+      {
+        "index": 5,
+        "name": "Station 5",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -15.3425,
+        "lon": 108.963,
+        "distFromOriginNm": 673,
+        "distFromOriginKm": 1246
+      },
+      {
+        "index": 6,
+        "name": "Station 6",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -13.7218,
+        "lon": 107.3326,
+        "distFromOriginNm": 809,
+        "distFromOriginKm": 1498
+      },
+      {
+        "index": 7,
+        "name": "Station 7",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -12.1716,
+        "lon": 105.7731,
+        "distFromOriginNm": 939,
+        "distFromOriginKm": 1739
+      },
+      {
+        "index": 8,
+        "name": "Station 8",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.6214,
+        "lon": 104.2136,
+        "distFromOriginNm": 1070,
+        "distFromOriginKm": 1981
+      },
+      {
+        "index": 9,
+        "name": "Station 9",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -9.0712,
+        "lon": 102.6541,
+        "distFromOriginNm": 1201,
+        "distFromOriginKm": 2224
+      },
+      {
+        "index": 10,
+        "name": "Station 10",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -7.521,
+        "lon": 101.0946,
+        "distFromOriginNm": 1332,
+        "distFromOriginKm": 2467
+      },
+      {
+        "index": 11,
+        "name": "Station 11",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -5.9708,
+        "lon": 99.5351,
+        "distFromOriginNm": 1464,
+        "distFromOriginKm": 2711
+      },
+      {
+        "index": 12,
+        "name": "Station 12",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.4206,
+        "lon": 97.9756,
+        "distFromOriginNm": 1595,
+        "distFromOriginKm": 2955
+      },
+      {
+        "index": 13,
+        "name": "Station 13",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -2.8758,
+        "lon": 96.4131,
+        "distFromOriginNm": 1727,
+        "distFromOriginKm": 3199
+      },
+      {
+        "index": 14,
+        "name": "Station 14",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -1.3377,
+        "lon": 94.847,
+        "distFromOriginNm": 1859,
+        "distFromOriginKm": 3443
+      },
+      {
+        "index": 15,
+        "name": "Station 15",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 0.2004,
+        "lon": 93.2809,
+        "distFromOriginNm": 1991,
+        "distFromOriginKm": 3687
+      },
+      {
+        "index": 16,
+        "name": "Station 16",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 1.7386,
+        "lon": 91.7148,
+        "distFromOriginNm": 2123,
+        "distFromOriginKm": 3931
+      },
+      {
+        "index": 17,
+        "name": "Station 17",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 3.2767,
+        "lon": 90.1487,
+        "distFromOriginNm": 2254,
+        "distFromOriginKm": 4175
+      },
+      {
+        "index": 18,
+        "name": "Station 18",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 4.815,
+        "lon": 88.585,
+        "distFromOriginNm": 2386,
+        "distFromOriginKm": 4418
+      },
+      {
+        "index": 19,
+        "name": "Station 19",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 6.355,
+        "lon": 87.045,
+        "distFromOriginNm": 2516,
+        "distFromOriginKm": 4660
+      },
+      {
+        "index": 20,
+        "name": "Station 20",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 7.895,
+        "lon": 85.505,
+        "distFromOriginNm": 2646,
+        "distFromOriginKm": 4901
+      },
+      {
+        "index": 21,
+        "name": "Station 21",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 9.49,
+        "lon": 83.895,
+        "distFromOriginNm": 2782,
+        "distFromOriginKm": 5152
+      },
+      {
+        "index": 22,
+        "name": "Station 22",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 11.065,
+        "lon": 82.285,
+        "distFromOriginNm": 2916,
+        "distFromOriginKm": 5400
+      },
+      {
+        "index": 23,
+        "name": "Chennai Port",
+        "isPort": true,
+        "type": "destination",
+        "lat": 13.1,
+        "lon": 80.29,
+        "distFromOriginNm": 3022,
+        "distFromOriginKm": 5597
+      }
+    ]
+  },
   "AUHAY_INPAV": {
     "key": "AUHAY_INPAV",
     "origin": "AUHAY",
     "dest": "INPAV",
     "originName": "Hay Point",
     "destName": "Paradip Port",
-    "label": "Hay Point, Australia → Paradip Port, India",
+    "label": "Hay Point, Australia -> Paradip Port, India",
     "distance_nm": 4806.4,
     "distance_km": 8901,
     "hazard_zones": [
@@ -4383,7 +5722,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -19.505,
@@ -4393,7 +5732,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -17.895,
@@ -4403,7 +5742,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -16.075,
@@ -4413,7 +5752,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -14.225,
@@ -4423,7 +5762,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -12.525,
@@ -4433,7 +5772,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.675,
@@ -4443,7 +5782,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4453,7 +5792,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4463,7 +5802,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4473,7 +5812,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4483,7 +5822,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4493,7 +5832,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4503,7 +5842,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4513,7 +5852,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4523,7 +5862,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4533,7 +5872,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4543,7 +5882,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -4553,7 +5892,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": -9.4607,
@@ -4563,7 +5902,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.8417,
@@ -4573,7 +5912,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": -6.825,
@@ -4583,7 +5922,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": -6.025,
@@ -4593,7 +5932,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.445,
@@ -4603,7 +5942,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.875,
@@ -4613,7 +5952,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": -1.8897,
@@ -4623,7 +5962,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": -0.325,
@@ -4633,7 +5972,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.125,
@@ -4643,7 +5982,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.475,
@@ -4653,7 +5992,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.125,
@@ -4663,7 +6002,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.025,
@@ -4673,7 +6012,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.625,
@@ -4683,7 +6022,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.425,
@@ -4693,7 +6032,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.0226,
@@ -4703,7 +6042,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.636,
@@ -4713,7 +6052,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 34,
-        "name": "Point 34",
+        "name": "Station 34",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.2628,
@@ -4723,7 +6062,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 35,
-        "name": "Point 35",
+        "name": "Station 35",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.8896,
@@ -4749,7 +6088,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INVTZ",
     "originName": "Hay Point",
     "destName": "Visakhapatnam Port",
-    "label": "Hay Point, Australia → Visakhapatnam Port, India",
+    "label": "Hay Point, Australia -> Visakhapatnam Port, India",
     "distance_nm": 4855.8,
     "distance_km": 8993,
     "hazard_zones": [
@@ -5621,7 +6960,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -19.505,
@@ -5631,7 +6970,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -17.895,
@@ -5641,7 +6980,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -16.075,
@@ -5651,7 +6990,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -14.225,
@@ -5661,7 +7000,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -12.525,
@@ -5671,7 +7010,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.675,
@@ -5681,7 +7020,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5691,7 +7030,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5701,7 +7040,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5711,7 +7050,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5721,7 +7060,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5731,7 +7070,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5741,7 +7080,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5751,7 +7090,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5761,7 +7100,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5771,7 +7110,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5781,7 +7120,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -5791,7 +7130,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": -9.4607,
@@ -5801,7 +7140,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.875,
@@ -5811,7 +7150,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": -6.825,
@@ -5821,7 +7160,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": -6.025,
@@ -5831,7 +7170,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.445,
@@ -5841,7 +7180,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.875,
@@ -5851,7 +7190,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": -1.8897,
@@ -5861,7 +7200,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": -0.325,
@@ -5871,7 +7210,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.125,
@@ -5881,7 +7220,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.475,
@@ -5891,7 +7230,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 3.9821,
@@ -5901,7 +7240,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.5528,
@@ -5911,7 +7250,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.1389,
@@ -5921,7 +7260,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 8.7361,
@@ -5931,7 +7270,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.3286,
@@ -5941,7 +7280,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.8917,
@@ -5951,7 +7290,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 34,
-        "name": "Point 34",
+        "name": "Station 34",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.4639,
@@ -5961,7 +7300,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 35,
-        "name": "Point 35",
+        "name": "Station 35",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.0618,
@@ -5971,7 +7310,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 36,
-        "name": "Point 36",
+        "name": "Station 36",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.6675,
@@ -5997,7 +7336,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INENN",
     "originName": "Hay Point",
     "destName": "Ennore Port",
-    "label": "Hay Point, Australia → Ennore Port, India",
+    "label": "Hay Point, Australia -> Ennore Port, India",
     "distance_nm": 4853,
     "distance_km": 8988,
     "hazard_zones": [
@@ -6877,7 +8216,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -19.505,
@@ -6887,7 +8226,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -17.895,
@@ -6897,7 +8236,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -16.075,
@@ -6907,7 +8246,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -14.225,
@@ -6917,7 +8256,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -12.525,
@@ -6927,7 +8266,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.675,
@@ -6937,7 +8276,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -6947,7 +8286,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -6957,7 +8296,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -6967,7 +8306,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -6977,7 +8316,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -6987,7 +8326,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -6997,7 +8336,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -7007,7 +8346,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -7017,7 +8356,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -7027,7 +8366,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -7037,7 +8376,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -7047,7 +8386,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": -9.4607,
@@ -7057,7 +8396,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.875,
@@ -7067,7 +8406,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": -6.825,
@@ -7077,7 +8416,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": -6.025,
@@ -7087,7 +8426,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.445,
@@ -7097,7 +8436,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.875,
@@ -7107,7 +8446,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": -1.8897,
@@ -7117,7 +8456,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": -0.325,
@@ -7127,7 +8466,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.125,
@@ -7137,7 +8476,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.475,
@@ -7147,7 +8486,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 3.975,
@@ -7157,7 +8496,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.5561,
@@ -7167,7 +8506,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.102,
@@ -7177,7 +8516,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 8.648,
@@ -7187,7 +8526,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.1939,
@@ -7197,7 +8536,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.775,
@@ -7207,7 +8546,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 34,
-        "name": "Point 34",
+        "name": "Station 34",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.0823,
@@ -7217,7 +8556,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 35,
-        "name": "Point 35",
+        "name": "Station 35",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.1241,
@@ -7227,7 +8566,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 36,
-        "name": "Point 36",
+        "name": "Station 36",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.1659,
@@ -7247,13 +8586,1263 @@ window.ARC_NAUTICAL_ROUTES = {
       }
     ]
   },
+  "AUHAY_INMAA": {
+    "key": "AUHAY_INMAA",
+    "origin": "AUHAY",
+    "dest": "INMAA",
+    "originName": "Hay Point",
+    "destName": "Chennai Port",
+    "label": "Hay Point, Australia -> Chennai Port, India",
+    "distance_nm": 4850.9,
+    "distance_km": 8984,
+    "hazard_zones": [
+      "Torres Strait",
+      "Lombok Strait"
+    ],
+    "chokepoints": [
+      {
+        "lat": -21.28,
+        "lng": 149.3,
+        "name": "Hay Point"
+      },
+      {
+        "lat": -10,
+        "lng": 142.5,
+        "name": "Torres Strait"
+      },
+      {
+        "lat": -8.5,
+        "lng": 115.7,
+        "name": "Lombok Strait"
+      },
+      {
+        "lat": 13.1,
+        "lng": 80.29,
+        "name": "Chennai"
+      }
+    ],
+    "coordinates": [
+      [
+        149.3,
+        -21.28
+      ],
+      [
+        149.225,
+        -21.025
+      ],
+      [
+        148.975,
+        -20.775
+      ],
+      [
+        148.925,
+        -20.475
+      ],
+      [
+        148.775,
+        -20.225
+      ],
+      [
+        148.525,
+        -19.975
+      ],
+      [
+        148.195,
+        -19.645
+      ],
+      [
+        147.845,
+        -19.295
+      ],
+      [
+        147.495,
+        -18.945
+      ],
+      [
+        147.145,
+        -18.595
+      ],
+      [
+        146.795,
+        -18.245
+      ],
+      [
+        146.445,
+        -17.895
+      ],
+      [
+        146.175,
+        -17.625
+      ],
+      [
+        146.075,
+        -17.375
+      ],
+      [
+        145.975,
+        -17.125
+      ],
+      [
+        145.975,
+        -16.875
+      ],
+      [
+        145.725,
+        -16.625
+      ],
+      [
+        145.525,
+        -16.375
+      ],
+      [
+        145.475,
+        -16.125
+      ],
+      [
+        145.375,
+        -15.875
+      ],
+      [
+        145.375,
+        -15.625
+      ],
+      [
+        145.375,
+        -15.375
+      ],
+      [
+        145.375,
+        -15.125
+      ],
+      [
+        145.275,
+        -14.875
+      ],
+      [
+        145.025,
+        -14.625
+      ],
+      [
+        144.775,
+        -14.375
+      ],
+      [
+        144.525,
+        -14.125
+      ],
+      [
+        144.2179,
+        -13.8179
+      ],
+      [
+        143.9,
+        -13.5
+      ],
+      [
+        143.625,
+        -13.225
+      ],
+      [
+        143.575,
+        -12.975
+      ],
+      [
+        143.475,
+        -12.725
+      ],
+      [
+        143.325,
+        -12.475
+      ],
+      [
+        143.275,
+        -12.175
+      ],
+      [
+        143.225,
+        -11.925
+      ],
+      [
+        142.975,
+        -11.675
+      ],
+      [
+        142.875,
+        -11.425
+      ],
+      [
+        142.825,
+        -11.175
+      ],
+      [
+        142.725,
+        -10.925
+      ],
+      [
+        142.575,
+        -10.675
+      ],
+      [
+        142.575,
+        -10.3917
+      ],
+      [
+        142.5,
+        -10
+      ],
+      [
+        142.225,
+        -10.125
+      ],
+      [
+        141.975,
+        -10.375
+      ],
+      [
+        141.479,
+        -10.375
+      ],
+      [
+        140.9831,
+        -10.375
+      ],
+      [
+        140.4871,
+        -10.375
+      ],
+      [
+        139.9911,
+        -10.375
+      ],
+      [
+        139.4952,
+        -10.375
+      ],
+      [
+        138.9992,
+        -10.375
+      ],
+      [
+        138.5032,
+        -10.375
+      ],
+      [
+        138.0073,
+        -10.375
+      ],
+      [
+        137.5113,
+        -10.375
+      ],
+      [
+        137.0153,
+        -10.375
+      ],
+      [
+        136.5194,
+        -10.375
+      ],
+      [
+        136.0234,
+        -10.375
+      ],
+      [
+        135.5274,
+        -10.375
+      ],
+      [
+        135.0315,
+        -10.375
+      ],
+      [
+        134.5355,
+        -10.375
+      ],
+      [
+        134.0395,
+        -10.375
+      ],
+      [
+        133.5435,
+        -10.375
+      ],
+      [
+        133.0476,
+        -10.375
+      ],
+      [
+        132.5516,
+        -10.375
+      ],
+      [
+        132.0556,
+        -10.375
+      ],
+      [
+        131.5597,
+        -10.375
+      ],
+      [
+        131.0637,
+        -10.375
+      ],
+      [
+        130.5677,
+        -10.375
+      ],
+      [
+        130.0718,
+        -10.375
+      ],
+      [
+        129.5781,
+        -10.375
+      ],
+      [
+        129.0938,
+        -10.375
+      ],
+      [
+        128.6094,
+        -10.375
+      ],
+      [
+        128.125,
+        -10.375
+      ],
+      [
+        127.6406,
+        -10.375
+      ],
+      [
+        127.1563,
+        -10.375
+      ],
+      [
+        126.6719,
+        -10.375
+      ],
+      [
+        126.1875,
+        -10.375
+      ],
+      [
+        125.7031,
+        -10.375
+      ],
+      [
+        125.2188,
+        -10.375
+      ],
+      [
+        124.7438,
+        -10.375
+      ],
+      [
+        124.275,
+        -10.375
+      ],
+      [
+        123.975,
+        -10.375
+      ],
+      [
+        123.725,
+        -10.375
+      ],
+      [
+        123.475,
+        -10.375
+      ],
+      [
+        123.225,
+        -10.375
+      ],
+      [
+        122.825,
+        -10.375
+      ],
+      [
+        122.405,
+        -10.375
+      ],
+      [
+        122.025,
+        -10.375
+      ],
+      [
+        121.775,
+        -10.375
+      ],
+      [
+        121.4,
+        -10.375
+      ],
+      [
+        120.985,
+        -10.375
+      ],
+      [
+        120.575,
+        -10.375
+      ],
+      [
+        120.325,
+        -10.375
+      ],
+      [
+        119.975,
+        -10.375
+      ],
+      [
+        119.4875,
+        -10.375
+      ],
+      [
+        119.0188,
+        -10.375
+      ],
+      [
+        118.525,
+        -10.375
+      ],
+      [
+        118.025,
+        -10.375
+      ],
+      [
+        117.525,
+        -10.375
+      ],
+      [
+        117.1635,
+        -10.1135
+      ],
+      [
+        116.8365,
+        -9.7865
+      ],
+      [
+        116.5107,
+        -9.4607
+      ],
+      [
+        116.1893,
+        -9.1393
+      ],
+      [
+        115.925,
+        -8.875
+      ],
+      [
+        115.725,
+        -8.625
+      ],
+      [
+        115.725,
+        -8.375
+      ],
+      [
+        115.475,
+        -8.175
+      ],
+      [
+        115.225,
+        -7.925
+      ],
+      [
+        114.925,
+        -7.625
+      ],
+      [
+        114.5917,
+        -7.2917
+      ],
+      [
+        114.325,
+        -7.025
+      ],
+      [
+        114.075,
+        -6.875
+      ],
+      [
+        113.825,
+        -6.825
+      ],
+      [
+        113.575,
+        -6.825
+      ],
+      [
+        113.325,
+        -6.825
+      ],
+      [
+        113.075,
+        -6.825
+      ],
+      [
+        112.825,
+        -6.825
+      ],
+      [
+        112.575,
+        -6.825
+      ],
+      [
+        112.325,
+        -6.775
+      ],
+      [
+        112.075,
+        -6.525
+      ],
+      [
+        111.7625,
+        -6.2125
+      ],
+      [
+        111.45,
+        -5.9
+      ],
+      [
+        111.115,
+        -5.565
+      ],
+      [
+        110.765,
+        -5.215
+      ],
+      [
+        110.415,
+        -4.865
+      ],
+      [
+        110.065,
+        -4.515
+      ],
+      [
+        109.715,
+        -4.165
+      ],
+      [
+        109.365,
+        -3.815
+      ],
+      [
+        109.0188,
+        -3.4687
+      ],
+      [
+        108.675,
+        -3.125
+      ],
+      [
+        108.375,
+        -2.825
+      ],
+      [
+        108.125,
+        -2.625
+      ],
+      [
+        107.875,
+        -2.525
+      ],
+      [
+        107.625,
+        -2.525
+      ],
+      [
+        107.225,
+        -2.525
+      ],
+      [
+        106.8721,
+        -2.1721
+      ],
+      [
+        106.5191,
+        -1.8191
+      ],
+      [
+        106.1662,
+        -1.4662
+      ],
+      [
+        105.825,
+        -1.125
+      ],
+      [
+        105.4917,
+        -0.7917
+      ],
+      [
+        105.185,
+        -0.485
+      ],
+      [
+        104.925,
+        -0.225
+      ],
+      [
+        104.675,
+        -0.025
+      ],
+      [
+        104.425,
+        0.175
+      ],
+      [
+        104.175,
+        0.425
+      ],
+      [
+        103.925,
+        0.675
+      ],
+      [
+        103.675,
+        0.875
+      ],
+      [
+        103.425,
+        1.125
+      ],
+      [
+        103.175,
+        1.375
+      ],
+      [
+        102.925,
+        1.625
+      ],
+      [
+        102.675,
+        1.875
+      ],
+      [
+        102.425,
+        2.075
+      ],
+      [
+        102.175,
+        2.175
+      ],
+      [
+        101.925,
+        2.375
+      ],
+      [
+        101.675,
+        2.575
+      ],
+      [
+        101.425,
+        2.725
+      ],
+      [
+        101.175,
+        2.975
+      ],
+      [
+        100.925,
+        3.225
+      ],
+      [
+        100.615,
+        3.535
+      ],
+      [
+        100.29,
+        3.86
+      ],
+      [
+        99.9513,
+        4.1987
+      ],
+      [
+        99.6092,
+        4.5408
+      ],
+      [
+        99.2671,
+        4.8829
+      ],
+      [
+        98.925,
+        5.225
+      ],
+      [
+        98.5804,
+        5.5696
+      ],
+      [
+        98.2358,
+        5.9142
+      ],
+      [
+        97.8912,
+        6.2588
+      ],
+      [
+        97.5466,
+        6.6034
+      ],
+      [
+        97.202,
+        6.948
+      ],
+      [
+        96.8574,
+        7.2926
+      ],
+      [
+        96.5128,
+        7.6372
+      ],
+      [
+        96.1682,
+        7.9818
+      ],
+      [
+        95.8236,
+        8.3264
+      ],
+      [
+        95.4791,
+        8.6709
+      ],
+      [
+        95.1345,
+        9.0155
+      ],
+      [
+        94.7899,
+        9.3601
+      ],
+      [
+        94.4453,
+        9.7047
+      ],
+      [
+        94.1007,
+        10.0493
+      ],
+      [
+        93.76,
+        10.39
+      ],
+      [
+        93.435,
+        10.715
+      ],
+      [
+        93.105,
+        11.045
+      ],
+      [
+        92.775,
+        11.375
+      ],
+      [
+        92.525,
+        11.625
+      ],
+      [
+        92.275,
+        11.875
+      ],
+      [
+        91.995,
+        12.155
+      ],
+      [
+        91.675,
+        12.475
+      ],
+      [
+        91.3417,
+        12.8083
+      ],
+      [
+        90.8815,
+        12.875
+      ],
+      [
+        90.3895,
+        12.875
+      ],
+      [
+        89.8976,
+        12.875
+      ],
+      [
+        89.4056,
+        12.875
+      ],
+      [
+        88.9137,
+        12.875
+      ],
+      [
+        88.4218,
+        12.875
+      ],
+      [
+        87.9298,
+        12.875
+      ],
+      [
+        87.4379,
+        12.875
+      ],
+      [
+        86.946,
+        12.875
+      ],
+      [
+        86.454,
+        12.875
+      ],
+      [
+        85.9621,
+        12.875
+      ],
+      [
+        85.4702,
+        12.875
+      ],
+      [
+        84.979,
+        12.879
+      ],
+      [
+        84.489,
+        12.889
+      ],
+      [
+        83.999,
+        12.899
+      ],
+      [
+        83.509,
+        12.909
+      ],
+      [
+        83.019,
+        12.919
+      ],
+      [
+        82.5404,
+        12.9327
+      ],
+      [
+        82.0788,
+        12.9519
+      ],
+      [
+        81.6173,
+        12.9712
+      ],
+      [
+        81.1821,
+        12.975
+      ],
+      [
+        80.775,
+        12.975
+      ],
+      [
+        80.425,
+        13
+      ],
+      [
+        80.29,
+        13.1
+      ]
+    ],
+    "weatherWaypoints": [
+      {
+        "index": 0,
+        "name": "Hay Point",
+        "isPort": true,
+        "type": "origin",
+        "lat": -21.28,
+        "lon": 149.3,
+        "distFromOriginNm": 0,
+        "distFromOriginKm": 0
+      },
+      {
+        "index": 1,
+        "name": "Station 1",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -19.505,
+        "lon": 148.055,
+        "distFromOriginNm": 134,
+        "distFromOriginKm": 248
+      },
+      {
+        "index": 2,
+        "name": "Station 2",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -17.895,
+        "lon": 146.445,
+        "distFromOriginNm": 267,
+        "distFromOriginKm": 495
+      },
+      {
+        "index": 3,
+        "name": "Station 3",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -16.075,
+        "lon": 145.475,
+        "distFromOriginNm": 399,
+        "distFromOriginKm": 739
+      },
+      {
+        "index": 4,
+        "name": "Station 4",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -14.225,
+        "lon": 144.625,
+        "distFromOriginNm": 530,
+        "distFromOriginKm": 981
+      },
+      {
+        "index": 5,
+        "name": "Station 5",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -12.525,
+        "lon": 143.375,
+        "distFromOriginNm": 662,
+        "distFromOriginKm": 1225
+      },
+      {
+        "index": 6,
+        "name": "Station 6",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.675,
+        "lon": 142.575,
+        "distFromOriginNm": 792,
+        "distFromOriginKm": 1466
+      },
+      {
+        "index": 7,
+        "name": "Station 7",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 141.0823,
+        "distFromOriginNm": 927,
+        "distFromOriginKm": 1716
+      },
+      {
+        "index": 8,
+        "name": "Station 8",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 138.8008,
+        "distFromOriginNm": 1062,
+        "distFromOriginKm": 1966
+      },
+      {
+        "index": 9,
+        "name": "Station 9",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 136.5194,
+        "distFromOriginNm": 1196,
+        "distFromOriginKm": 2215
+      },
+      {
+        "index": 10,
+        "name": "Station 10",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 134.2379,
+        "distFromOriginNm": 1331,
+        "distFromOriginKm": 2465
+      },
+      {
+        "index": 11,
+        "name": "Station 11",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 131.9565,
+        "distFromOriginNm": 1466,
+        "distFromOriginKm": 2715
+      },
+      {
+        "index": 12,
+        "name": "Station 12",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 129.675,
+        "distFromOriginNm": 1600,
+        "distFromOriginKm": 2964
+      },
+      {
+        "index": 13,
+        "name": "Station 13",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 127.4469,
+        "distFromOriginNm": 1732,
+        "distFromOriginKm": 3208
+      },
+      {
+        "index": 14,
+        "name": "Station 14",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 125.2188,
+        "distFromOriginNm": 1864,
+        "distFromOriginKm": 3452
+      },
+      {
+        "index": 15,
+        "name": "Station 15",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 122.925,
+        "distFromOriginNm": 1999,
+        "distFromOriginKm": 3702
+      },
+      {
+        "index": 16,
+        "name": "Station 16",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 120.625,
+        "distFromOriginNm": 2135,
+        "distFromOriginKm": 3954
+      },
+      {
+        "index": 17,
+        "name": "Station 17",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.375,
+        "lon": 118.325,
+        "distFromOriginNm": 2271,
+        "distFromOriginKm": 4206
+      },
+      {
+        "index": 18,
+        "name": "Station 18",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -9.4607,
+        "lon": 116.5107,
+        "distFromOriginNm": 2401,
+        "distFromOriginKm": 4447
+      },
+      {
+        "index": 19,
+        "name": "Station 19",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -7.875,
+        "lon": 115.175,
+        "distFromOriginNm": 2533,
+        "distFromOriginKm": 4690
+      },
+      {
+        "index": 20,
+        "name": "Station 20",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -6.825,
+        "lon": 113.425,
+        "distFromOriginNm": 2663,
+        "distFromOriginKm": 4932
+      },
+      {
+        "index": 21,
+        "name": "Station 21",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -6.025,
+        "lon": 111.575,
+        "distFromOriginNm": 2793,
+        "distFromOriginKm": 5173
+      },
+      {
+        "index": 22,
+        "name": "Station 22",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.445,
+        "lon": 109.995,
+        "distFromOriginNm": 2927,
+        "distFromOriginKm": 5421
+      },
+      {
+        "index": 23,
+        "name": "Station 23",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -2.875,
+        "lon": 108.425,
+        "distFromOriginNm": 3060,
+        "distFromOriginKm": 5668
+      },
+      {
+        "index": 24,
+        "name": "Station 24",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -1.8897,
+        "lon": 106.5897,
+        "distFromOriginNm": 3195,
+        "distFromOriginKm": 5917
+      },
+      {
+        "index": 25,
+        "name": "Station 25",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -0.325,
+        "lon": 105.025,
+        "distFromOriginNm": 3328,
+        "distFromOriginKm": 6163
+      },
+      {
+        "index": 26,
+        "name": "Station 26",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 1.125,
+        "lon": 103.425,
+        "distFromOriginNm": 3460,
+        "distFromOriginKm": 6408
+      },
+      {
+        "index": 27,
+        "name": "Station 27",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 2.475,
+        "lon": 101.775,
+        "distFromOriginNm": 3593,
+        "distFromOriginKm": 6654
+      },
+      {
+        "index": 28,
+        "name": "Station 28",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 3.9934,
+        "lon": 100.1566,
+        "distFromOriginNm": 3727,
+        "distFromOriginKm": 6903
+      },
+      {
+        "index": 29,
+        "name": "Station 29",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 5.5696,
+        "lon": 98.5804,
+        "distFromOriginNm": 3861,
+        "distFromOriginKm": 7151
+      },
+      {
+        "index": 30,
+        "name": "Station 30",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 7.1547,
+        "lon": 96.9953,
+        "distFromOriginNm": 3995,
+        "distFromOriginKm": 7399
+      },
+      {
+        "index": 31,
+        "name": "Station 31",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 8.7399,
+        "lon": 95.4101,
+        "distFromOriginNm": 4129,
+        "distFromOriginKm": 7647
+      },
+      {
+        "index": 32,
+        "name": "Station 32",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 10.325,
+        "lon": 93.825,
+        "distFromOriginNm": 4263,
+        "distFromOriginKm": 7895
+      },
+      {
+        "index": 33,
+        "name": "Station 33",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 11.875,
+        "lon": 92.275,
+        "distFromOriginNm": 4393,
+        "distFromOriginKm": 8136
+      },
+      {
+        "index": 34,
+        "name": "Station 34",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 12.875,
+        "lon": 90.3895,
+        "distFromOriginNm": 4529,
+        "distFromOriginKm": 8388
+      },
+      {
+        "index": 35,
+        "name": "Station 35",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 12.875,
+        "lon": 88.1266,
+        "distFromOriginNm": 4661,
+        "distFromOriginKm": 8633
+      },
+      {
+        "index": 36,
+        "name": "Chennai Port",
+        "isPort": true,
+        "type": "destination",
+        "lat": 13.1,
+        "lon": 80.29,
+        "distFromOriginNm": 4851,
+        "distFromOriginKm": 8984
+      }
+    ]
+  },
   "AUGLT_INPAV": {
     "key": "AUGLT_INPAV",
     "origin": "AUGLT",
     "dest": "INPAV",
     "originName": "Gladstone",
     "destName": "Paradip Port",
-    "label": "Gladstone, Australia → Paradip Port, India",
+    "label": "Gladstone, Australia -> Paradip Port, India",
     "distance_nm": 4995.1,
     "distance_km": 9251,
     "hazard_zones": [
@@ -8037,7 +10626,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -21.9917,
@@ -8047,7 +10636,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -20.325,
@@ -8057,7 +10646,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -18.735,
@@ -8067,7 +10656,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -17.025,
@@ -8077,7 +10666,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -15.075,
@@ -8087,7 +10676,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -13.4375,
@@ -8097,7 +10686,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -11.625,
@@ -8107,7 +10696,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.175,
@@ -8117,7 +10706,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8127,7 +10716,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8137,7 +10726,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8147,7 +10736,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8157,7 +10746,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8167,7 +10756,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8177,7 +10766,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8187,7 +10776,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8197,7 +10786,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8207,7 +10796,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8217,7 +10806,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -8227,7 +10816,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": -8.825,
@@ -8237,7 +10826,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.175,
@@ -8247,7 +10836,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": -6.825,
@@ -8257,7 +10846,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": -5.355,
@@ -8267,7 +10856,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": -3.815,
@@ -8277,7 +10866,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.525,
@@ -8287,7 +10876,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": -1.325,
@@ -8297,7 +10886,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 0.175,
@@ -8307,7 +10896,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.675,
@@ -8317,7 +10906,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.925,
@@ -8327,7 +10916,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.825,
@@ -8337,7 +10926,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.575,
@@ -8347,7 +10936,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 8.275,
@@ -8357,7 +10946,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.985,
@@ -8367,7 +10956,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 34,
-        "name": "Point 34",
+        "name": "Station 34",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.575,
@@ -8377,7 +10966,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 35,
-        "name": "Point 35",
+        "name": "Station 35",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.2018,
@@ -8387,7 +10976,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 36,
-        "name": "Point 36",
+        "name": "Station 36",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.8287,
@@ -8397,7 +10986,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 37,
-        "name": "Point 37",
+        "name": "Station 37",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.4555,
@@ -8423,7 +11012,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INVTZ",
     "originName": "Gladstone",
     "destName": "Visakhapatnam Port",
-    "label": "Gladstone, Australia → Visakhapatnam Port, India",
+    "label": "Gladstone, Australia -> Visakhapatnam Port, India",
     "distance_nm": 5044.5,
     "distance_km": 9342,
     "hazard_zones": [
@@ -9335,7 +11924,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -21.9917,
@@ -9345,7 +11934,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -20.325,
@@ -9355,7 +11944,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -18.735,
@@ -9365,7 +11954,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -17.025,
@@ -9375,7 +11964,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -15.075,
@@ -9385,7 +11974,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -13.4375,
@@ -9395,7 +11984,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -11.625,
@@ -9405,7 +11994,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.175,
@@ -9415,7 +12004,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9425,7 +12014,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9435,7 +12024,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9445,7 +12034,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9455,7 +12044,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9465,7 +12054,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9475,7 +12064,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9485,7 +12074,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9495,7 +12084,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9505,7 +12094,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9515,7 +12104,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.375,
@@ -9525,7 +12114,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": -8.825,
@@ -9535,7 +12124,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.225,
@@ -9545,7 +12134,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": -6.825,
@@ -9555,7 +12144,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": -5.355,
@@ -9565,7 +12154,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": -3.815,
@@ -9575,7 +12164,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.525,
@@ -9585,7 +12174,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": -1.325,
@@ -9595,7 +12184,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 0.175,
@@ -9605,7 +12194,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.675,
@@ -9615,7 +12204,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.925,
@@ -9625,7 +12214,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.525,
@@ -9635,7 +12224,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.1009,
@@ -9645,7 +12234,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.6944,
@@ -9655,7 +12244,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.2917,
@@ -9665,7 +12254,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 34,
-        "name": "Point 34",
+        "name": "Station 34",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.8714,
@@ -9675,7 +12264,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 35,
-        "name": "Point 35",
+        "name": "Station 35",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.4361,
@@ -9685,7 +12274,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 36,
-        "name": "Point 36",
+        "name": "Station 36",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.0146,
@@ -9695,7 +12284,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 37,
-        "name": "Point 37",
+        "name": "Station 37",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.6203,
@@ -9715,13 +12304,4753 @@ window.ARC_NAUTICAL_ROUTES = {
       }
     ]
   },
+  "IDBPN_INPAV": {
+    "key": "IDBPN_INPAV",
+    "origin": "IDBPN",
+    "dest": "INPAV",
+    "originName": "Balikpapan (Kalimantan)",
+    "destName": "Paradip Port",
+    "label": "Kalimantan, Indonesia -> Paradip Port, India",
+    "distance_nm": 2334,
+    "distance_km": 4323,
+    "hazard_zones": [
+      "Malacca Strait"
+    ],
+    "chokepoints": [
+      {
+        "lat": -1.27,
+        "lng": 116.83,
+        "name": "Balikpapan"
+      },
+      {
+        "lat": 2.5,
+        "lng": 101,
+        "name": "Malacca Strait"
+      },
+      {
+        "lat": 20.26,
+        "lng": 86.67,
+        "name": "Paradip"
+      }
+    ],
+    "coordinates": [
+      [
+        116.83,
+        -1.27
+      ],
+      [
+        116.775,
+        -1.425
+      ],
+      [
+        116.775,
+        -1.6
+      ],
+      [
+        116.775,
+        -1.85
+      ],
+      [
+        116.775,
+        -2.1179
+      ],
+      [
+        116.775,
+        -2.3964
+      ],
+      [
+        116.775,
+        -2.675
+      ],
+      [
+        116.565,
+        -2.885
+      ],
+      [
+        116.375,
+        -3.075
+      ],
+      [
+        116.225,
+        -3.225
+      ],
+      [
+        116.075,
+        -3.325
+      ],
+      [
+        116.025,
+        -3.475
+      ],
+      [
+        115.975,
+        -3.625
+      ],
+      [
+        115.825,
+        -3.775
+      ],
+      [
+        115.675,
+        -3.925
+      ],
+      [
+        115.495,
+        -4.105
+      ],
+      [
+        115.2875,
+        -4.225
+      ],
+      [
+        115.025,
+        -4.225
+      ],
+      [
+        114.875,
+        -4.225
+      ],
+      [
+        114.725,
+        -4.225
+      ],
+      [
+        114.575,
+        -4.225
+      ],
+      [
+        114.325,
+        -4.225
+      ],
+      [
+        114.0625,
+        -4.225
+      ],
+      [
+        113.7883,
+        -4.225
+      ],
+      [
+        113.5083,
+        -4.225
+      ],
+      [
+        113.2283,
+        -4.225
+      ],
+      [
+        112.9483,
+        -4.225
+      ],
+      [
+        112.6683,
+        -4.225
+      ],
+      [
+        112.375,
+        -4.225
+      ],
+      [
+        112.075,
+        -4.225
+      ],
+      [
+        111.775,
+        -4.225
+      ],
+      [
+        111.475,
+        -4.225
+      ],
+      [
+        111.175,
+        -4.225
+      ],
+      [
+        110.875,
+        -4.225
+      ],
+      [
+        110.575,
+        -4.225
+      ],
+      [
+        110.275,
+        -4.225
+      ],
+      [
+        109.975,
+        -4.225
+      ],
+      [
+        109.7083,
+        -4.1583
+      ],
+      [
+        109.5083,
+        -3.9583
+      ],
+      [
+        109.3083,
+        -3.7583
+      ],
+      [
+        109.1083,
+        -3.5583
+      ],
+      [
+        108.9083,
+        -3.3583
+      ],
+      [
+        108.7083,
+        -3.1583
+      ],
+      [
+        108.5083,
+        -2.9583
+      ],
+      [
+        108.325,
+        -2.775
+      ],
+      [
+        108.175,
+        -2.625
+      ],
+      [
+        108.025,
+        -2.575
+      ],
+      [
+        107.875,
+        -2.525
+      ],
+      [
+        107.725,
+        -2.525
+      ],
+      [
+        107.575,
+        -2.525
+      ],
+      [
+        107.3125,
+        -2.525
+      ],
+      [
+        107.0838,
+        -2.3838
+      ],
+      [
+        106.8721,
+        -2.1721
+      ],
+      [
+        106.6603,
+        -1.9603
+      ],
+      [
+        106.4485,
+        -1.7485
+      ],
+      [
+        106.2368,
+        -1.5368
+      ],
+      [
+        106.025,
+        -1.325
+      ],
+      [
+        105.825,
+        -1.125
+      ],
+      [
+        105.625,
+        -0.925
+      ],
+      [
+        105.425,
+        -0.725
+      ],
+      [
+        105.245,
+        -0.545
+      ],
+      [
+        105.075,
+        -0.375
+      ],
+      [
+        104.925,
+        -0.225
+      ],
+      [
+        104.775,
+        -0.125
+      ],
+      [
+        104.625,
+        0.025
+      ],
+      [
+        104.475,
+        0.125
+      ],
+      [
+        104.325,
+        0.275
+      ],
+      [
+        104.175,
+        0.425
+      ],
+      [
+        104.025,
+        0.575
+      ],
+      [
+        103.875,
+        0.725
+      ],
+      [
+        103.725,
+        0.825
+      ],
+      [
+        103.575,
+        0.975
+      ],
+      [
+        103.425,
+        1.125
+      ],
+      [
+        103.275,
+        1.275
+      ],
+      [
+        103.125,
+        1.425
+      ],
+      [
+        102.975,
+        1.575
+      ],
+      [
+        102.825,
+        1.725
+      ],
+      [
+        102.675,
+        1.875
+      ],
+      [
+        102.525,
+        2.025
+      ],
+      [
+        102.375,
+        2.125
+      ],
+      [
+        102.225,
+        2.175
+      ],
+      [
+        102.075,
+        2.275
+      ],
+      [
+        101.925,
+        2.375
+      ],
+      [
+        101.775,
+        2.475
+      ],
+      [
+        101.625,
+        2.475
+      ],
+      [
+        101.375,
+        2.475
+      ],
+      [
+        101.0938,
+        2.4938
+      ],
+      [
+        101.0083,
+        2.675
+      ],
+      [
+        101.0208,
+        2.9375
+      ],
+      [
+        101.025,
+        3.1917
+      ],
+      [
+        101.025,
+        3.425
+      ],
+      [
+        100.975,
+        3.575
+      ],
+      [
+        100.825,
+        3.725
+      ],
+      [
+        100.675,
+        3.875
+      ],
+      [
+        100.675,
+        4.025
+      ],
+      [
+        100.575,
+        4.175
+      ],
+      [
+        100.525,
+        4.325
+      ],
+      [
+        100.525,
+        4.475
+      ],
+      [
+        100.525,
+        4.625
+      ],
+      [
+        100.525,
+        4.775
+      ],
+      [
+        100.425,
+        4.925
+      ],
+      [
+        100.375,
+        5.075
+      ],
+      [
+        100.275,
+        5.225
+      ],
+      [
+        100.175,
+        5.375
+      ],
+      [
+        100.175,
+        5.525
+      ],
+      [
+        100.175,
+        5.7083
+      ],
+      [
+        100.05,
+        5.9
+      ],
+      [
+        99.875,
+        6.075
+      ],
+      [
+        99.725,
+        6.225
+      ],
+      [
+        99.625,
+        6.375
+      ],
+      [
+        99.525,
+        6.525
+      ],
+      [
+        99.375,
+        6.675
+      ],
+      [
+        99.2125,
+        6.8375
+      ],
+      [
+        99.025,
+        7.025
+      ],
+      [
+        98.875,
+        7.175
+      ],
+      [
+        98.7125,
+        7.3375
+      ],
+      [
+        98.525,
+        7.525
+      ],
+      [
+        98.375,
+        7.675
+      ],
+      [
+        98.275,
+        7.825
+      ],
+      [
+        98.225,
+        7.975
+      ],
+      [
+        98.225,
+        8.125
+      ],
+      [
+        98.225,
+        8.275
+      ],
+      [
+        98.225,
+        8.425
+      ],
+      [
+        98.175,
+        8.575
+      ],
+      [
+        98.125,
+        8.725
+      ],
+      [
+        97.975,
+        8.875
+      ],
+      [
+        97.775,
+        9.075
+      ],
+      [
+        97.565,
+        9.285
+      ],
+      [
+        97.355,
+        9.495
+      ],
+      [
+        97.145,
+        9.705
+      ],
+      [
+        96.935,
+        9.915
+      ],
+      [
+        96.725,
+        10.125
+      ],
+      [
+        96.5179,
+        10.3321
+      ],
+      [
+        96.3107,
+        10.5393
+      ],
+      [
+        96.1036,
+        10.7464
+      ],
+      [
+        95.8964,
+        10.9536
+      ],
+      [
+        95.6893,
+        11.1607
+      ],
+      [
+        95.4821,
+        11.3679
+      ],
+      [
+        95.275,
+        11.575
+      ],
+      [
+        95.0665,
+        11.7872
+      ],
+      [
+        94.8579,
+        11.9994
+      ],
+      [
+        94.6494,
+        12.2116
+      ],
+      [
+        94.4409,
+        12.4238
+      ],
+      [
+        94.2323,
+        12.636
+      ],
+      [
+        94.0238,
+        12.8482
+      ],
+      [
+        93.8152,
+        13.0604
+      ],
+      [
+        93.6067,
+        13.2726
+      ],
+      [
+        93.3982,
+        13.4848
+      ],
+      [
+        93.1896,
+        13.697
+      ],
+      [
+        92.9811,
+        13.9091
+      ],
+      [
+        92.7726,
+        14.1213
+      ],
+      [
+        92.564,
+        14.3335
+      ],
+      [
+        92.3555,
+        14.5457
+      ],
+      [
+        92.147,
+        14.7579
+      ],
+      [
+        91.9384,
+        14.9701
+      ],
+      [
+        91.7299,
+        15.1823
+      ],
+      [
+        91.5213,
+        15.3945
+      ],
+      [
+        91.3128,
+        15.6067
+      ],
+      [
+        91.1043,
+        15.8189
+      ],
+      [
+        90.8957,
+        16.0311
+      ],
+      [
+        90.6872,
+        16.2433
+      ],
+      [
+        90.4787,
+        16.4555
+      ],
+      [
+        90.2701,
+        16.6677
+      ],
+      [
+        90.0616,
+        16.8799
+      ],
+      [
+        89.853,
+        17.0921
+      ],
+      [
+        89.6445,
+        17.3043
+      ],
+      [
+        89.4369,
+        17.5131
+      ],
+      [
+        89.2298,
+        17.7202
+      ],
+      [
+        89.0226,
+        17.9274
+      ],
+      [
+        88.8155,
+        18.1345
+      ],
+      [
+        88.6083,
+        18.3417
+      ],
+      [
+        88.4012,
+        18.5488
+      ],
+      [
+        88.194,
+        18.756
+      ],
+      [
+        87.9886,
+        18.9614
+      ],
+      [
+        87.7841,
+        19.1659
+      ],
+      [
+        87.5795,
+        19.3705
+      ],
+      [
+        87.375,
+        19.575
+      ],
+      [
+        87.165,
+        19.785
+      ],
+      [
+        86.9583,
+        19.9917
+      ],
+      [
+        86.775,
+        20.175
+      ],
+      [
+        86.67,
+        20.26
+      ]
+    ],
+    "weatherWaypoints": [
+      {
+        "index": 0,
+        "name": "Balikpapan (Kalimantan)",
+        "isPort": true,
+        "type": "origin",
+        "lat": -1.27,
+        "lon": 116.83,
+        "distFromOriginNm": 0,
+        "distFromOriginKm": 0
+      },
+      {
+        "index": 1,
+        "name": "Station 1",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -3.225,
+        "lon": 116.225,
+        "distFromOriginNm": 132,
+        "distFromOriginKm": 244
+      },
+      {
+        "index": 2,
+        "name": "Station 2",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 114.575,
+        "distFromOriginNm": 263,
+        "distFromOriginKm": 486
+      },
+      {
+        "index": 3,
+        "name": "Station 3",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 112.375,
+        "distFromOriginNm": 394,
+        "distFromOriginKm": 730
+      },
+      {
+        "index": 4,
+        "name": "Station 4",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 110.175,
+        "distFromOriginNm": 526,
+        "distFromOriginKm": 974
+      },
+      {
+        "index": 5,
+        "name": "Station 5",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -2.9583,
+        "lon": 108.5083,
+        "distFromOriginNm": 657,
+        "distFromOriginKm": 1218
+      },
+      {
+        "index": 6,
+        "name": "Station 6",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -1.9603,
+        "lon": 106.6603,
+        "distFromOriginNm": 793,
+        "distFromOriginKm": 1469
+      },
+      {
+        "index": 7,
+        "name": "Station 7",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -0.425,
+        "lon": 105.125,
+        "distFromOriginNm": 923,
+        "distFromOriginKm": 1710
+      },
+      {
+        "index": 8,
+        "name": "Station 8",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 1.025,
+        "lon": 103.525,
+        "distFromOriginNm": 1056,
+        "distFromOriginKm": 1955
+      },
+      {
+        "index": 9,
+        "name": "Station 9",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 2.375,
+        "lon": 101.875,
+        "distFromOriginNm": 1188,
+        "distFromOriginKm": 2201
+      },
+      {
+        "index": 10,
+        "name": "Station 10",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 3.725,
+        "lon": 100.825,
+        "distFromOriginNm": 1322,
+        "distFromOriginKm": 2448
+      },
+      {
+        "index": 11,
+        "name": "Station 11",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 5.6417,
+        "lon": 100.175,
+        "distFromOriginNm": 1453,
+        "distFromOriginKm": 2691
+      },
+      {
+        "index": 12,
+        "name": "Station 12",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 7.275,
+        "lon": 98.775,
+        "distFromOriginNm": 1585,
+        "distFromOriginKm": 2936
+      },
+      {
+        "index": 13,
+        "name": "Station 13",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 9.075,
+        "lon": 97.775,
+        "distFromOriginNm": 1718,
+        "distFromOriginKm": 3182
+      },
+      {
+        "index": 14,
+        "name": "Station 14",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 10.6774,
+        "lon": 96.1726,
+        "distFromOriginNm": 1853,
+        "distFromOriginKm": 3432
+      },
+      {
+        "index": 15,
+        "name": "Station 15",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 12.2823,
+        "lon": 94.5799,
+        "distFromOriginNm": 1987,
+        "distFromOriginKm": 3681
+      },
+      {
+        "index": 16,
+        "name": "Station 16",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 13.9091,
+        "lon": 92.9811,
+        "distFromOriginNm": 2123,
+        "distFromOriginKm": 3931
+      },
+      {
+        "index": 17,
+        "name": "Station 17",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 15.536,
+        "lon": 91.3823,
+        "distFromOriginNm": 2257,
+        "distFromOriginKm": 4181
+      },
+      {
+        "index": 18,
+        "name": "Paradip Port",
+        "isPort": true,
+        "type": "destination",
+        "lat": 20.26,
+        "lon": 86.67,
+        "distFromOriginNm": 2334,
+        "distFromOriginKm": 4323
+      }
+    ]
+  },
+  "IDBPN_INVTZ": {
+    "key": "IDBPN_INVTZ",
+    "origin": "IDBPN",
+    "dest": "INVTZ",
+    "originName": "Balikpapan (Kalimantan)",
+    "destName": "Visakhapatnam Port",
+    "label": "Kalimantan, Indonesia -> Visakhapatnam Port, India",
+    "distance_nm": 2362.1,
+    "distance_km": 4375,
+    "hazard_zones": [
+      "Malacca Strait"
+    ],
+    "chokepoints": [
+      {
+        "lat": -1.27,
+        "lng": 116.83,
+        "name": "Balikpapan"
+      },
+      {
+        "lat": 2.5,
+        "lng": 101,
+        "name": "Malacca Strait"
+      },
+      {
+        "lat": 17.69,
+        "lng": 83.3,
+        "name": "Visakhapatnam"
+      }
+    ],
+    "coordinates": [
+      [
+        116.83,
+        -1.27
+      ],
+      [
+        116.775,
+        -1.375
+      ],
+      [
+        116.775,
+        -1.475
+      ],
+      [
+        116.775,
+        -1.6
+      ],
+      [
+        116.775,
+        -1.7625
+      ],
+      [
+        116.775,
+        -1.9375
+      ],
+      [
+        116.775,
+        -2.1179
+      ],
+      [
+        116.775,
+        -2.3036
+      ],
+      [
+        116.775,
+        -2.4893
+      ],
+      [
+        116.775,
+        -2.675
+      ],
+      [
+        116.635,
+        -2.815
+      ],
+      [
+        116.495,
+        -2.955
+      ],
+      [
+        116.375,
+        -3.075
+      ],
+      [
+        116.275,
+        -3.175
+      ],
+      [
+        116.175,
+        -3.275
+      ],
+      [
+        116.075,
+        -3.325
+      ],
+      [
+        116.025,
+        -3.425
+      ],
+      [
+        116.025,
+        -3.525
+      ],
+      [
+        115.975,
+        -3.625
+      ],
+      [
+        115.875,
+        -3.725
+      ],
+      [
+        115.775,
+        -3.825
+      ],
+      [
+        115.675,
+        -3.925
+      ],
+      [
+        115.555,
+        -4.045
+      ],
+      [
+        115.435,
+        -4.165
+      ],
+      [
+        115.2875,
+        -4.225
+      ],
+      [
+        115.1125,
+        -4.225
+      ],
+      [
+        114.975,
+        -4.225
+      ],
+      [
+        114.875,
+        -4.225
+      ],
+      [
+        114.775,
+        -4.225
+      ],
+      [
+        114.675,
+        -4.225
+      ],
+      [
+        114.575,
+        -4.225
+      ],
+      [
+        114.4,
+        -4.225
+      ],
+      [
+        114.2375,
+        -4.225
+      ],
+      [
+        114.0625,
+        -4.225
+      ],
+      [
+        113.8817,
+        -4.225
+      ],
+      [
+        113.695,
+        -4.225
+      ],
+      [
+        113.5083,
+        -4.225
+      ],
+      [
+        113.3217,
+        -4.225
+      ],
+      [
+        113.135,
+        -4.225
+      ],
+      [
+        112.9483,
+        -4.225
+      ],
+      [
+        112.7617,
+        -4.225
+      ],
+      [
+        112.575,
+        -4.225
+      ],
+      [
+        112.375,
+        -4.225
+      ],
+      [
+        112.175,
+        -4.225
+      ],
+      [
+        111.975,
+        -4.225
+      ],
+      [
+        111.775,
+        -4.225
+      ],
+      [
+        111.575,
+        -4.225
+      ],
+      [
+        111.375,
+        -4.225
+      ],
+      [
+        111.175,
+        -4.225
+      ],
+      [
+        110.975,
+        -4.225
+      ],
+      [
+        110.775,
+        -4.225
+      ],
+      [
+        110.575,
+        -4.225
+      ],
+      [
+        110.375,
+        -4.225
+      ],
+      [
+        110.175,
+        -4.225
+      ],
+      [
+        109.975,
+        -4.225
+      ],
+      [
+        109.775,
+        -4.225
+      ],
+      [
+        109.6417,
+        -4.0917
+      ],
+      [
+        109.5083,
+        -3.9583
+      ],
+      [
+        109.375,
+        -3.825
+      ],
+      [
+        109.2417,
+        -3.6917
+      ],
+      [
+        109.1083,
+        -3.5583
+      ],
+      [
+        108.975,
+        -3.425
+      ],
+      [
+        108.8417,
+        -3.2917
+      ],
+      [
+        108.7083,
+        -3.1583
+      ],
+      [
+        108.575,
+        -3.025
+      ],
+      [
+        108.4417,
+        -2.8917
+      ],
+      [
+        108.325,
+        -2.775
+      ],
+      [
+        108.225,
+        -2.675
+      ],
+      [
+        108.125,
+        -2.625
+      ],
+      [
+        108.025,
+        -2.575
+      ],
+      [
+        107.925,
+        -2.525
+      ],
+      [
+        107.825,
+        -2.525
+      ],
+      [
+        107.725,
+        -2.525
+      ],
+      [
+        107.625,
+        -2.525
+      ],
+      [
+        107.4875,
+        -2.525
+      ],
+      [
+        107.3125,
+        -2.525
+      ],
+      [
+        107.1544,
+        -2.4544
+      ],
+      [
+        107.0132,
+        -2.3132
+      ],
+      [
+        106.8721,
+        -2.1721
+      ],
+      [
+        106.7309,
+        -2.0309
+      ],
+      [
+        106.5897,
+        -1.8897
+      ],
+      [
+        106.4485,
+        -1.7485
+      ],
+      [
+        106.3074,
+        -1.6074
+      ],
+      [
+        106.1662,
+        -1.4662
+      ],
+      [
+        106.025,
+        -1.325
+      ],
+      [
+        105.8917,
+        -1.1917
+      ],
+      [
+        105.7583,
+        -1.0583
+      ],
+      [
+        105.625,
+        -0.925
+      ],
+      [
+        105.4917,
+        -0.7917
+      ],
+      [
+        105.365,
+        -0.665
+      ],
+      [
+        105.245,
+        -0.545
+      ],
+      [
+        105.125,
+        -0.425
+      ],
+      [
+        105.025,
+        -0.325
+      ],
+      [
+        104.925,
+        -0.225
+      ],
+      [
+        104.825,
+        -0.125
+      ],
+      [
+        104.725,
+        -0.075
+      ],
+      [
+        104.625,
+        0.025
+      ],
+      [
+        104.525,
+        0.125
+      ],
+      [
+        104.425,
+        0.175
+      ],
+      [
+        104.325,
+        0.275
+      ],
+      [
+        104.225,
+        0.375
+      ],
+      [
+        104.125,
+        0.475
+      ],
+      [
+        104.025,
+        0.575
+      ],
+      [
+        103.925,
+        0.675
+      ],
+      [
+        103.825,
+        0.725
+      ],
+      [
+        103.725,
+        0.825
+      ],
+      [
+        103.625,
+        0.925
+      ],
+      [
+        103.525,
+        1.025
+      ],
+      [
+        103.425,
+        1.125
+      ],
+      [
+        103.325,
+        1.225
+      ],
+      [
+        103.225,
+        1.325
+      ],
+      [
+        103.125,
+        1.425
+      ],
+      [
+        103.025,
+        1.525
+      ],
+      [
+        102.925,
+        1.625
+      ],
+      [
+        102.825,
+        1.725
+      ],
+      [
+        102.725,
+        1.825
+      ],
+      [
+        102.625,
+        1.925
+      ],
+      [
+        102.525,
+        2.025
+      ],
+      [
+        102.425,
+        2.075
+      ],
+      [
+        102.325,
+        2.125
+      ],
+      [
+        102.225,
+        2.175
+      ],
+      [
+        102.125,
+        2.225
+      ],
+      [
+        102.025,
+        2.325
+      ],
+      [
+        101.925,
+        2.375
+      ],
+      [
+        101.825,
+        2.425
+      ],
+      [
+        101.725,
+        2.475
+      ],
+      [
+        101.625,
+        2.475
+      ],
+      [
+        101.475,
+        2.475
+      ],
+      [
+        101.2813,
+        2.4813
+      ],
+      [
+        101.0938,
+        2.4938
+      ],
+      [
+        100.9297,
+        2.5708
+      ],
+      [
+        100.789,
+        2.7124
+      ],
+      [
+        100.6484,
+        2.854
+      ],
+      [
+        100.5077,
+        2.9956
+      ],
+      [
+        100.3671,
+        3.1371
+      ],
+      [
+        100.2264,
+        3.2787
+      ],
+      [
+        100.0857,
+        3.4203
+      ],
+      [
+        99.9451,
+        3.5619
+      ],
+      [
+        99.8044,
+        3.7035
+      ],
+      [
+        99.6638,
+        3.8451
+      ],
+      [
+        99.5231,
+        3.9867
+      ],
+      [
+        99.3825,
+        4.1283
+      ],
+      [
+        99.2418,
+        4.2699
+      ],
+      [
+        99.1012,
+        4.4114
+      ],
+      [
+        98.9605,
+        4.553
+      ],
+      [
+        98.8199,
+        4.6946
+      ],
+      [
+        98.6792,
+        4.8362
+      ],
+      [
+        98.5386,
+        4.9778
+      ],
+      [
+        98.3979,
+        5.1194
+      ],
+      [
+        98.2572,
+        5.261
+      ],
+      [
+        98.1166,
+        5.4026
+      ],
+      [
+        97.9759,
+        5.5442
+      ],
+      [
+        97.8353,
+        5.6857
+      ],
+      [
+        97.6946,
+        5.8273
+      ],
+      [
+        97.554,
+        5.9689
+      ],
+      [
+        97.4133,
+        6.1105
+      ],
+      [
+        97.2727,
+        6.2521
+      ],
+      [
+        97.132,
+        6.3937
+      ],
+      [
+        96.9914,
+        6.5353
+      ],
+      [
+        96.8507,
+        6.6769
+      ],
+      [
+        96.71,
+        6.8185
+      ],
+      [
+        96.5694,
+        6.96
+      ],
+      [
+        96.4287,
+        7.1016
+      ],
+      [
+        96.2881,
+        7.2432
+      ],
+      [
+        96.1474,
+        7.3848
+      ],
+      [
+        96.0068,
+        7.5264
+      ],
+      [
+        95.8661,
+        7.668
+      ],
+      [
+        95.7255,
+        7.8096
+      ],
+      [
+        95.5848,
+        7.9512
+      ],
+      [
+        95.4442,
+        8.0928
+      ],
+      [
+        95.3035,
+        8.2343
+      ],
+      [
+        95.1629,
+        8.3759
+      ],
+      [
+        95.0222,
+        8.5175
+      ],
+      [
+        94.8815,
+        8.6591
+      ],
+      [
+        94.7409,
+        8.8007
+      ],
+      [
+        94.6002,
+        8.9423
+      ],
+      [
+        94.4596,
+        9.0839
+      ],
+      [
+        94.3189,
+        9.2255
+      ],
+      [
+        94.1783,
+        9.3671
+      ],
+      [
+        94.0376,
+        9.5086
+      ],
+      [
+        93.897,
+        9.6502
+      ],
+      [
+        93.7563,
+        9.7918
+      ],
+      [
+        93.6157,
+        9.9334
+      ],
+      [
+        93.475,
+        10.075
+      ],
+      [
+        93.35,
+        10.2
+      ],
+      [
+        93.225,
+        10.325
+      ],
+      [
+        93.1,
+        10.45
+      ],
+      [
+        92.975,
+        10.575
+      ],
+      [
+        92.85,
+        10.7
+      ],
+      [
+        92.725,
+        10.825
+      ],
+      [
+        92.625,
+        10.925
+      ],
+      [
+        92.525,
+        11.025
+      ],
+      [
+        92.4,
+        11.15
+      ],
+      [
+        92.275,
+        11.275
+      ],
+      [
+        92.175,
+        11.375
+      ],
+      [
+        92.075,
+        11.475
+      ],
+      [
+        91.9607,
+        11.5893
+      ],
+      [
+        91.8321,
+        11.7179
+      ],
+      [
+        91.7036,
+        11.8464
+      ],
+      [
+        91.575,
+        11.975
+      ],
+      [
+        91.438,
+        12.112
+      ],
+      [
+        91.3009,
+        12.2491
+      ],
+      [
+        91.1639,
+        12.3861
+      ],
+      [
+        91.0269,
+        12.5231
+      ],
+      [
+        90.8898,
+        12.6602
+      ],
+      [
+        90.7528,
+        12.7972
+      ],
+      [
+        90.6157,
+        12.9343
+      ],
+      [
+        90.4787,
+        13.0713
+      ],
+      [
+        90.3417,
+        13.2083
+      ],
+      [
+        90.2046,
+        13.3454
+      ],
+      [
+        90.0676,
+        13.4824
+      ],
+      [
+        89.9306,
+        13.6194
+      ],
+      [
+        89.7935,
+        13.7565
+      ],
+      [
+        89.6556,
+        13.8944
+      ],
+      [
+        89.5167,
+        14.0333
+      ],
+      [
+        89.3778,
+        14.1722
+      ],
+      [
+        89.2389,
+        14.3111
+      ],
+      [
+        89.1,
+        14.45
+      ],
+      [
+        88.9611,
+        14.5889
+      ],
+      [
+        88.8222,
+        14.7278
+      ],
+      [
+        88.6833,
+        14.8667
+      ],
+      [
+        88.5444,
+        15.0056
+      ],
+      [
+        88.4056,
+        15.1444
+      ],
+      [
+        88.2667,
+        15.2833
+      ],
+      [
+        88.1278,
+        15.4222
+      ],
+      [
+        87.9889,
+        15.5611
+      ],
+      [
+        87.85,
+        15.7
+      ],
+      [
+        87.7111,
+        15.8389
+      ],
+      [
+        87.5722,
+        15.9778
+      ],
+      [
+        87.4333,
+        16.1167
+      ],
+      [
+        87.2944,
+        16.2556
+      ],
+      [
+        87.1556,
+        16.3944
+      ],
+      [
+        87.0167,
+        16.5333
+      ],
+      [
+        86.8778,
+        16.6722
+      ],
+      [
+        86.7389,
+        16.8111
+      ],
+      [
+        86.6,
+        16.95
+      ],
+      [
+        86.4611,
+        17.0889
+      ],
+      [
+        86.3222,
+        17.2278
+      ],
+      [
+        86.1833,
+        17.3667
+      ],
+      [
+        86.0444,
+        17.5056
+      ],
+      [
+        85.8786,
+        17.5786
+      ],
+      [
+        85.6857,
+        17.5857
+      ],
+      [
+        85.4929,
+        17.5929
+      ],
+      [
+        85.3,
+        17.6
+      ],
+      [
+        85.1071,
+        17.6071
+      ],
+      [
+        84.9143,
+        17.6143
+      ],
+      [
+        84.7214,
+        17.6214
+      ],
+      [
+        84.5321,
+        17.625
+      ],
+      [
+        84.3464,
+        17.625
+      ],
+      [
+        84.1607,
+        17.625
+      ],
+      [
+        83.975,
+        17.625
+      ],
+      [
+        83.8,
+        17.625
+      ],
+      [
+        83.625,
+        17.625
+      ],
+      [
+        83.475,
+        17.625
+      ],
+      [
+        83.375,
+        17.675
+      ],
+      [
+        83.3,
+        17.69
+      ]
+    ],
+    "weatherWaypoints": [
+      {
+        "index": 0,
+        "name": "Balikpapan (Kalimantan)",
+        "isPort": true,
+        "type": "origin",
+        "lat": -1.27,
+        "lon": 116.83,
+        "distFromOriginNm": 0,
+        "distFromOriginKm": 0
+      },
+      {
+        "index": 1,
+        "name": "Station 1",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -3.225,
+        "lon": 116.225,
+        "distFromOriginNm": 132,
+        "distFromOriginKm": 244
+      },
+      {
+        "index": 2,
+        "name": "Station 2",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 114.575,
+        "distFromOriginNm": 263,
+        "distFromOriginKm": 486
+      },
+      {
+        "index": 3,
+        "name": "Station 3",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 112.375,
+        "distFromOriginNm": 394,
+        "distFromOriginKm": 730
+      },
+      {
+        "index": 4,
+        "name": "Station 4",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 110.175,
+        "distFromOriginNm": 526,
+        "distFromOriginKm": 974
+      },
+      {
+        "index": 5,
+        "name": "Station 5",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -2.9583,
+        "lon": 108.5083,
+        "distFromOriginNm": 657,
+        "distFromOriginKm": 1218
+      },
+      {
+        "index": 6,
+        "name": "Station 6",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -1.9603,
+        "lon": 106.6603,
+        "distFromOriginNm": 793,
+        "distFromOriginKm": 1469
+      },
+      {
+        "index": 7,
+        "name": "Station 7",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -0.425,
+        "lon": 105.125,
+        "distFromOriginNm": 923,
+        "distFromOriginKm": 1710
+      },
+      {
+        "index": 8,
+        "name": "Station 8",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 1.025,
+        "lon": 103.525,
+        "distFromOriginNm": 1056,
+        "distFromOriginKm": 1955
+      },
+      {
+        "index": 9,
+        "name": "Station 9",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 2.375,
+        "lon": 101.875,
+        "distFromOriginNm": 1188,
+        "distFromOriginKm": 2201
+      },
+      {
+        "index": 10,
+        "name": "Station 10",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 3.4203,
+        "lon": 100.0857,
+        "distFromOriginNm": 1321,
+        "distFromOriginKm": 2447
+      },
+      {
+        "index": 11,
+        "name": "Station 11",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 4.9778,
+        "lon": 98.5386,
+        "distFromOriginNm": 1453,
+        "distFromOriginKm": 2690
+      },
+      {
+        "index": 12,
+        "name": "Station 12",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 6.5353,
+        "lon": 96.9914,
+        "distFromOriginNm": 1584,
+        "distFromOriginKm": 2934
+      },
+      {
+        "index": 13,
+        "name": "Station 13",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 8.0928,
+        "lon": 95.4442,
+        "distFromOriginNm": 1715,
+        "distFromOriginKm": 3177
+      },
+      {
+        "index": 14,
+        "name": "Station 14",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 9.6502,
+        "lon": 93.897,
+        "distFromOriginNm": 1846,
+        "distFromOriginKm": 3420
+      },
+      {
+        "index": 15,
+        "name": "Station 15",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 11.2125,
+        "lon": 92.3375,
+        "distFromOriginNm": 1978,
+        "distFromOriginKm": 3663
+      },
+      {
+        "index": 16,
+        "name": "Station 16",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 12.7972,
+        "lon": 90.7528,
+        "distFromOriginNm": 2111,
+        "distFromOriginKm": 3910
+      },
+      {
+        "index": 17,
+        "name": "Station 17",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 14.3806,
+        "lon": 89.1694,
+        "distFromOriginNm": 2244,
+        "distFromOriginKm": 4155
+      },
+      {
+        "index": 18,
+        "name": "Visakhapatnam Port",
+        "isPort": true,
+        "type": "destination",
+        "lat": 17.69,
+        "lon": 83.3,
+        "distFromOriginNm": 2362,
+        "distFromOriginKm": 4375
+      }
+    ]
+  },
+  "IDBPN_INENN": {
+    "key": "IDBPN_INENN",
+    "origin": "IDBPN",
+    "dest": "INENN",
+    "originName": "Balikpapan (Kalimantan)",
+    "destName": "Ennore Port",
+    "label": "Kalimantan, Indonesia -> Ennore Port, India",
+    "distance_nm": 2363.2,
+    "distance_km": 4377,
+    "hazard_zones": [
+      "Malacca Strait"
+    ],
+    "chokepoints": [
+      {
+        "lat": -1.27,
+        "lng": 116.83,
+        "name": "Balikpapan"
+      },
+      {
+        "lat": 2.5,
+        "lng": 101,
+        "name": "Malacca Strait"
+      },
+      {
+        "lat": 13.22,
+        "lng": 80.32,
+        "name": "Ennore"
+      }
+    ],
+    "coordinates": [
+      [
+        116.83,
+        -1.27
+      ],
+      [
+        116.775,
+        -1.375
+      ],
+      [
+        116.775,
+        -1.475
+      ],
+      [
+        116.775,
+        -1.6
+      ],
+      [
+        116.775,
+        -1.7625
+      ],
+      [
+        116.775,
+        -1.9375
+      ],
+      [
+        116.775,
+        -2.1179
+      ],
+      [
+        116.775,
+        -2.3036
+      ],
+      [
+        116.775,
+        -2.4893
+      ],
+      [
+        116.775,
+        -2.675
+      ],
+      [
+        116.635,
+        -2.815
+      ],
+      [
+        116.495,
+        -2.955
+      ],
+      [
+        116.375,
+        -3.075
+      ],
+      [
+        116.275,
+        -3.175
+      ],
+      [
+        116.175,
+        -3.275
+      ],
+      [
+        116.075,
+        -3.325
+      ],
+      [
+        116.025,
+        -3.425
+      ],
+      [
+        116.025,
+        -3.525
+      ],
+      [
+        115.975,
+        -3.625
+      ],
+      [
+        115.875,
+        -3.725
+      ],
+      [
+        115.775,
+        -3.825
+      ],
+      [
+        115.675,
+        -3.925
+      ],
+      [
+        115.555,
+        -4.045
+      ],
+      [
+        115.435,
+        -4.165
+      ],
+      [
+        115.2875,
+        -4.225
+      ],
+      [
+        115.1125,
+        -4.225
+      ],
+      [
+        114.975,
+        -4.225
+      ],
+      [
+        114.875,
+        -4.225
+      ],
+      [
+        114.775,
+        -4.225
+      ],
+      [
+        114.675,
+        -4.225
+      ],
+      [
+        114.575,
+        -4.225
+      ],
+      [
+        114.4,
+        -4.225
+      ],
+      [
+        114.2375,
+        -4.225
+      ],
+      [
+        114.0625,
+        -4.225
+      ],
+      [
+        113.8817,
+        -4.225
+      ],
+      [
+        113.695,
+        -4.225
+      ],
+      [
+        113.5083,
+        -4.225
+      ],
+      [
+        113.3217,
+        -4.225
+      ],
+      [
+        113.135,
+        -4.225
+      ],
+      [
+        112.9483,
+        -4.225
+      ],
+      [
+        112.7617,
+        -4.225
+      ],
+      [
+        112.575,
+        -4.225
+      ],
+      [
+        112.375,
+        -4.225
+      ],
+      [
+        112.175,
+        -4.225
+      ],
+      [
+        111.975,
+        -4.225
+      ],
+      [
+        111.775,
+        -4.225
+      ],
+      [
+        111.575,
+        -4.225
+      ],
+      [
+        111.375,
+        -4.225
+      ],
+      [
+        111.175,
+        -4.225
+      ],
+      [
+        110.975,
+        -4.225
+      ],
+      [
+        110.775,
+        -4.225
+      ],
+      [
+        110.575,
+        -4.225
+      ],
+      [
+        110.375,
+        -4.225
+      ],
+      [
+        110.175,
+        -4.225
+      ],
+      [
+        109.975,
+        -4.225
+      ],
+      [
+        109.775,
+        -4.225
+      ],
+      [
+        109.6417,
+        -4.0917
+      ],
+      [
+        109.5083,
+        -3.9583
+      ],
+      [
+        109.375,
+        -3.825
+      ],
+      [
+        109.2417,
+        -3.6917
+      ],
+      [
+        109.1083,
+        -3.5583
+      ],
+      [
+        108.975,
+        -3.425
+      ],
+      [
+        108.8417,
+        -3.2917
+      ],
+      [
+        108.7083,
+        -3.1583
+      ],
+      [
+        108.575,
+        -3.025
+      ],
+      [
+        108.4417,
+        -2.8917
+      ],
+      [
+        108.325,
+        -2.775
+      ],
+      [
+        108.225,
+        -2.675
+      ],
+      [
+        108.125,
+        -2.625
+      ],
+      [
+        108.025,
+        -2.575
+      ],
+      [
+        107.925,
+        -2.525
+      ],
+      [
+        107.825,
+        -2.525
+      ],
+      [
+        107.725,
+        -2.525
+      ],
+      [
+        107.625,
+        -2.525
+      ],
+      [
+        107.4875,
+        -2.525
+      ],
+      [
+        107.3125,
+        -2.525
+      ],
+      [
+        107.1544,
+        -2.4544
+      ],
+      [
+        107.0132,
+        -2.3132
+      ],
+      [
+        106.8721,
+        -2.1721
+      ],
+      [
+        106.7309,
+        -2.0309
+      ],
+      [
+        106.5897,
+        -1.8897
+      ],
+      [
+        106.4485,
+        -1.7485
+      ],
+      [
+        106.3074,
+        -1.6074
+      ],
+      [
+        106.1662,
+        -1.4662
+      ],
+      [
+        106.025,
+        -1.325
+      ],
+      [
+        105.8917,
+        -1.1917
+      ],
+      [
+        105.7583,
+        -1.0583
+      ],
+      [
+        105.625,
+        -0.925
+      ],
+      [
+        105.4917,
+        -0.7917
+      ],
+      [
+        105.365,
+        -0.665
+      ],
+      [
+        105.245,
+        -0.545
+      ],
+      [
+        105.125,
+        -0.425
+      ],
+      [
+        105.025,
+        -0.325
+      ],
+      [
+        104.925,
+        -0.225
+      ],
+      [
+        104.825,
+        -0.125
+      ],
+      [
+        104.725,
+        -0.075
+      ],
+      [
+        104.625,
+        0.025
+      ],
+      [
+        104.525,
+        0.125
+      ],
+      [
+        104.425,
+        0.175
+      ],
+      [
+        104.325,
+        0.275
+      ],
+      [
+        104.225,
+        0.375
+      ],
+      [
+        104.125,
+        0.475
+      ],
+      [
+        104.025,
+        0.575
+      ],
+      [
+        103.925,
+        0.675
+      ],
+      [
+        103.825,
+        0.725
+      ],
+      [
+        103.725,
+        0.825
+      ],
+      [
+        103.625,
+        0.925
+      ],
+      [
+        103.525,
+        1.025
+      ],
+      [
+        103.425,
+        1.125
+      ],
+      [
+        103.325,
+        1.225
+      ],
+      [
+        103.225,
+        1.325
+      ],
+      [
+        103.125,
+        1.425
+      ],
+      [
+        103.025,
+        1.525
+      ],
+      [
+        102.925,
+        1.625
+      ],
+      [
+        102.825,
+        1.725
+      ],
+      [
+        102.725,
+        1.825
+      ],
+      [
+        102.625,
+        1.925
+      ],
+      [
+        102.525,
+        2.025
+      ],
+      [
+        102.425,
+        2.075
+      ],
+      [
+        102.325,
+        2.125
+      ],
+      [
+        102.225,
+        2.175
+      ],
+      [
+        102.125,
+        2.225
+      ],
+      [
+        102.025,
+        2.325
+      ],
+      [
+        101.925,
+        2.375
+      ],
+      [
+        101.825,
+        2.425
+      ],
+      [
+        101.725,
+        2.475
+      ],
+      [
+        101.625,
+        2.475
+      ],
+      [
+        101.475,
+        2.475
+      ],
+      [
+        101.2813,
+        2.4813
+      ],
+      [
+        101.0938,
+        2.4938
+      ],
+      [
+        100.9303,
+        2.5703
+      ],
+      [
+        100.791,
+        2.711
+      ],
+      [
+        100.6517,
+        2.8517
+      ],
+      [
+        100.5123,
+        2.9923
+      ],
+      [
+        100.373,
+        3.133
+      ],
+      [
+        100.2337,
+        3.2737
+      ],
+      [
+        100.0943,
+        3.4143
+      ],
+      [
+        99.955,
+        3.555
+      ],
+      [
+        99.8157,
+        3.6957
+      ],
+      [
+        99.6763,
+        3.8363
+      ],
+      [
+        99.537,
+        3.977
+      ],
+      [
+        99.3977,
+        4.1177
+      ],
+      [
+        99.2583,
+        4.2583
+      ],
+      [
+        99.119,
+        4.399
+      ],
+      [
+        98.9797,
+        4.5397
+      ],
+      [
+        98.8403,
+        4.6803
+      ],
+      [
+        98.701,
+        4.821
+      ],
+      [
+        98.5617,
+        4.9617
+      ],
+      [
+        98.4223,
+        5.1023
+      ],
+      [
+        98.283,
+        5.243
+      ],
+      [
+        98.1437,
+        5.3837
+      ],
+      [
+        98.0043,
+        5.5243
+      ],
+      [
+        97.865,
+        5.665
+      ],
+      [
+        97.7257,
+        5.8057
+      ],
+      [
+        97.5863,
+        5.9463
+      ],
+      [
+        97.447,
+        6.087
+      ],
+      [
+        97.3077,
+        6.2277
+      ],
+      [
+        97.1683,
+        6.3683
+      ],
+      [
+        97.029,
+        6.509
+      ],
+      [
+        96.8897,
+        6.6497
+      ],
+      [
+        96.7503,
+        6.7903
+      ],
+      [
+        96.611,
+        6.931
+      ],
+      [
+        96.4717,
+        7.0717
+      ],
+      [
+        96.3323,
+        7.2123
+      ],
+      [
+        96.193,
+        7.353
+      ],
+      [
+        96.0537,
+        7.4937
+      ],
+      [
+        95.9143,
+        7.6343
+      ],
+      [
+        95.775,
+        7.775
+      ],
+      [
+        95.6355,
+        7.9145
+      ],
+      [
+        95.4961,
+        8.0539
+      ],
+      [
+        95.3566,
+        8.1934
+      ],
+      [
+        95.2171,
+        8.3329
+      ],
+      [
+        95.0776,
+        8.4724
+      ],
+      [
+        94.9382,
+        8.6118
+      ],
+      [
+        94.7987,
+        8.7513
+      ],
+      [
+        94.6592,
+        8.8908
+      ],
+      [
+        94.5197,
+        9.0303
+      ],
+      [
+        94.3803,
+        9.1697
+      ],
+      [
+        94.2408,
+        9.3092
+      ],
+      [
+        94.1013,
+        9.4487
+      ],
+      [
+        93.9618,
+        9.5882
+      ],
+      [
+        93.8224,
+        9.7276
+      ],
+      [
+        93.6829,
+        9.8671
+      ],
+      [
+        93.5434,
+        10.0066
+      ],
+      [
+        93.4039,
+        10.1461
+      ],
+      [
+        93.2645,
+        10.2855
+      ],
+      [
+        93.125,
+        10.425
+      ],
+      [
+        92.985,
+        10.565
+      ],
+      [
+        92.845,
+        10.705
+      ],
+      [
+        92.725,
+        10.825
+      ],
+      [
+        92.625,
+        10.925
+      ],
+      [
+        92.525,
+        11.025
+      ],
+      [
+        92.405,
+        11.145
+      ],
+      [
+        92.265,
+        11.285
+      ],
+      [
+        92.125,
+        11.425
+      ],
+      [
+        92.025,
+        11.525
+      ],
+      [
+        91.925,
+        11.625
+      ],
+      [
+        91.825,
+        11.725
+      ],
+      [
+        91.6882,
+        11.8618
+      ],
+      [
+        91.5513,
+        11.9987
+      ],
+      [
+        91.4145,
+        12.1355
+      ],
+      [
+        91.2776,
+        12.2724
+      ],
+      [
+        91.1408,
+        12.4092
+      ],
+      [
+        91.0039,
+        12.5461
+      ],
+      [
+        90.8671,
+        12.6829
+      ],
+      [
+        90.7303,
+        12.8197
+      ],
+      [
+        90.5934,
+        12.9566
+      ],
+      [
+        90.4269,
+        13.025
+      ],
+      [
+        90.2306,
+        13.025
+      ],
+      [
+        90.0343,
+        13.025
+      ],
+      [
+        89.838,
+        13.025
+      ],
+      [
+        89.6417,
+        13.025
+      ],
+      [
+        89.4454,
+        13.025
+      ],
+      [
+        89.2491,
+        13.025
+      ],
+      [
+        89.0528,
+        13.025
+      ],
+      [
+        88.8565,
+        13.025
+      ],
+      [
+        88.6602,
+        13.025
+      ],
+      [
+        88.4639,
+        13.025
+      ],
+      [
+        88.2676,
+        13.025
+      ],
+      [
+        88.0713,
+        13.025
+      ],
+      [
+        87.875,
+        13.025
+      ],
+      [
+        87.6787,
+        13.025
+      ],
+      [
+        87.4824,
+        13.025
+      ],
+      [
+        87.2861,
+        13.025
+      ],
+      [
+        87.0898,
+        13.025
+      ],
+      [
+        86.8935,
+        13.025
+      ],
+      [
+        86.6972,
+        13.025
+      ],
+      [
+        86.5009,
+        13.025
+      ],
+      [
+        86.3046,
+        13.025
+      ],
+      [
+        86.1083,
+        13.025
+      ],
+      [
+        85.912,
+        13.025
+      ],
+      [
+        85.7157,
+        13.025
+      ],
+      [
+        85.5194,
+        13.025
+      ],
+      [
+        85.3231,
+        13.025
+      ],
+      [
+        85.127,
+        13.027
+      ],
+      [
+        84.931,
+        13.031
+      ],
+      [
+        84.735,
+        13.035
+      ],
+      [
+        84.539,
+        13.039
+      ],
+      [
+        84.343,
+        13.043
+      ],
+      [
+        84.147,
+        13.047
+      ],
+      [
+        83.951,
+        13.051
+      ],
+      [
+        83.755,
+        13.055
+      ],
+      [
+        83.559,
+        13.059
+      ],
+      [
+        83.363,
+        13.063
+      ],
+      [
+        83.167,
+        13.067
+      ],
+      [
+        82.971,
+        13.071
+      ],
+      [
+        82.775,
+        13.075
+      ],
+      [
+        82.5827,
+        13.0827
+      ],
+      [
+        82.3904,
+        13.0904
+      ],
+      [
+        82.1981,
+        13.0981
+      ],
+      [
+        82.0058,
+        13.1058
+      ],
+      [
+        81.8135,
+        13.1135
+      ],
+      [
+        81.6212,
+        13.1212
+      ],
+      [
+        81.4393,
+        13.125
+      ],
+      [
+        81.2679,
+        13.125
+      ],
+      [
+        81.0964,
+        13.125
+      ],
+      [
+        80.925,
+        13.125
+      ],
+      [
+        80.775,
+        13.125
+      ],
+      [
+        80.625,
+        13.125
+      ],
+      [
+        80.475,
+        13.125
+      ],
+      [
+        80.375,
+        13.175
+      ],
+      [
+        80.32,
+        13.22
+      ]
+    ],
+    "weatherWaypoints": [
+      {
+        "index": 0,
+        "name": "Balikpapan (Kalimantan)",
+        "isPort": true,
+        "type": "origin",
+        "lat": -1.27,
+        "lon": 116.83,
+        "distFromOriginNm": 0,
+        "distFromOriginKm": 0
+      },
+      {
+        "index": 1,
+        "name": "Station 1",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -3.225,
+        "lon": 116.225,
+        "distFromOriginNm": 132,
+        "distFromOriginKm": 244
+      },
+      {
+        "index": 2,
+        "name": "Station 2",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 114.575,
+        "distFromOriginNm": 263,
+        "distFromOriginKm": 486
+      },
+      {
+        "index": 3,
+        "name": "Station 3",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 112.375,
+        "distFromOriginNm": 394,
+        "distFromOriginKm": 730
+      },
+      {
+        "index": 4,
+        "name": "Station 4",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 110.175,
+        "distFromOriginNm": 526,
+        "distFromOriginKm": 974
+      },
+      {
+        "index": 5,
+        "name": "Station 5",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -2.9583,
+        "lon": 108.5083,
+        "distFromOriginNm": 657,
+        "distFromOriginKm": 1218
+      },
+      {
+        "index": 6,
+        "name": "Station 6",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -1.9603,
+        "lon": 106.6603,
+        "distFromOriginNm": 793,
+        "distFromOriginKm": 1469
+      },
+      {
+        "index": 7,
+        "name": "Station 7",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -0.425,
+        "lon": 105.125,
+        "distFromOriginNm": 923,
+        "distFromOriginKm": 1710
+      },
+      {
+        "index": 8,
+        "name": "Station 8",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 1.025,
+        "lon": 103.525,
+        "distFromOriginNm": 1056,
+        "distFromOriginKm": 1955
+      },
+      {
+        "index": 9,
+        "name": "Station 9",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 2.375,
+        "lon": 101.875,
+        "distFromOriginNm": 1188,
+        "distFromOriginKm": 2201
+      },
+      {
+        "index": 10,
+        "name": "Station 10",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 3.4143,
+        "lon": 100.0943,
+        "distFromOriginNm": 1320,
+        "distFromOriginKm": 2445
+      },
+      {
+        "index": 11,
+        "name": "Station 11",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 4.9617,
+        "lon": 98.5617,
+        "distFromOriginNm": 1451,
+        "distFromOriginKm": 2687
+      },
+      {
+        "index": 12,
+        "name": "Station 12",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 6.509,
+        "lon": 97.029,
+        "distFromOriginNm": 1581,
+        "distFromOriginKm": 2929
+      },
+      {
+        "index": 13,
+        "name": "Station 13",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 8.0539,
+        "lon": 95.4961,
+        "distFromOriginNm": 1712,
+        "distFromOriginKm": 3170
+      },
+      {
+        "index": 14,
+        "name": "Station 14",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 9.6579,
+        "lon": 93.8921,
+        "distFromOriginNm": 1847,
+        "distFromOriginKm": 3421
+      },
+      {
+        "index": 15,
+        "name": "Station 15",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 11.215,
+        "lon": 92.335,
+        "distFromOriginNm": 1978,
+        "distFromOriginKm": 3664
+      },
+      {
+        "index": 16,
+        "name": "Station 16",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 12.8197,
+        "lon": 90.7303,
+        "distFromOriginNm": 2113,
+        "distFromOriginKm": 3913
+      },
+      {
+        "index": 17,
+        "name": "Station 17",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 13.025,
+        "lon": 88.562,
+        "distFromOriginNm": 2245,
+        "distFromOriginKm": 4158
+      },
+      {
+        "index": 18,
+        "name": "Ennore Port",
+        "isPort": true,
+        "type": "destination",
+        "lat": 13.22,
+        "lon": 80.32,
+        "distFromOriginNm": 2363,
+        "distFromOriginKm": 4377
+      }
+    ]
+  },
+  "IDBPN_INMAA": {
+    "key": "IDBPN_INMAA",
+    "origin": "IDBPN",
+    "dest": "INMAA",
+    "originName": "Balikpapan (Kalimantan)",
+    "destName": "Chennai Port",
+    "label": "Kalimantan, Indonesia -> Chennai Port, India",
+    "distance_nm": 2361.7,
+    "distance_km": 4374,
+    "hazard_zones": [
+      "Malacca Strait"
+    ],
+    "chokepoints": [
+      {
+        "lat": -1.27,
+        "lng": 116.83,
+        "name": "Balikpapan"
+      },
+      {
+        "lat": 2.5,
+        "lng": 101,
+        "name": "Malacca Strait"
+      },
+      {
+        "lat": 13.1,
+        "lng": 80.29,
+        "name": "Chennai"
+      }
+    ],
+    "coordinates": [
+      [
+        116.83,
+        -1.27
+      ],
+      [
+        116.775,
+        -1.375
+      ],
+      [
+        116.775,
+        -1.475
+      ],
+      [
+        116.775,
+        -1.6
+      ],
+      [
+        116.775,
+        -1.7625
+      ],
+      [
+        116.775,
+        -1.9375
+      ],
+      [
+        116.775,
+        -2.1179
+      ],
+      [
+        116.775,
+        -2.3036
+      ],
+      [
+        116.775,
+        -2.4893
+      ],
+      [
+        116.775,
+        -2.675
+      ],
+      [
+        116.635,
+        -2.815
+      ],
+      [
+        116.495,
+        -2.955
+      ],
+      [
+        116.375,
+        -3.075
+      ],
+      [
+        116.275,
+        -3.175
+      ],
+      [
+        116.175,
+        -3.275
+      ],
+      [
+        116.075,
+        -3.325
+      ],
+      [
+        116.025,
+        -3.425
+      ],
+      [
+        116.025,
+        -3.525
+      ],
+      [
+        115.975,
+        -3.625
+      ],
+      [
+        115.875,
+        -3.725
+      ],
+      [
+        115.775,
+        -3.825
+      ],
+      [
+        115.675,
+        -3.925
+      ],
+      [
+        115.555,
+        -4.045
+      ],
+      [
+        115.435,
+        -4.165
+      ],
+      [
+        115.2875,
+        -4.225
+      ],
+      [
+        115.1125,
+        -4.225
+      ],
+      [
+        114.975,
+        -4.225
+      ],
+      [
+        114.875,
+        -4.225
+      ],
+      [
+        114.775,
+        -4.225
+      ],
+      [
+        114.675,
+        -4.225
+      ],
+      [
+        114.575,
+        -4.225
+      ],
+      [
+        114.4,
+        -4.225
+      ],
+      [
+        114.2375,
+        -4.225
+      ],
+      [
+        114.0625,
+        -4.225
+      ],
+      [
+        113.8817,
+        -4.225
+      ],
+      [
+        113.695,
+        -4.225
+      ],
+      [
+        113.5083,
+        -4.225
+      ],
+      [
+        113.3217,
+        -4.225
+      ],
+      [
+        113.135,
+        -4.225
+      ],
+      [
+        112.9483,
+        -4.225
+      ],
+      [
+        112.7617,
+        -4.225
+      ],
+      [
+        112.575,
+        -4.225
+      ],
+      [
+        112.375,
+        -4.225
+      ],
+      [
+        112.175,
+        -4.225
+      ],
+      [
+        111.975,
+        -4.225
+      ],
+      [
+        111.775,
+        -4.225
+      ],
+      [
+        111.575,
+        -4.225
+      ],
+      [
+        111.375,
+        -4.225
+      ],
+      [
+        111.175,
+        -4.225
+      ],
+      [
+        110.975,
+        -4.225
+      ],
+      [
+        110.775,
+        -4.225
+      ],
+      [
+        110.575,
+        -4.225
+      ],
+      [
+        110.375,
+        -4.225
+      ],
+      [
+        110.175,
+        -4.225
+      ],
+      [
+        109.975,
+        -4.225
+      ],
+      [
+        109.775,
+        -4.225
+      ],
+      [
+        109.6417,
+        -4.0917
+      ],
+      [
+        109.5083,
+        -3.9583
+      ],
+      [
+        109.375,
+        -3.825
+      ],
+      [
+        109.2417,
+        -3.6917
+      ],
+      [
+        109.1083,
+        -3.5583
+      ],
+      [
+        108.975,
+        -3.425
+      ],
+      [
+        108.8417,
+        -3.2917
+      ],
+      [
+        108.7083,
+        -3.1583
+      ],
+      [
+        108.575,
+        -3.025
+      ],
+      [
+        108.4417,
+        -2.8917
+      ],
+      [
+        108.325,
+        -2.775
+      ],
+      [
+        108.225,
+        -2.675
+      ],
+      [
+        108.125,
+        -2.625
+      ],
+      [
+        108.025,
+        -2.575
+      ],
+      [
+        107.925,
+        -2.525
+      ],
+      [
+        107.825,
+        -2.525
+      ],
+      [
+        107.725,
+        -2.525
+      ],
+      [
+        107.625,
+        -2.525
+      ],
+      [
+        107.4875,
+        -2.525
+      ],
+      [
+        107.3125,
+        -2.525
+      ],
+      [
+        107.1544,
+        -2.4544
+      ],
+      [
+        107.0132,
+        -2.3132
+      ],
+      [
+        106.8721,
+        -2.1721
+      ],
+      [
+        106.7309,
+        -2.0309
+      ],
+      [
+        106.5897,
+        -1.8897
+      ],
+      [
+        106.4485,
+        -1.7485
+      ],
+      [
+        106.3074,
+        -1.6074
+      ],
+      [
+        106.1662,
+        -1.4662
+      ],
+      [
+        106.025,
+        -1.325
+      ],
+      [
+        105.8917,
+        -1.1917
+      ],
+      [
+        105.7583,
+        -1.0583
+      ],
+      [
+        105.625,
+        -0.925
+      ],
+      [
+        105.4917,
+        -0.7917
+      ],
+      [
+        105.365,
+        -0.665
+      ],
+      [
+        105.245,
+        -0.545
+      ],
+      [
+        105.125,
+        -0.425
+      ],
+      [
+        105.025,
+        -0.325
+      ],
+      [
+        104.925,
+        -0.225
+      ],
+      [
+        104.825,
+        -0.125
+      ],
+      [
+        104.725,
+        -0.075
+      ],
+      [
+        104.625,
+        0.025
+      ],
+      [
+        104.525,
+        0.125
+      ],
+      [
+        104.425,
+        0.175
+      ],
+      [
+        104.325,
+        0.275
+      ],
+      [
+        104.225,
+        0.375
+      ],
+      [
+        104.125,
+        0.475
+      ],
+      [
+        104.025,
+        0.575
+      ],
+      [
+        103.925,
+        0.675
+      ],
+      [
+        103.825,
+        0.725
+      ],
+      [
+        103.725,
+        0.825
+      ],
+      [
+        103.625,
+        0.925
+      ],
+      [
+        103.525,
+        1.025
+      ],
+      [
+        103.425,
+        1.125
+      ],
+      [
+        103.325,
+        1.225
+      ],
+      [
+        103.225,
+        1.325
+      ],
+      [
+        103.125,
+        1.425
+      ],
+      [
+        103.025,
+        1.525
+      ],
+      [
+        102.925,
+        1.625
+      ],
+      [
+        102.825,
+        1.725
+      ],
+      [
+        102.725,
+        1.825
+      ],
+      [
+        102.625,
+        1.925
+      ],
+      [
+        102.525,
+        2.025
+      ],
+      [
+        102.425,
+        2.075
+      ],
+      [
+        102.325,
+        2.125
+      ],
+      [
+        102.225,
+        2.175
+      ],
+      [
+        102.125,
+        2.225
+      ],
+      [
+        102.025,
+        2.325
+      ],
+      [
+        101.925,
+        2.375
+      ],
+      [
+        101.825,
+        2.425
+      ],
+      [
+        101.725,
+        2.475
+      ],
+      [
+        101.625,
+        2.475
+      ],
+      [
+        101.475,
+        2.475
+      ],
+      [
+        101.2813,
+        2.4813
+      ],
+      [
+        101.0938,
+        2.4938
+      ],
+      [
+        100.9301,
+        2.5706
+      ],
+      [
+        100.7902,
+        2.7118
+      ],
+      [
+        100.6503,
+        2.853
+      ],
+      [
+        100.5105,
+        2.9943
+      ],
+      [
+        100.3706,
+        3.1355
+      ],
+      [
+        100.2307,
+        3.2767
+      ],
+      [
+        100.0909,
+        3.4179
+      ],
+      [
+        99.951,
+        3.5591
+      ],
+      [
+        99.8111,
+        3.7003
+      ],
+      [
+        99.6713,
+        3.8416
+      ],
+      [
+        99.5314,
+        3.9828
+      ],
+      [
+        99.3916,
+        4.124
+      ],
+      [
+        99.2517,
+        4.2652
+      ],
+      [
+        99.1118,
+        4.4064
+      ],
+      [
+        98.972,
+        4.5476
+      ],
+      [
+        98.8321,
+        4.6889
+      ],
+      [
+        98.6922,
+        4.8301
+      ],
+      [
+        98.5524,
+        4.9713
+      ],
+      [
+        98.4125,
+        5.1125
+      ],
+      [
+        98.2726,
+        5.2537
+      ],
+      [
+        98.1328,
+        5.3949
+      ],
+      [
+        97.9929,
+        5.5361
+      ],
+      [
+        97.853,
+        5.6774
+      ],
+      [
+        97.7132,
+        5.8186
+      ],
+      [
+        97.5733,
+        5.9598
+      ],
+      [
+        97.4334,
+        6.101
+      ],
+      [
+        97.2936,
+        6.2422
+      ],
+      [
+        97.1537,
+        6.3834
+      ],
+      [
+        97.0139,
+        6.5247
+      ],
+      [
+        96.874,
+        6.6659
+      ],
+      [
+        96.7341,
+        6.8071
+      ],
+      [
+        96.5943,
+        6.9483
+      ],
+      [
+        96.4544,
+        7.0895
+      ],
+      [
+        96.3145,
+        7.2307
+      ],
+      [
+        96.1747,
+        7.372
+      ],
+      [
+        96.0348,
+        7.5132
+      ],
+      [
+        95.8949,
+        7.6544
+      ],
+      [
+        95.7547,
+        7.7953
+      ],
+      [
+        95.6142,
+        7.9358
+      ],
+      [
+        95.4736,
+        8.0764
+      ],
+      [
+        95.3331,
+        8.2169
+      ],
+      [
+        95.1926,
+        8.3574
+      ],
+      [
+        95.052,
+        8.498
+      ],
+      [
+        94.9115,
+        8.6385
+      ],
+      [
+        94.7709,
+        8.7791
+      ],
+      [
+        94.6304,
+        8.9196
+      ],
+      [
+        94.4899,
+        9.0601
+      ],
+      [
+        94.3493,
+        9.2007
+      ],
+      [
+        94.2088,
+        9.3412
+      ],
+      [
+        94.0682,
+        9.4818
+      ],
+      [
+        93.9277,
+        9.6223
+      ],
+      [
+        93.7872,
+        9.7628
+      ],
+      [
+        93.6466,
+        9.9034
+      ],
+      [
+        93.5061,
+        10.0439
+      ],
+      [
+        93.3655,
+        10.1845
+      ],
+      [
+        93.225,
+        10.325
+      ],
+      [
+        93.085,
+        10.465
+      ],
+      [
+        92.945,
+        10.605
+      ],
+      [
+        92.825,
+        10.725
+      ],
+      [
+        92.725,
+        10.825
+      ],
+      [
+        92.625,
+        10.925
+      ],
+      [
+        92.505,
+        11.045
+      ],
+      [
+        92.365,
+        11.185
+      ],
+      [
+        92.225,
+        11.325
+      ],
+      [
+        92.125,
+        11.425
+      ],
+      [
+        92.025,
+        11.525
+      ],
+      [
+        91.925,
+        11.625
+      ],
+      [
+        91.7861,
+        11.7639
+      ],
+      [
+        91.6472,
+        11.9028
+      ],
+      [
+        91.5083,
+        12.0417
+      ],
+      [
+        91.3694,
+        12.1806
+      ],
+      [
+        91.2306,
+        12.3194
+      ],
+      [
+        91.0917,
+        12.4583
+      ],
+      [
+        90.9528,
+        12.5972
+      ],
+      [
+        90.8139,
+        12.7361
+      ],
+      [
+        90.675,
+        12.875
+      ],
+      [
+        90.475,
+        12.875
+      ],
+      [
+        90.275,
+        12.875
+      ],
+      [
+        90.075,
+        12.875
+      ],
+      [
+        89.875,
+        12.875
+      ],
+      [
+        89.675,
+        12.875
+      ],
+      [
+        89.475,
+        12.875
+      ],
+      [
+        89.275,
+        12.875
+      ],
+      [
+        89.075,
+        12.875
+      ],
+      [
+        88.875,
+        12.875
+      ],
+      [
+        88.675,
+        12.875
+      ],
+      [
+        88.475,
+        12.875
+      ],
+      [
+        88.275,
+        12.875
+      ],
+      [
+        88.075,
+        12.875
+      ],
+      [
+        87.875,
+        12.875
+      ],
+      [
+        87.675,
+        12.875
+      ],
+      [
+        87.475,
+        12.875
+      ],
+      [
+        87.275,
+        12.875
+      ],
+      [
+        87.075,
+        12.875
+      ],
+      [
+        86.875,
+        12.875
+      ],
+      [
+        86.675,
+        12.875
+      ],
+      [
+        86.475,
+        12.875
+      ],
+      [
+        86.275,
+        12.875
+      ],
+      [
+        86.075,
+        12.875
+      ],
+      [
+        85.875,
+        12.875
+      ],
+      [
+        85.675,
+        12.875
+      ],
+      [
+        85.475,
+        12.875
+      ],
+      [
+        85.275,
+        12.875
+      ],
+      [
+        85.077,
+        12.877
+      ],
+      [
+        84.881,
+        12.881
+      ],
+      [
+        84.685,
+        12.885
+      ],
+      [
+        84.489,
+        12.889
+      ],
+      [
+        84.293,
+        12.893
+      ],
+      [
+        84.097,
+        12.897
+      ],
+      [
+        83.901,
+        12.901
+      ],
+      [
+        83.705,
+        12.905
+      ],
+      [
+        83.509,
+        12.909
+      ],
+      [
+        83.313,
+        12.913
+      ],
+      [
+        83.117,
+        12.917
+      ],
+      [
+        82.921,
+        12.921
+      ],
+      [
+        82.725,
+        12.925
+      ],
+      [
+        82.5404,
+        12.9327
+      ],
+      [
+        82.3558,
+        12.9404
+      ],
+      [
+        82.1712,
+        12.9481
+      ],
+      [
+        81.9865,
+        12.9558
+      ],
+      [
+        81.8019,
+        12.9635
+      ],
+      [
+        81.6173,
+        12.9712
+      ],
+      [
+        81.4393,
+        12.975
+      ],
+      [
+        81.2679,
+        12.975
+      ],
+      [
+        81.0964,
+        12.975
+      ],
+      [
+        80.925,
+        12.975
+      ],
+      [
+        80.775,
+        12.975
+      ],
+      [
+        80.625,
+        12.975
+      ],
+      [
+        80.475,
+        12.975
+      ],
+      [
+        80.375,
+        13.025
+      ],
+      [
+        80.29,
+        13.1
+      ],
+      [
+        80.29,
+        13.1
+      ]
+    ],
+    "weatherWaypoints": [
+      {
+        "index": 0,
+        "name": "Balikpapan (Kalimantan)",
+        "isPort": true,
+        "type": "origin",
+        "lat": -1.27,
+        "lon": 116.83,
+        "distFromOriginNm": 0,
+        "distFromOriginKm": 0
+      },
+      {
+        "index": 1,
+        "name": "Station 1",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -3.225,
+        "lon": 116.225,
+        "distFromOriginNm": 132,
+        "distFromOriginKm": 244
+      },
+      {
+        "index": 2,
+        "name": "Station 2",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 114.575,
+        "distFromOriginNm": 263,
+        "distFromOriginKm": 486
+      },
+      {
+        "index": 3,
+        "name": "Station 3",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 112.375,
+        "distFromOriginNm": 394,
+        "distFromOriginKm": 730
+      },
+      {
+        "index": 4,
+        "name": "Station 4",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.225,
+        "lon": 110.175,
+        "distFromOriginNm": 526,
+        "distFromOriginKm": 974
+      },
+      {
+        "index": 5,
+        "name": "Station 5",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -2.9583,
+        "lon": 108.5083,
+        "distFromOriginNm": 657,
+        "distFromOriginKm": 1218
+      },
+      {
+        "index": 6,
+        "name": "Station 6",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -1.9603,
+        "lon": 106.6603,
+        "distFromOriginNm": 793,
+        "distFromOriginKm": 1469
+      },
+      {
+        "index": 7,
+        "name": "Station 7",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -0.425,
+        "lon": 105.125,
+        "distFromOriginNm": 923,
+        "distFromOriginKm": 1710
+      },
+      {
+        "index": 8,
+        "name": "Station 8",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 1.025,
+        "lon": 103.525,
+        "distFromOriginNm": 1056,
+        "distFromOriginKm": 1955
+      },
+      {
+        "index": 9,
+        "name": "Station 9",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 2.375,
+        "lon": 101.875,
+        "distFromOriginNm": 1188,
+        "distFromOriginKm": 2201
+      },
+      {
+        "index": 10,
+        "name": "Station 10",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 3.4179,
+        "lon": 100.0909,
+        "distFromOriginNm": 1321,
+        "distFromOriginKm": 2446
+      },
+      {
+        "index": 11,
+        "name": "Station 11",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 4.9713,
+        "lon": 98.5524,
+        "distFromOriginNm": 1452,
+        "distFromOriginKm": 2689
+      },
+      {
+        "index": 12,
+        "name": "Station 12",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 6.5247,
+        "lon": 97.0139,
+        "distFromOriginNm": 1583,
+        "distFromOriginKm": 2931
+      },
+      {
+        "index": 13,
+        "name": "Station 13",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 8.0764,
+        "lon": 95.4736,
+        "distFromOriginNm": 1714,
+        "distFromOriginKm": 3173
+      },
+      {
+        "index": 14,
+        "name": "Station 14",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 9.6223,
+        "lon": 93.9277,
+        "distFromOriginNm": 1844,
+        "distFromOriginKm": 3415
+      },
+      {
+        "index": 15,
+        "name": "Station 15",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 11.185,
+        "lon": 92.365,
+        "distFromOriginNm": 1976,
+        "distFromOriginKm": 3659
+      },
+      {
+        "index": 16,
+        "name": "Station 16",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 12.7361,
+        "lon": 90.8139,
+        "distFromOriginNm": 2106,
+        "distFromOriginKm": 3900
+      },
+      {
+        "index": 17,
+        "name": "Station 17",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 12.875,
+        "lon": 88.575,
+        "distFromOriginNm": 2240,
+        "distFromOriginKm": 4149
+      },
+      {
+        "index": 18,
+        "name": "Chennai Port",
+        "isPort": true,
+        "type": "destination",
+        "lat": 13.1,
+        "lon": 80.29,
+        "distFromOriginNm": 2362,
+        "distFromOriginKm": 4374
+      }
+    ]
+  },
   "ZARCB_INPAV": {
     "key": "ZARCB_INPAV",
     "origin": "ZARCB",
     "dest": "INPAV",
     "originName": "Richards Bay",
     "destName": "Paradip Port",
-    "label": "Richards Bay, South Africa → Paradip Port, India",
+    "label": "Richards Bay, South Africa -> Paradip Port, India",
     "distance_nm": 4321.1,
     "distance_km": 8003,
     "hazard_zones": [],
@@ -10596,7 +17925,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -10606,7 +17935,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -10616,7 +17945,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -10626,7 +17955,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -10636,7 +17965,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -27.985,
@@ -10646,7 +17975,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -26.305,
@@ -10656,7 +17985,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -24.675,
@@ -10666,7 +17995,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -23.031,
@@ -10676,7 +18005,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -21.3836,
@@ -10686,7 +18015,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -19.7689,
@@ -10696,7 +18025,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -18.1543,
@@ -10706,7 +18035,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -16.5396,
@@ -10716,7 +18045,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -14.925,
@@ -10726,7 +18055,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -13.3704,
@@ -10736,7 +18065,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": -11.8158,
@@ -10746,7 +18075,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.2612,
@@ -10756,7 +18085,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": -8.7066,
@@ -10766,7 +18095,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.152,
@@ -10776,7 +18105,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": -5.5974,
@@ -10786,7 +18115,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.0429,
@@ -10796,7 +18125,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.4883,
@@ -10806,7 +18135,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": -0.875,
@@ -10816,7 +18145,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.2664,
@@ -10826,7 +18155,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.8216,
@@ -10836,7 +18165,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.3767,
@@ -10846,7 +18175,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.9319,
@@ -10856,7 +18185,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.475,
@@ -10866,7 +18195,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.025,
@@ -10876,7 +18205,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.825,
@@ -10886,7 +18215,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.875,
@@ -10896,7 +18225,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.6728,
@@ -10906,7 +18235,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.2978,
@@ -10932,7 +18261,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INVTZ",
     "originName": "Richards Bay",
     "destName": "Visakhapatnam Port",
-    "label": "Richards Bay, South Africa → Visakhapatnam Port, India",
+    "label": "Richards Bay, South Africa -> Visakhapatnam Port, India",
     "distance_nm": 4075.7,
     "distance_km": 7548,
     "hazard_zones": [],
@@ -11771,7 +19100,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -11781,7 +19110,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -11791,7 +19120,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -11801,7 +19130,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -11811,7 +19140,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -27.985,
@@ -11821,7 +19150,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -26.305,
@@ -11831,7 +19160,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -24.675,
@@ -11841,7 +19170,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -23.031,
@@ -11851,7 +19180,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -21.3836,
@@ -11861,7 +19190,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -19.7689,
@@ -11871,7 +19200,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -18.1543,
@@ -11881,7 +19210,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -16.5396,
@@ -11891,7 +19220,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -14.925,
@@ -11901,7 +19230,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -13.3704,
@@ -11911,7 +19240,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": -11.8158,
@@ -11921,7 +19250,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.2612,
@@ -11931,7 +19260,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": -8.7066,
@@ -11941,7 +19270,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.152,
@@ -11951,7 +19280,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": -5.5974,
@@ -11961,7 +19290,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.0429,
@@ -11971,7 +19300,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.4883,
@@ -11981,7 +19310,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": -0.875,
@@ -11991,7 +19320,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.2664,
@@ -12001,7 +19330,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.8216,
@@ -12011,7 +19340,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.3767,
@@ -12021,7 +19350,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.9319,
@@ -12031,7 +19360,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.475,
@@ -12041,7 +19370,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.025,
@@ -12051,7 +19380,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.825,
@@ -12061,7 +19390,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.875,
@@ -12087,7 +19416,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INENN",
     "originName": "Richards Bay",
     "destName": "Ennore Port",
-    "label": "Richards Bay, South Africa → Ennore Port, India",
+    "label": "Richards Bay, South Africa -> Ennore Port, India",
     "distance_nm": 3767.1,
     "distance_km": 6977,
     "hazard_zones": [],
@@ -12854,7 +20183,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -12864,7 +20193,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -12874,7 +20203,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -12884,7 +20213,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": -28.825,
@@ -12894,7 +20223,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": -27.985,
@@ -12904,7 +20233,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": -26.305,
@@ -12914,7 +20243,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": -24.675,
@@ -12924,7 +20253,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": -23.031,
@@ -12934,7 +20263,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": -21.3836,
@@ -12944,7 +20273,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": -19.7689,
@@ -12954,7 +20283,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": -18.1543,
@@ -12964,7 +20293,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": -16.5396,
@@ -12974,7 +20303,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": -14.925,
@@ -12984,7 +20313,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": -13.3704,
@@ -12994,7 +20323,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": -11.8158,
@@ -13004,7 +20333,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": -10.2612,
@@ -13014,7 +20343,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": -8.7066,
@@ -13024,7 +20353,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": -7.152,
@@ -13034,7 +20363,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": -5.5974,
@@ -13044,7 +20373,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": -4.0429,
@@ -13054,7 +20383,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": -2.4883,
@@ -13064,7 +20393,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": -0.875,
@@ -13074,7 +20403,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.2664,
@@ -13084,7 +20413,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.8216,
@@ -13094,7 +20423,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.3767,
@@ -13104,7 +20433,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.9319,
@@ -13114,7 +20443,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.475,
@@ -13124,7 +20453,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.025,
@@ -13144,13 +20473,1076 @@ window.ARC_NAUTICAL_ROUTES = {
       }
     ]
   },
+  "ZARCB_INMAA": {
+    "key": "ZARCB_INMAA",
+    "origin": "ZARCB",
+    "dest": "INMAA",
+    "originName": "Richards Bay",
+    "destName": "Chennai Port",
+    "label": "Richards Bay, South Africa -> Chennai Port, India",
+    "distance_nm": 3760.9,
+    "distance_km": 6965,
+    "hazard_zones": [],
+    "chokepoints": [
+      {
+        "lat": -28.8,
+        "lng": 32.08,
+        "name": "Richards Bay"
+      },
+      {
+        "lat": 13.1,
+        "lng": 80.29,
+        "name": "Chennai"
+      }
+    ],
+    "coordinates": [
+      [
+        32.08,
+        -28.8
+      ],
+      [
+        32.275,
+        -28.825
+      ],
+      [
+        32.6,
+        -28.825
+      ],
+      [
+        32.95,
+        -28.825
+      ],
+      [
+        33.3,
+        -28.825
+      ],
+      [
+        33.675,
+        -28.825
+      ],
+      [
+        34.075,
+        -28.825
+      ],
+      [
+        34.475,
+        -28.825
+      ],
+      [
+        34.875,
+        -28.825
+      ],
+      [
+        35.2612,
+        -28.825
+      ],
+      [
+        35.6474,
+        -28.825
+      ],
+      [
+        36.0336,
+        -28.825
+      ],
+      [
+        36.4198,
+        -28.825
+      ],
+      [
+        36.806,
+        -28.825
+      ],
+      [
+        37.1922,
+        -28.825
+      ],
+      [
+        37.5784,
+        -28.825
+      ],
+      [
+        37.975,
+        -28.825
+      ],
+      [
+        38.375,
+        -28.825
+      ],
+      [
+        38.775,
+        -28.825
+      ],
+      [
+        39.175,
+        -28.825
+      ],
+      [
+        39.575,
+        -28.825
+      ],
+      [
+        39.975,
+        -28.825
+      ],
+      [
+        40.375,
+        -28.825
+      ],
+      [
+        40.775,
+        -28.825
+      ],
+      [
+        41.175,
+        -28.825
+      ],
+      [
+        41.575,
+        -28.825
+      ],
+      [
+        41.975,
+        -28.825
+      ],
+      [
+        42.375,
+        -28.825
+      ],
+      [
+        42.775,
+        -28.825
+      ],
+      [
+        43.175,
+        -28.825
+      ],
+      [
+        43.485,
+        -28.615
+      ],
+      [
+        43.765,
+        -28.335
+      ],
+      [
+        44.045,
+        -28.055
+      ],
+      [
+        44.325,
+        -27.775
+      ],
+      [
+        44.605,
+        -27.495
+      ],
+      [
+        44.885,
+        -27.215
+      ],
+      [
+        45.165,
+        -26.935
+      ],
+      [
+        45.445,
+        -26.655
+      ],
+      [
+        45.725,
+        -26.375
+      ],
+      [
+        46.005,
+        -26.095
+      ],
+      [
+        46.285,
+        -25.815
+      ],
+      [
+        46.565,
+        -25.535
+      ],
+      [
+        46.825,
+        -25.275
+      ],
+      [
+        47.025,
+        -25.075
+      ],
+      [
+        47.225,
+        -24.875
+      ],
+      [
+        47.425,
+        -24.675
+      ],
+      [
+        47.675,
+        -24.425
+      ],
+      [
+        47.9365,
+        -24.1635
+      ],
+      [
+        48.1981,
+        -23.9019
+      ],
+      [
+        48.4596,
+        -23.6404
+      ],
+      [
+        48.729,
+        -23.371
+      ],
+      [
+        49.001,
+        -23.099
+      ],
+      [
+        49.273,
+        -22.827
+      ],
+      [
+        49.545,
+        -22.555
+      ],
+      [
+        49.817,
+        -22.283
+      ],
+      [
+        50.089,
+        -22.011
+      ],
+      [
+        50.3654,
+        -21.7346
+      ],
+      [
+        50.6462,
+        -21.4538
+      ],
+      [
+        50.927,
+        -21.173
+      ],
+      [
+        51.2078,
+        -20.8922
+      ],
+      [
+        51.4886,
+        -20.6114
+      ],
+      [
+        51.7694,
+        -20.3306
+      ],
+      [
+        52.0503,
+        -20.0497
+      ],
+      [
+        52.3311,
+        -19.7689
+      ],
+      [
+        52.6119,
+        -19.4881
+      ],
+      [
+        52.8927,
+        -19.2073
+      ],
+      [
+        53.1735,
+        -18.9265
+      ],
+      [
+        53.4543,
+        -18.6457
+      ],
+      [
+        53.7351,
+        -18.3649
+      ],
+      [
+        54.0159,
+        -18.0841
+      ],
+      [
+        54.2967,
+        -17.8033
+      ],
+      [
+        54.5775,
+        -17.5225
+      ],
+      [
+        54.8583,
+        -17.2417
+      ],
+      [
+        55.1391,
+        -16.9609
+      ],
+      [
+        55.4199,
+        -16.6801
+      ],
+      [
+        55.7008,
+        -16.3992
+      ],
+      [
+        55.9816,
+        -16.1184
+      ],
+      [
+        56.2624,
+        -15.8376
+      ],
+      [
+        56.5432,
+        -15.5568
+      ],
+      [
+        56.824,
+        -15.276
+      ],
+      [
+        57.1048,
+        -14.9952
+      ],
+      [
+        57.387,
+        -14.713
+      ],
+      [
+        57.6696,
+        -14.4304
+      ],
+      [
+        57.9523,
+        -14.1477
+      ],
+      [
+        58.2349,
+        -13.8651
+      ],
+      [
+        58.5176,
+        -13.5824
+      ],
+      [
+        58.8003,
+        -13.2997
+      ],
+      [
+        59.0829,
+        -13.0171
+      ],
+      [
+        59.3656,
+        -12.7344
+      ],
+      [
+        59.6482,
+        -12.4518
+      ],
+      [
+        59.9309,
+        -12.1691
+      ],
+      [
+        60.2135,
+        -11.8865
+      ],
+      [
+        60.4962,
+        -11.6038
+      ],
+      [
+        60.7788,
+        -11.3212
+      ],
+      [
+        61.0615,
+        -11.0385
+      ],
+      [
+        61.3441,
+        -10.7559
+      ],
+      [
+        61.6268,
+        -10.4732
+      ],
+      [
+        61.9094,
+        -10.1906
+      ],
+      [
+        62.1921,
+        -9.9079
+      ],
+      [
+        62.4747,
+        -9.6253
+      ],
+      [
+        62.7574,
+        -9.3426
+      ],
+      [
+        63.0401,
+        -9.0599
+      ],
+      [
+        63.3227,
+        -8.7773
+      ],
+      [
+        63.6054,
+        -8.4946
+      ],
+      [
+        63.888,
+        -8.212
+      ],
+      [
+        64.1707,
+        -7.9293
+      ],
+      [
+        64.4533,
+        -7.6467
+      ],
+      [
+        64.736,
+        -7.364
+      ],
+      [
+        65.0186,
+        -7.0814
+      ],
+      [
+        65.3013,
+        -6.7987
+      ],
+      [
+        65.5839,
+        -6.5161
+      ],
+      [
+        65.8666,
+        -6.2334
+      ],
+      [
+        66.1492,
+        -5.9508
+      ],
+      [
+        66.4319,
+        -5.6681
+      ],
+      [
+        66.7145,
+        -5.3855
+      ],
+      [
+        66.9972,
+        -5.1028
+      ],
+      [
+        67.2798,
+        -4.8202
+      ],
+      [
+        67.5625,
+        -4.5375
+      ],
+      [
+        67.8452,
+        -4.2548
+      ],
+      [
+        68.1278,
+        -3.9722
+      ],
+      [
+        68.4105,
+        -3.6895
+      ],
+      [
+        68.6931,
+        -3.4069
+      ],
+      [
+        68.9758,
+        -3.1242
+      ],
+      [
+        69.2584,
+        -2.8416
+      ],
+      [
+        69.5411,
+        -2.5589
+      ],
+      [
+        69.8237,
+        -2.2763
+      ],
+      [
+        70.1064,
+        -1.9936
+      ],
+      [
+        70.389,
+        -1.711
+      ],
+      [
+        70.6717,
+        -1.4283
+      ],
+      [
+        70.9543,
+        -1.1457
+      ],
+      [
+        71.025,
+        -0.775
+      ],
+      [
+        71.025,
+        -0.375
+      ],
+      [
+        71.025,
+        0.025
+      ],
+      [
+        71.025,
+        0.425
+      ],
+      [
+        71.025,
+        0.825
+      ],
+      [
+        71.0957,
+        1.1957
+      ],
+      [
+        71.3784,
+        1.4784
+      ],
+      [
+        71.6612,
+        1.7612
+      ],
+      [
+        71.944,
+        2.044
+      ],
+      [
+        72.2267,
+        2.3267
+      ],
+      [
+        72.5095,
+        2.6095
+      ],
+      [
+        72.7922,
+        2.8922
+      ],
+      [
+        73.075,
+        3.175
+      ],
+      [
+        73.3578,
+        3.4578
+      ],
+      [
+        73.6405,
+        3.7405
+      ],
+      [
+        73.9233,
+        4.0233
+      ],
+      [
+        74.206,
+        4.306
+      ],
+      [
+        74.4888,
+        4.5888
+      ],
+      [
+        74.7716,
+        4.8716
+      ],
+      [
+        75.0543,
+        5.1543
+      ],
+      [
+        75.3371,
+        5.4371
+      ],
+      [
+        75.6198,
+        5.7198
+      ],
+      [
+        75.9026,
+        6.0026
+      ],
+      [
+        76.1853,
+        6.2853
+      ],
+      [
+        76.4681,
+        6.5681
+      ],
+      [
+        76.7509,
+        6.8509
+      ],
+      [
+        77.0336,
+        7.1336
+      ],
+      [
+        77.3083,
+        7.4083
+      ],
+      [
+        77.575,
+        7.675
+      ],
+      [
+        77.8417,
+        7.9417
+      ],
+      [
+        78.1083,
+        8.2083
+      ],
+      [
+        78.3625,
+        8.4625
+      ],
+      [
+        78.6125,
+        8.7125
+      ],
+      [
+        78.8625,
+        8.9625
+      ],
+      [
+        79.075,
+        9.175
+      ],
+      [
+        79.175,
+        9.375
+      ],
+      [
+        79.2417,
+        9.6417
+      ],
+      [
+        79.5083,
+        9.9083
+      ],
+      [
+        79.725,
+        10.125
+      ],
+      [
+        79.925,
+        10.325
+      ],
+      [
+        79.925,
+        10.525
+      ],
+      [
+        79.925,
+        10.725
+      ],
+      [
+        79.925,
+        10.925
+      ],
+      [
+        79.925,
+        11.125
+      ],
+      [
+        79.925,
+        11.325
+      ],
+      [
+        79.925,
+        11.5417
+      ],
+      [
+        79.925,
+        11.825
+      ],
+      [
+        79.925,
+        12.025
+      ],
+      [
+        80.025,
+        12.225
+      ],
+      [
+        80.175,
+        12.425
+      ],
+      [
+        80.225,
+        12.625
+      ],
+      [
+        80.275,
+        12.825
+      ],
+      [
+        80.3075,
+        13.0375
+      ],
+      [
+        80.29,
+        13.1
+      ]
+    ],
+    "weatherWaypoints": [
+      {
+        "index": 0,
+        "name": "Richards Bay",
+        "isPort": true,
+        "type": "origin",
+        "lat": -28.8,
+        "lon": 32.08,
+        "distFromOriginNm": 0,
+        "distFromOriginKm": 0
+      },
+      {
+        "index": 1,
+        "name": "Station 1",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -28.825,
+        "lon": 34.575,
+        "distFromOriginNm": 132,
+        "distFromOriginKm": 244
+      },
+      {
+        "index": 2,
+        "name": "Station 2",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -28.825,
+        "lon": 37.0957,
+        "distFromOriginNm": 264,
+        "distFromOriginKm": 489
+      },
+      {
+        "index": 3,
+        "name": "Station 3",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -28.825,
+        "lon": 39.575,
+        "distFromOriginNm": 395,
+        "distFromOriginKm": 731
+      },
+      {
+        "index": 4,
+        "name": "Station 4",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -28.825,
+        "lon": 42.075,
+        "distFromOriginNm": 526,
+        "distFromOriginKm": 974
+      },
+      {
+        "index": 5,
+        "name": "Station 5",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -27.985,
+        "lon": 44.115,
+        "distFromOriginNm": 656,
+        "distFromOriginKm": 1216
+      },
+      {
+        "index": 6,
+        "name": "Station 6",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -26.305,
+        "lon": 45.795,
+        "distFromOriginNm": 791,
+        "distFromOriginKm": 1466
+      },
+      {
+        "index": 7,
+        "name": "Station 7",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -24.675,
+        "lon": 47.425,
+        "distFromOriginNm": 923,
+        "distFromOriginKm": 1710
+      },
+      {
+        "index": 8,
+        "name": "Station 8",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -23.031,
+        "lon": 49.069,
+        "distFromOriginNm": 1057,
+        "distFromOriginKm": 1958
+      },
+      {
+        "index": 9,
+        "name": "Station 9",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -21.3836,
+        "lon": 50.7164,
+        "distFromOriginNm": 1192,
+        "distFromOriginKm": 2207
+      },
+      {
+        "index": 10,
+        "name": "Station 10",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -19.7689,
+        "lon": 52.3311,
+        "distFromOriginNm": 1325,
+        "distFromOriginKm": 2453
+      },
+      {
+        "index": 11,
+        "name": "Station 11",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -18.1543,
+        "lon": 53.9457,
+        "distFromOriginNm": 1458,
+        "distFromOriginKm": 2700
+      },
+      {
+        "index": 12,
+        "name": "Station 12",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -16.5396,
+        "lon": 55.5604,
+        "distFromOriginNm": 1592,
+        "distFromOriginKm": 2949
+      },
+      {
+        "index": 13,
+        "name": "Station 13",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -14.925,
+        "lon": 57.175,
+        "distFromOriginNm": 1727,
+        "distFromOriginKm": 3198
+      },
+      {
+        "index": 14,
+        "name": "Station 14",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -13.3704,
+        "lon": 58.7296,
+        "distFromOriginNm": 1857,
+        "distFromOriginKm": 3439
+      },
+      {
+        "index": 15,
+        "name": "Station 15",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -11.8158,
+        "lon": 60.2842,
+        "distFromOriginNm": 1987,
+        "distFromOriginKm": 3680
+      },
+      {
+        "index": 16,
+        "name": "Station 16",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -10.2612,
+        "lon": 61.8388,
+        "distFromOriginNm": 2118,
+        "distFromOriginKm": 3922
+      },
+      {
+        "index": 17,
+        "name": "Station 17",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -8.7066,
+        "lon": 63.3934,
+        "distFromOriginNm": 2249,
+        "distFromOriginKm": 4165
+      },
+      {
+        "index": 18,
+        "name": "Station 18",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -7.152,
+        "lon": 64.948,
+        "distFromOriginNm": 2380,
+        "distFromOriginKm": 4408
+      },
+      {
+        "index": 19,
+        "name": "Station 19",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -5.5974,
+        "lon": 66.5026,
+        "distFromOriginNm": 2512,
+        "distFromOriginKm": 4652
+      },
+      {
+        "index": 20,
+        "name": "Station 20",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -4.0429,
+        "lon": 68.0571,
+        "distFromOriginNm": 2644,
+        "distFromOriginKm": 4896
+      },
+      {
+        "index": 21,
+        "name": "Station 21",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -2.4883,
+        "lon": 69.6117,
+        "distFromOriginNm": 2776,
+        "distFromOriginKm": 5140
+      },
+      {
+        "index": 22,
+        "name": "Station 22",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": -0.875,
+        "lon": 71.025,
+        "distFromOriginNm": 2908,
+        "distFromOriginKm": 5385
+      },
+      {
+        "index": 23,
+        "name": "Station 23",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 1.2664,
+        "lon": 71.1664,
+        "distFromOriginNm": 3040,
+        "distFromOriginKm": 5629
+      },
+      {
+        "index": 24,
+        "name": "Station 24",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 2.8216,
+        "lon": 72.7216,
+        "distFromOriginNm": 3172,
+        "distFromOriginKm": 5874
+      },
+      {
+        "index": 25,
+        "name": "Station 25",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 4.3767,
+        "lon": 74.2767,
+        "distFromOriginNm": 3304,
+        "distFromOriginKm": 6118
+      },
+      {
+        "index": 26,
+        "name": "Station 26",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 5.9319,
+        "lon": 75.8319,
+        "distFromOriginNm": 3435,
+        "distFromOriginKm": 6362
+      },
+      {
+        "index": 27,
+        "name": "Station 27",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 7.475,
+        "lon": 77.375,
+        "distFromOriginNm": 3566,
+        "distFromOriginKm": 6604
+      },
+      {
+        "index": 28,
+        "name": "Station 28",
+        "isPort": false,
+        "type": "waypoint",
+        "lat": 9.025,
+        "lon": 78.925,
+        "distFromOriginNm": 3697,
+        "distFromOriginKm": 6847
+      },
+      {
+        "index": 29,
+        "name": "Chennai Port",
+        "isPort": true,
+        "type": "destination",
+        "lat": 13.1,
+        "lon": 80.29,
+        "distFromOriginNm": 3761,
+        "distFromOriginKm": 6965
+      }
+    ]
+  },
   "USNFK_INPAV": {
     "key": "USNFK_INPAV",
     "origin": "USNFK",
     "dest": "INPAV",
     "originName": "Hampton Roads (Norfolk)",
     "destName": "Paradip Port",
-    "label": "Hampton Roads, USA → Paradip Port, India",
+    "label": "Hampton Roads, USA -> Paradip Port, India",
     "distance_nm": 9055.7,
     "distance_km": 16771,
     "hazard_zones": [
@@ -14000,7 +22392,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14010,7 +22402,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14020,7 +22412,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14030,7 +22422,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14040,7 +22432,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14050,7 +22442,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14060,7 +22452,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14070,7 +22462,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14080,7 +22472,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14090,7 +22482,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14100,7 +22492,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14110,7 +22502,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14120,7 +22512,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14130,7 +22522,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14140,7 +22532,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14150,7 +22542,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14160,7 +22552,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14170,7 +22562,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -14180,7 +22572,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -14190,7 +22582,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -14200,7 +22592,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -14210,7 +22602,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -14220,7 +22612,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -14230,7 +22622,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -14240,7 +22632,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -14250,7 +22642,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.375,
@@ -14260,7 +22652,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.675,
@@ -14270,7 +22662,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -14280,7 +22672,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -14290,7 +22682,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -14300,7 +22692,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -14310,7 +22702,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -14320,7 +22712,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.275,
@@ -14330,7 +22722,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 34,
-        "name": "Point 34",
+        "name": "Station 34",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.625,
@@ -14340,7 +22732,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 35,
-        "name": "Point 35",
+        "name": "Station 35",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.625,
@@ -14350,7 +22742,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 36,
-        "name": "Point 36",
+        "name": "Station 36",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.625,
@@ -14360,7 +22752,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 37,
-        "name": "Point 37",
+        "name": "Station 37",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.125,
@@ -14370,7 +22762,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 38,
-        "name": "Point 38",
+        "name": "Station 38",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.125,
@@ -14380,7 +22772,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 39,
-        "name": "Point 39",
+        "name": "Station 39",
         "isPort": false,
         "type": "waypoint",
         "lat": 34.925,
@@ -14390,7 +22782,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 40,
-        "name": "Point 40",
+        "name": "Station 40",
         "isPort": false,
         "type": "waypoint",
         "lat": 33.1889,
@@ -14400,7 +22792,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 41,
-        "name": "Point 41",
+        "name": "Station 41",
         "isPort": false,
         "type": "waypoint",
         "lat": 31.525,
@@ -14410,7 +22802,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 42,
-        "name": "Point 42",
+        "name": "Station 42",
         "isPort": false,
         "type": "waypoint",
         "lat": 29.575,
@@ -14420,7 +22812,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 43,
-        "name": "Point 43",
+        "name": "Station 43",
         "isPort": false,
         "type": "waypoint",
         "lat": 27.775,
@@ -14430,7 +22822,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 44,
-        "name": "Point 44",
+        "name": "Station 44",
         "isPort": false,
         "type": "waypoint",
         "lat": 26.125,
@@ -14440,7 +22832,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 45,
-        "name": "Point 45",
+        "name": "Station 45",
         "isPort": false,
         "type": "waypoint",
         "lat": 24.475,
@@ -14450,7 +22842,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 46,
-        "name": "Point 46",
+        "name": "Station 46",
         "isPort": false,
         "type": "waypoint",
         "lat": 22.484,
@@ -14460,7 +22852,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 47,
-        "name": "Point 47",
+        "name": "Station 47",
         "isPort": false,
         "type": "waypoint",
         "lat": 20.2981,
@@ -14470,7 +22862,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 48,
-        "name": "Point 48",
+        "name": "Station 48",
         "isPort": false,
         "type": "waypoint",
         "lat": 18.6029,
@@ -14480,7 +22872,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 49,
-        "name": "Point 49",
+        "name": "Station 49",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.9897,
@@ -14490,7 +22882,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 50,
-        "name": "Point 50",
+        "name": "Station 50",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.425,
@@ -14500,7 +22892,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 51,
-        "name": "Point 51",
+        "name": "Station 51",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.475,
@@ -14510,7 +22902,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 52,
-        "name": "Point 52",
+        "name": "Station 52",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.575,
@@ -14520,7 +22912,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 53,
-        "name": "Point 53",
+        "name": "Station 53",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.575,
@@ -14530,7 +22922,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 54,
-        "name": "Point 54",
+        "name": "Station 54",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.575,
@@ -14540,7 +22932,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 55,
-        "name": "Point 55",
+        "name": "Station 55",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14550,7 +22942,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 56,
-        "name": "Point 56",
+        "name": "Station 56",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14560,7 +22952,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 57,
-        "name": "Point 57",
+        "name": "Station 57",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14570,7 +22962,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 58,
-        "name": "Point 58",
+        "name": "Station 58",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14580,7 +22972,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 59,
-        "name": "Point 59",
+        "name": "Station 59",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14590,7 +22982,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 60,
-        "name": "Point 60",
+        "name": "Station 60",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14600,7 +22992,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 61,
-        "name": "Point 61",
+        "name": "Station 61",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14610,7 +23002,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 62,
-        "name": "Point 62",
+        "name": "Station 62",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14620,7 +23012,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 63,
-        "name": "Point 63",
+        "name": "Station 63",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14630,7 +23022,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 64,
-        "name": "Point 64",
+        "name": "Station 64",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -14640,7 +23032,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 65,
-        "name": "Point 65",
+        "name": "Station 65",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.6028,
@@ -14650,7 +23042,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 66,
-        "name": "Point 66",
+        "name": "Station 66",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.0571,
@@ -14660,7 +23052,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 67,
-        "name": "Point 67",
+        "name": "Station 67",
         "isPort": false,
         "type": "waypoint",
         "lat": 8.475,
@@ -14686,7 +23078,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INVTZ",
     "originName": "Hampton Roads (Norfolk)",
     "destName": "Visakhapatnam Port",
-    "label": "Hampton Roads, USA → Visakhapatnam Port, India",
+    "label": "Hampton Roads, USA -> Visakhapatnam Port, India",
     "distance_nm": 8848.2,
     "distance_km": 16387,
     "hazard_zones": [
@@ -15524,7 +23916,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15534,7 +23926,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15544,7 +23936,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15554,7 +23946,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15564,7 +23956,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15574,7 +23966,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15584,7 +23976,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15594,7 +23986,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15604,7 +23996,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15614,7 +24006,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15624,7 +24016,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15634,7 +24026,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15644,7 +24036,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15654,7 +24046,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15664,7 +24056,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15674,7 +24066,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15684,7 +24076,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15694,7 +24086,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.975,
@@ -15704,7 +24096,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -15714,7 +24106,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -15724,7 +24116,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -15734,7 +24126,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -15744,7 +24136,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -15754,7 +24146,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -15764,7 +24156,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.925,
@@ -15774,7 +24166,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.375,
@@ -15784,7 +24176,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.675,
@@ -15794,7 +24186,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -15804,7 +24196,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -15814,7 +24206,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -15824,7 +24216,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -15834,7 +24226,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.375,
@@ -15844,7 +24236,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.275,
@@ -15854,7 +24246,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 34,
-        "name": "Point 34",
+        "name": "Station 34",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.625,
@@ -15864,7 +24256,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 35,
-        "name": "Point 35",
+        "name": "Station 35",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.625,
@@ -15874,7 +24266,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 36,
-        "name": "Point 36",
+        "name": "Station 36",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.625,
@@ -15884,7 +24276,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 37,
-        "name": "Point 37",
+        "name": "Station 37",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.125,
@@ -15894,7 +24286,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 38,
-        "name": "Point 38",
+        "name": "Station 38",
         "isPort": false,
         "type": "waypoint",
         "lat": 36.125,
@@ -15904,7 +24296,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 39,
-        "name": "Point 39",
+        "name": "Station 39",
         "isPort": false,
         "type": "waypoint",
         "lat": 34.925,
@@ -15914,7 +24306,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 40,
-        "name": "Point 40",
+        "name": "Station 40",
         "isPort": false,
         "type": "waypoint",
         "lat": 33.1889,
@@ -15924,7 +24316,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 41,
-        "name": "Point 41",
+        "name": "Station 41",
         "isPort": false,
         "type": "waypoint",
         "lat": 31.525,
@@ -15934,7 +24326,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 42,
-        "name": "Point 42",
+        "name": "Station 42",
         "isPort": false,
         "type": "waypoint",
         "lat": 29.575,
@@ -15944,7 +24336,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 43,
-        "name": "Point 43",
+        "name": "Station 43",
         "isPort": false,
         "type": "waypoint",
         "lat": 27.775,
@@ -15954,7 +24346,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 44,
-        "name": "Point 44",
+        "name": "Station 44",
         "isPort": false,
         "type": "waypoint",
         "lat": 26.125,
@@ -15964,7 +24356,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 45,
-        "name": "Point 45",
+        "name": "Station 45",
         "isPort": false,
         "type": "waypoint",
         "lat": 24.475,
@@ -15974,7 +24366,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 46,
-        "name": "Point 46",
+        "name": "Station 46",
         "isPort": false,
         "type": "waypoint",
         "lat": 22.484,
@@ -15984,7 +24376,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 47,
-        "name": "Point 47",
+        "name": "Station 47",
         "isPort": false,
         "type": "waypoint",
         "lat": 20.2981,
@@ -15994,7 +24386,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 48,
-        "name": "Point 48",
+        "name": "Station 48",
         "isPort": false,
         "type": "waypoint",
         "lat": 18.6029,
@@ -16004,7 +24396,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 49,
-        "name": "Point 49",
+        "name": "Station 49",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.9897,
@@ -16014,7 +24406,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 50,
-        "name": "Point 50",
+        "name": "Station 50",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.425,
@@ -16024,7 +24416,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 51,
-        "name": "Point 51",
+        "name": "Station 51",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.475,
@@ -16034,7 +24426,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 52,
-        "name": "Point 52",
+        "name": "Station 52",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.575,
@@ -16044,7 +24436,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 53,
-        "name": "Point 53",
+        "name": "Station 53",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.575,
@@ -16054,7 +24446,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 54,
-        "name": "Point 54",
+        "name": "Station 54",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.575,
@@ -16064,7 +24456,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 55,
-        "name": "Point 55",
+        "name": "Station 55",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16074,7 +24466,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 56,
-        "name": "Point 56",
+        "name": "Station 56",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16084,7 +24476,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 57,
-        "name": "Point 57",
+        "name": "Station 57",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16094,7 +24486,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 58,
-        "name": "Point 58",
+        "name": "Station 58",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16104,7 +24496,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 59,
-        "name": "Point 59",
+        "name": "Station 59",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16114,7 +24506,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 60,
-        "name": "Point 60",
+        "name": "Station 60",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16124,7 +24516,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 61,
-        "name": "Point 61",
+        "name": "Station 61",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16134,7 +24526,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 62,
-        "name": "Point 62",
+        "name": "Station 62",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16144,7 +24536,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 63,
-        "name": "Point 63",
+        "name": "Station 63",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16154,7 +24546,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 64,
-        "name": "Point 64",
+        "name": "Station 64",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.025,
@@ -16164,7 +24556,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 65,
-        "name": "Point 65",
+        "name": "Station 65",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.6028,
@@ -16174,7 +24566,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 66,
-        "name": "Point 66",
+        "name": "Station 66",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.0571,
@@ -16200,7 +24592,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INPAV",
     "originName": "Vostochny",
     "destName": "Paradip Port",
-    "label": "Vostochny, Russia → Paradip Port, India",
+    "label": "Vostochny, Russia -> Paradip Port, India",
     "distance_nm": 4499.3,
     "distance_km": 8333,
     "hazard_zones": [
@@ -17002,7 +25394,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": 41.075,
@@ -17012,7 +25404,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": 39.275,
@@ -17022,7 +25414,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.1083,
@@ -17032,7 +25424,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": 35.075,
@@ -17042,7 +25434,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": 33.3397,
@@ -17052,7 +25444,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": 31.6456,
@@ -17062,7 +25454,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": 29.9515,
@@ -17072,7 +25464,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": 28.2574,
@@ -17082,7 +25474,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": 26.575,
@@ -17092,7 +25484,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": 24.6781,
@@ -17102,7 +25494,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": 22.8704,
@@ -17112,7 +25504,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": 21.2467,
@@ -17122,7 +25514,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": 19.6229,
@@ -17132,7 +25524,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": 17.9991,
@@ -17142,7 +25534,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.3754,
@@ -17152,7 +25544,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.7516,
@@ -17162,7 +25554,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.875,
@@ -17172,7 +25564,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.025,
@@ -17182,7 +25574,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.4779,
@@ -17192,7 +25584,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.925,
@@ -17202,7 +25594,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.2429,
@@ -17212,7 +25604,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.025,
@@ -17222,7 +25614,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.825,
@@ -17232,7 +25624,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.775,
@@ -17242,7 +25634,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.5875,
@@ -17252,7 +25644,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.575,
@@ -17262,7 +25654,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.375,
@@ -17272,7 +25664,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.975,
@@ -17282,7 +25674,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.705,
@@ -17292,7 +25684,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.2988,
@@ -17302,7 +25694,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.9189,
@@ -17312,7 +25704,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.5457,
@@ -17322,7 +25714,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.1726,
@@ -17348,7 +25740,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "dest": "INVTZ",
     "originName": "Vostochny",
     "destName": "Visakhapatnam Port",
-    "label": "Vostochny, Russia → Visakhapatnam Port, India",
+    "label": "Vostochny, Russia -> Visakhapatnam Port, India",
     "distance_nm": 4527.4,
     "distance_km": 8385,
     "hazard_zones": [
@@ -18126,7 +26518,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": 41.075,
@@ -18136,7 +26528,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": 39.275,
@@ -18146,7 +26538,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": 37.1083,
@@ -18156,7 +26548,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": 35.075,
@@ -18166,7 +26558,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": 33.3397,
@@ -18176,7 +26568,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": 31.6456,
@@ -18186,7 +26578,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": 29.9515,
@@ -18196,7 +26588,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": 28.2574,
@@ -18206,7 +26598,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": 26.575,
@@ -18216,7 +26608,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": 24.6781,
@@ -18226,7 +26618,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": 22.8704,
@@ -18236,7 +26628,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 12,
-        "name": "Point 12",
+        "name": "Station 12",
         "isPort": false,
         "type": "waypoint",
         "lat": 21.2467,
@@ -18246,7 +26638,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 13,
-        "name": "Point 13",
+        "name": "Station 13",
         "isPort": false,
         "type": "waypoint",
         "lat": 19.6229,
@@ -18256,7 +26648,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 14,
-        "name": "Point 14",
+        "name": "Station 14",
         "isPort": false,
         "type": "waypoint",
         "lat": 17.9991,
@@ -18266,7 +26658,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 15,
-        "name": "Point 15",
+        "name": "Station 15",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.3754,
@@ -18276,7 +26668,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 16,
-        "name": "Point 16",
+        "name": "Station 16",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.7516,
@@ -18286,7 +26678,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 17,
-        "name": "Point 17",
+        "name": "Station 17",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.875,
@@ -18296,7 +26688,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 18,
-        "name": "Point 18",
+        "name": "Station 18",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.025,
@@ -18306,7 +26698,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 19,
-        "name": "Point 19",
+        "name": "Station 19",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.4779,
@@ -18316,7 +26708,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 20,
-        "name": "Point 20",
+        "name": "Station 20",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.925,
@@ -18326,7 +26718,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 21,
-        "name": "Point 21",
+        "name": "Station 21",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.2429,
@@ -18336,7 +26728,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 22,
-        "name": "Point 22",
+        "name": "Station 22",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.025,
@@ -18346,7 +26738,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 23,
-        "name": "Point 23",
+        "name": "Station 23",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.825,
@@ -18356,7 +26748,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 24,
-        "name": "Point 24",
+        "name": "Station 24",
         "isPort": false,
         "type": "waypoint",
         "lat": 1.775,
@@ -18366,7 +26758,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 25,
-        "name": "Point 25",
+        "name": "Station 25",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.5708,
@@ -18376,7 +26768,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 26,
-        "name": "Point 26",
+        "name": "Station 26",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.1283,
@@ -18386,7 +26778,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 27,
-        "name": "Point 27",
+        "name": "Station 27",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.6857,
@@ -18396,7 +26788,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 28,
-        "name": "Point 28",
+        "name": "Station 28",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.2432,
@@ -18406,7 +26798,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 29,
-        "name": "Point 29",
+        "name": "Station 29",
         "isPort": false,
         "type": "waypoint",
         "lat": 8.8007,
@@ -18416,7 +26808,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 30,
-        "name": "Point 30",
+        "name": "Station 30",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.3875,
@@ -18426,7 +26818,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 31,
-        "name": "Point 31",
+        "name": "Station 31",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.975,
@@ -18436,7 +26828,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 32,
-        "name": "Point 32",
+        "name": "Station 32",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.5509,
@@ -18446,7 +26838,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 33,
-        "name": "Point 33",
+        "name": "Station 33",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.1444,
@@ -18470,9 +26862,9 @@ window.ARC_NAUTICAL_ROUTES = {
     "key": "SGSIN_INPAV",
     "origin": "SGSIN",
     "dest": "INPAV",
-    "originName": "Singapore",
+    "originName": "Singapore Hub",
     "destName": "Paradip Port",
-    "label": "Singapore Hub → Paradip Port, India",
+    "label": "Singapore Hub -> Paradip Port, India",
     "distance_nm": 1543.1,
     "distance_km": 2858,
     "hazard_zones": [
@@ -19836,7 +28228,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "weatherWaypoints": [
       {
         "index": 0,
-        "name": "Singapore",
+        "name": "Singapore Hub",
         "isPort": true,
         "type": "origin",
         "lat": 1.26,
@@ -19846,7 +28238,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.225,
@@ -19856,7 +28248,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": 3.425,
@@ -19866,7 +28258,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": 5.275,
@@ -19876,7 +28268,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.9625,
@@ -19886,7 +28278,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": 8.725,
@@ -19896,7 +28288,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": 10.2631,
@@ -19906,7 +28298,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.8579,
@@ -19916,7 +28308,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": 13.414,
@@ -19926,7 +28318,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.9701,
@@ -19936,7 +28328,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": 16.5262,
@@ -19946,7 +28338,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": 18.1345,
@@ -19970,9 +28362,9 @@ window.ARC_NAUTICAL_ROUTES = {
     "key": "SGSIN_INVTZ",
     "origin": "SGSIN",
     "dest": "INVTZ",
-    "originName": "Singapore",
+    "originName": "Singapore Hub",
     "destName": "Visakhapatnam Port",
-    "label": "Singapore Hub → Visakhapatnam Port, India",
+    "label": "Singapore Hub -> Visakhapatnam Port, India",
     "distance_nm": 1571.3,
     "distance_km": 2910,
     "hazard_zones": [
@@ -21216,7 +29608,7 @@ window.ARC_NAUTICAL_ROUTES = {
     "weatherWaypoints": [
       {
         "index": 0,
-        "name": "Singapore",
+        "name": "Singapore Hub",
         "isPort": true,
         "type": "origin",
         "lat": 1.26,
@@ -21226,7 +29618,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 1,
-        "name": "Point 1",
+        "name": "Station 1",
         "isPort": false,
         "type": "waypoint",
         "lat": 2.225,
@@ -21236,7 +29628,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 2,
-        "name": "Point 2",
+        "name": "Station 2",
         "isPort": false,
         "type": "waypoint",
         "lat": 3.2079,
@@ -21246,7 +29638,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 3,
-        "name": "Point 3",
+        "name": "Station 3",
         "isPort": false,
         "type": "waypoint",
         "lat": 4.7654,
@@ -21256,7 +29648,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 4,
-        "name": "Point 4",
+        "name": "Station 4",
         "isPort": false,
         "type": "waypoint",
         "lat": 6.3229,
@@ -21266,7 +29658,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 5,
-        "name": "Point 5",
+        "name": "Station 5",
         "isPort": false,
         "type": "waypoint",
         "lat": 7.8804,
@@ -21276,7 +29668,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 6,
-        "name": "Point 6",
+        "name": "Station 6",
         "isPort": false,
         "type": "waypoint",
         "lat": 9.4379,
@@ -21286,7 +29678,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 7,
-        "name": "Point 7",
+        "name": "Station 7",
         "isPort": false,
         "type": "waypoint",
         "lat": 11.025,
@@ -21296,7 +29688,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 8,
-        "name": "Point 8",
+        "name": "Station 8",
         "isPort": false,
         "type": "waypoint",
         "lat": 12.5917,
@@ -21306,7 +29698,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 9,
-        "name": "Point 9",
+        "name": "Station 9",
         "isPort": false,
         "type": "waypoint",
         "lat": 14.1722,
@@ -21316,7 +29708,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 10,
-        "name": "Point 10",
+        "name": "Station 10",
         "isPort": false,
         "type": "waypoint",
         "lat": 15.7694,
@@ -21326,7 +29718,7 @@ window.ARC_NAUTICAL_ROUTES = {
       },
       {
         "index": 11,
-        "name": "Point 11",
+        "name": "Station 11",
         "isPort": false,
         "type": "waypoint",
         "lat": 17.3667,
