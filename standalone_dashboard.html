@@ -546,6 +546,12 @@
         }
 
         /* Map Container */
+        .leaflet-tile-pane {
+            filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+        }
+        .leaflet-container {
+            background: #0B0E14 !important;
+        }
         #portMap {
             height: 520px;
             width: 100%;
@@ -1381,8 +1387,14 @@
             const target = document.getElementById('page-' + tabId);
             if (target) {
                 target.classList.add('active');
-                if (tabId === 'map' && map) {
-                    setTimeout(() => { map.invalidateSize(); }, 200);
+                if (tabId === 'map') {
+                    setTimeout(() => {
+                        if (typeof initMap === 'function') initMap();
+                        if (map) {
+                            map.invalidateSize();
+                            if (typeof fitRouteBounds === 'function') fitRouteBounds();
+                        }
+                    }, 150);
                 }
             }
         }
@@ -1761,14 +1773,34 @@
         let waypointMarkers = [];
 
         function initMap() {
-            if (map) return;
-            map = L.map('portMap').setView([5.0, 100.0], 3);
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; OpenStreetMap contributors &copy; CARTO &copy; ArcNautical',
-                maxZoom: 18
+            const container = document.getElementById('portMap');
+            if (!container) return;
+            if (map) {
+                map.invalidateSize();
+                return;
+            }
+
+            map = L.map('portMap', {
+                center: [5.0, 95.0],
+                zoom: 3,
+                minZoom: 2,
+                maxZoom: 14,
+                attributionControl: true
+            });
+
+            // 100% Free OpenStreetMap Global Tiles (Filtered to Dark Minimalist Maritime Theme via CSS)
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | ArcNautical',
+                maxZoom: 18,
+                crossOrigin: true
             }).addTo(map);
 
             renderSelectedMaritimeRoute();
+
+            setTimeout(() => {
+                map.invalidateSize();
+                fitRouteBounds();
+            }, 250);
         }
 
         const PORT_GEO_LOCATIONS = {
@@ -1920,10 +1952,17 @@
         }
 
         function fitRouteBounds() {
-            if (map && routeLayer) {
-                map.fitBounds(routeLayer.getBounds(), { padding: [40, 40] });
+        if (map && routeLayer) {
+            try {
+                const b = routeLayer.getBounds();
+                if (b && b.isValid()) {
+                    map.fitBounds(b, { padding: [40, 40], maxZoom: 5 });
+                }
+            } catch (e) {
+                console.warn('fitBounds error:', e);
             }
         }
+    }
 
         // Initialize map on switch to tab 'map' or on page load
         setTimeout(() => {
