@@ -34,6 +34,7 @@ window.VOYAGE_STATE = {
 let mapOriginMarker = null;
 let mapDestMarker = null;
 let mapAltRouteLayers = [];
+let mapWaypointMarkers = [];
 
 function haversineNm(lat1, lon1, lat2, lon2) {
     const R = 3440.065;
@@ -177,82 +178,124 @@ function getRoutes(originCode, destCode) {
     ];
 }
 
+// REALTIME MULTI-WAYPOINT MARINE WEATHER FORECASTING ENGINE
 async function fetchRouteWeather(route, sailingDateStr) {
-    const wpts = route.weatherWaypoints && route.weatherWaypoints.length > 0 ? route.weatherWaypoints : null;
-    let sampleLat = 10.0, sampleLon = 88.0;
-    if (wpts && wpts.length >= 3) {
-        const mid = wpts[Math.floor(wpts.length / 2)];
-        sampleLat = mid.lat;
-        sampleLon = mid.lon;
-    } else if (route.coordinates && route.coordinates.length > 0) {
-        const mid = route.coordinates[Math.floor(route.coordinates.length / 2)];
-        sampleLon = mid[0];
-        sampleLat = mid[1];
-    }
-
-    try {
-        const apiUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${sampleLat.toFixed(2)}&longitude=${sampleLon.toFixed(2)}&current=wave_height,wave_direction,wind_wave_height,swell_wave_height&hourly=wave_height,wind_wave_height&forecast_days=7`;
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 3500);
-
-        const response = await fetch(apiUrl, { signal: controller.signal });
-        clearTimeout(timeoutId);
-
-        if (response.ok) {
-            const data = await response.json();
-            const curWave = data.current ? data.current.wave_height : 1.4;
-            const hourly = data.hourly && data.hourly.wave_height ? data.hourly.wave_height : [];
-            const maxWave = hourly.length > 0 ? Math.max(...hourly.slice(0, 96)) : curWave;
-            const avgWind = 14 + Math.round(curWave * 3);
-            const stormRisk = Math.min(25, Math.round(maxWave * 6));
-
-            const sDate = new Date(sailingDateStr || '2026-09-18');
-            const dailyProg = [];
-            for (let d = 0; d < 4; d++) {
-                const dayD = new Date(sDate.getTime() + d * 86400000);
-                const dayStr = dayD.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-                const dWave = Math.round((curWave + (Math.sin(d + sampleLon) * 0.4)) * 10) / 10;
-                const dRisk = dWave > 2.2 ? 'HIGH' : (dWave > 1.7 ? 'MODERATE' : 'FAVORABLE');
-                dailyProg.push({ date: dayStr, waves: dWave, risk: dRisk });
-            }
-
+    const rawWaypoints = route.weatherWaypoints && route.weatherWaypoints.length > 0 ? route.weatherWaypoints : [];
+    
+    let stations = [];
+    if (rawWaypoints.length >= 5) {
+        const indices = [
+            0,
+            Math.floor(rawWaypoints.length * 0.25),
+            Math.floor(rawWaypoints.length * 0.50),
+            Math.floor(rawWaypoints.length * 0.75),
+            rawWaypoints.length - 1
+        ];
+        stations = indices.map((idx, sIdx) => {
+            const w = rawWaypoints[idx];
             return {
-                isLive: true,
-                source: 'Open-Meteo Marine API',
-                curWave: Number(curWave).toFixed(1),
-                maxWave: Number(maxWave).toFixed(1),
-                avgWind: avgWind,
-                stormRisk: stormRisk,
-                riskLabel: maxWave > 2.2 ? 'MODERATE RISK' : 'LOW RISK',
-                dailyProgression: dailyProg
+                seq: sIdx + 1,
+                name: w.isPort ? w.name : `Station ${idx} (${Math.round(w.distFromOriginNm)} NM)`,
+                lat: w.lat,
+                lon: w.lon,
+                distNm: w.distFromOriginNm
             };
+        });
+    } else if (route.coordinates && route.coordinates.length > 0) {
+        const coords = route.coordinates;
+        const count = 4;
+        for (let i = 0; i < count; i++) {
+            const frac = i / (count - 1);
+            const idx = Math.floor((coords.length - 1) * frac);
+            const c = coords[idx];
+            stations.push({
+                seq: i + 1,
+                name: i === 0 ? route.origin : (i === count - 1 ? route.destination : `Mid-Ocean ${Math.round(route.distanceNm * frac)} NM`),
+                lat: c[1],
+                lon: c[0],
+                distNm: Math.round(route.distanceNm * frac)
+            });
         }
-    } catch (err) {
-        console.warn('Open-Meteo API unreachable. Using marine climatology.', err.message);
     }
 
-    const isCapeRoute = route.originCode === 'ZARCB';
-    const curWave = isCapeRoute ? 2.3 : (route.originCode === 'IDBPN' ? 1.1 : 1.4);
-    const sDate = new Date(sailingDateStr || '2026-09-18');
-    const dailyProg = [];
-    for (let d = 0; d < 4; d++) {
-        const dayD = new Date(sDate.getTime() + d * 86400000);
-        const dayStr = dayD.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-        const dWave = Math.round((curWave + (d === 2 ? 0.4 : -0.1)) * 10) / 10;
-        dailyProg.push({ date: dayStr, waves: dWave, risk: dWave > 2.0 ? 'MODERATE' : 'FAVORABLE' });
-    }
+    const sailingDate = new Date(sailingDateStr || '2026-09-07');
+    const vesselSpeedKnots = 12.2;
+    const now = new Date();
+
+    const stationPromises = stations.map(async (st) => {
+        const voyageHours = st.distNm / vesselSpeedKnots;
+        const etaDate = new Date(sailingDate.getTime() + voyageHours * 3600000);
+        const diffHoursFromNow = Math.round((etaDate.getTime() - now.getTime()) / 3600000);
+        const hourIdx = Math.max(0, Math.min(215, Math.max(0, diffHoursFromNow)));
+
+        try {
+            const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${st.lat.toFixed(2)}&longitude=${st.lon.toFixed(2)}&current=wave_height,wave_direction,wind_wave_height,swell_wave_height&hourly=wave_height,wave_period,wind_wave_height,swell_wave_height&forecast_days=10`;
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 3800);
+            const res = await fetch(url, { signal: controller.signal });
+            clearTimeout(timeoutId);
+
+            if (res.ok) {
+                const data = await res.json();
+                const hourlyWaves = data.hourly && data.hourly.wave_height ? data.hourly.wave_height : [];
+                const hourlyPeriods = data.hourly && data.hourly.wave_period ? data.hourly.wave_period : [];
+                
+                let waveAtEta = (hourlyWaves.length > hourIdx && hourlyWaves[hourIdx] !== null) ? hourlyWaves[hourIdx] : (data.current ? data.current.wave_height : 1.4);
+                let periodAtEta = (hourlyPeriods.length > hourIdx && hourlyPeriods[hourIdx] !== null) ? hourlyPeriods[hourIdx] : 7.5;
+                
+                const windSpeed = 12 + Math.round(waveAtEta * 3.5);
+                const isSquall = waveAtEta > 2.2 || windSpeed > 32;
+
+                return {
+                    name: st.name,
+                    lat: st.lat,
+                    lon: st.lon,
+                    distNm: st.distNm,
+                    etaDateStr: etaDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit' }),
+                    waveHeight: Number(waveAtEta).toFixed(1),
+                    wavePeriod: Number(periodAtEta).toFixed(1),
+                    windSpeed: windSpeed,
+                    risk: isSquall ? 'MODERATE' : 'FAVORABLE',
+                    isLive: true
+                };
+            }
+        } catch (e) {
+        }
+
+        const baseWave = Math.abs(st.lat) > 18 ? 1.8 : (Math.abs(st.lat) < 5 ? 1.1 : 1.5);
+        return {
+            name: st.name,
+            lat: st.lat,
+            lon: st.lon,
+            distNm: st.distNm,
+            etaDateStr: etaDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit' }),
+            waveHeight: Number(baseWave).toFixed(1),
+            wavePeriod: '7.8',
+            windSpeed: 16,
+            risk: baseWave > 2.0 ? 'MODERATE' : 'FAVORABLE',
+            isLive: false
+        };
+    });
+
+    const waypointForecasts = await Promise.all(stationPromises);
+    const isAnyLive = waypointForecasts.some(wf => wf.isLive);
+    const maxWaveObs = Math.max(...waypointForecasts.map(w => parseFloat(w.waveHeight)));
+    const avgWindObs = Math.round(waypointForecasts.reduce((a, b) => a + b.windSpeed, 0) / waypointForecasts.length);
+    const stormRisk = Math.min(25, Math.round(maxWaveObs * 6));
+    const overallRiskLabel = maxWaveObs > 2.4 ? 'MODERATE RISK' : 'LOW RISK';
 
     return {
-        isLive: false,
-        source: 'DEMO / NAUTICAL CLIMATOLOGY',
-        curWave: Number(curWave).toFixed(1),
-        maxWave: Number(curWave + 0.3).toFixed(1),
-        avgWind: isCapeRoute ? 24 : 15,
-        stormRisk: isCapeRoute ? 14 : 5,
-        riskLabel: isCapeRoute ? 'MODERATE SWELL' : 'LOW RISK',
-        dailyProgression: dailyProg
+        isLive: isAnyLive,
+        source: isAnyLive ? 'Open-Meteo Real-Time Marine API' : 'Climatological Marine Model',
+        curWave: waypointForecasts[0].waveHeight,
+        maxWave: Number(maxWaveObs).toFixed(1),
+        avgWind: avgWindObs,
+        stormRisk: stormRisk,
+        riskLabel: overallRiskLabel,
+        waypoints: waypointForecasts
     };
 }
+
 
 async function triggerAnalyzeVoyage() {
     showLoadingOverlay(true, 'CALCULATING ROUTE & LIVE WEATHER...', 'Optimizing maritime waypoints, running wave simulations, and assessing port queues.');
@@ -349,14 +392,16 @@ function renderTab2OperationalData(route, oPort, dPort, landedPerTon, totalOutla
             <div>Storm Probability: <strong>${w.stormRisk}%</strong></div>
         `;
 
-        if (w.dailyProgression && w.dailyProgression.length > 0) {
-            const daysHtml = w.dailyProgression.map(dp => `
-                <div>
-                    <span style="color: var(--text-muted);">${dp.date}:</span> 
-                    <strong class="${dp.risk === 'FAVORABLE' ? 'up' : 'gold'}">${dp.risk} (${dp.waves}m)</strong>
+        if (w.waypoints && w.waypoints.length > 0) {
+            const wptsHtml = w.waypoints.map(wp => `
+                <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 6px; padding: 8px;">
+                    <div style="font-weight: 600; color: #FFF; font-size: 11px;">${wp.name}</div>
+                    <div style="font-size: 10px; color: var(--text-muted); margin: 2px 0;">ETA: <strong style="color: var(--gold);">${wp.etaDateStr}</strong></div>
+                    <div style="font-size: 11px;">Waves: <strong class="${wp.risk === 'FAVORABLE' ? 'up' : 'gold'}">${wp.waveHeight}m</strong> (${wp.wavePeriod}s)</div>
+                    <div style="font-size: 10px; color: var(--text-secondary);">Wind: ${wp.windSpeed} km/h • ${wp.risk}</div>
                 </div>
             `).join('');
-            document.getElementById('laycanWeatherDays').innerHTML = daysHtml;
+            document.getElementById('laycanWeatherDays').innerHTML = wptsHtml;
         }
     }
 
@@ -510,6 +555,8 @@ function renderNavigableRoutesOnMap() {
     mapAltRouteLayers = [];
     if (mapOriginMarker) { map.removeLayer(mapOriginMarker); mapOriginMarker = null; }
     if (mapDestMarker) { map.removeLayer(mapDestMarker); mapDestMarker = null; }
+    mapWaypointMarkers.forEach(m => map.removeLayer(m));
+    mapWaypointMarkers = [];
 
     const routes = window.VOYAGE_STATE.candidateRoutes;
     if (!routes || routes.length === 0) return;
@@ -557,6 +604,21 @@ function renderNavigableRoutesOnMap() {
             fillOpacity: 1
         }).addTo(map).bindPopup(`<strong>Discharge Port: ${activeRoute.destination}</strong><br>Coordinates: ${dCoord[0].toFixed(2)}°, ${dCoord[1].toFixed(2)}°`);
 
+        // Add Waypoint Weather Forecast Stations on Map
+        const w = window.VOYAGE_STATE.weatherData;
+        if (w && w.waypoints && w.waypoints.length > 0) {
+            w.waypoints.forEach(wp => {
+                const wMarker = L.circleMarker([wp.lat, wp.lon], {
+                    radius: 5,
+                    fillColor: wp.risk === 'FAVORABLE' ? '#38BDF8' : '#F59E0B',
+                    color: '#FFF',
+                    weight: 1.5,
+                    fillOpacity: 0.9
+                }).addTo(map);
+                wMarker.bindTooltip(`<strong>${wp.name}</strong><br>ETA: ${wp.etaDateStr}<br>Wave: ${wp.waveHeight}m (${wp.risk})`, { sticky: true });
+                mapWaypointMarkers.push(wMarker);
+            });
+        }
         fitRouteBounds();
     }
 }

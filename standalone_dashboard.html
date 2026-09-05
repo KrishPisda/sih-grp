@@ -940,15 +940,15 @@
                         <div class="form-group">
                             <label>Laycan / Loading Window</label>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-                                <input type="date" id="vLaycanStart" class="clean-input mono" value="2026-09-18" onchange="updateVoyageState()">
-                                <input type="date" id="vLaycanEnd" class="clean-input mono" value="2026-09-24" onchange="updateVoyageState()">
+                                <input type="date" id="vLaycanStart" class="clean-input mono" value="2026-09-07" onchange="updateVoyageState()">
+                                <input type="date" id="vLaycanEnd" class="clean-input mono" value="2026-09-12" onchange="updateVoyageState()">
                             </div>
                         </div>
 
                         <!-- Field 7: Required Delivery Date -->
                         <div class="form-group">
                             <label>Required Delivery Date</label>
-                            <input type="date" id="vDeliveryDate" class="clean-input mono" value="2026-10-12" onchange="updateVoyageState()">
+                            <input type="date" id="vDeliveryDate" class="clean-input mono" value="2026-09-28" onchange="updateVoyageState()">
                         </div>
 
                         <!-- Field 8: Max Freight Budget -->
@@ -994,8 +994,8 @@
                 <div class="clean-card" style="padding: 16px;">
                     <div class="card-header" style="margin-bottom: 12px;">
                         <div>
-                            <h3 id="mapHeading">Port Hedland → Paradip (Navigable Ocean Route)</h3>
-                            <span style="font-size: 11px; color: var(--text-muted);">A* maritime path avoiding land with real-time waypoint weather overlay</span>
+                            <h3 id="mapHeading">Port Hedland → Paradip Port (Navigable Ocean Route)</h3>
+                            <span style="font-size: 11px; color: var(--text-muted);" id="mapSubheading">A* maritime path avoiding land masses • Multi-station real-time Open-Meteo overlay</span>
                         </div>
                         <div style="display: flex; gap: 8px;">
                             <button class="btn-action" onclick="fitRouteBounds()"><i class="fa-solid fa-expand"></i> Center Map</button>
@@ -1009,59 +1009,66 @@
                 <div class="tri-grid">
                     <!-- Card 1: Weather -->
                     <div class="status-card">
-                        <div class="sc-title"><i class="fa-solid fa-cloud-sun" style="color: var(--blue);"></i> Voyage Weather</div>
+                        <div class="sc-title"><i class="fa-solid fa-cloud-sun" style="color: var(--blue);"></i> Real-Time Route Weather <span class="data-badge badge-real" id="weatherDataSourceBadge">LIVE API</span></div>
                         <div class="sc-val up" id="cardWeatherRisk">LOW RISK</div>
-                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">
-                            Max Wave: <strong>1.4m</strong> • No storm alerts
+                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;" id="cardWeatherSummary">
+                            Max Waves: <strong>1.4m</strong> • Wind: <strong>16 km/h</strong> • Storm: <strong>4%</strong>
                         </div>
                         <div class="expandable-trigger" style="margin-top: 8px;" onclick="toggleDrawer('drawerWeather')">
-                            <i class="fa-solid fa-chevron-right" id="arrowDrawerWeather"></i> View Weather Details
+                            <i class="fa-solid fa-chevron-right" id="arrowDrawerWeather"></i> View Waypoint Weather & Voyage Progression
                         </div>
                     </div>
 
                     <!-- Card 2: Port -->
                     <div class="status-card">
-                        <div class="sc-title"><i class="fa-solid fa-anchor" style="color: var(--green);"></i> Port Status</div>
+                        <div class="sc-title"><i class="fa-solid fa-anchor" style="color: var(--green);"></i> Discharge Port Status</div>
                         <div class="sc-val up" id="cardPortStatus">LOW CONGESTION</div>
-                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">
-                            Paradip Waiting: <strong>1.2 Days</strong> • Berths Good
+                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;" id="cardPortSummary">
+                            Paradip Waiting: <strong>1.2 Days</strong> • Draft: <strong>17.5m</strong>
                         </div>
                         <div class="expandable-trigger" style="margin-top: 8px;" onclick="toggleDrawer('drawerPort')">
-                            <i class="fa-solid fa-chevron-right" id="arrowDrawerPort"></i> View Port Details
+                            <i class="fa-solid fa-chevron-right" id="arrowDrawerPort"></i> View Port & Berth Queue Details
                         </div>
                     </div>
 
                     <!-- Card 3: Route -->
                     <div class="status-card">
-                        <div class="sc-title"><i class="fa-solid fa-route" style="color: var(--gold);"></i> Route Economics</div>
+                        <div class="sc-title"><i class="fa-solid fa-route" style="color: var(--gold);"></i> Navigable Route Economics</div>
                         <div class="sc-val gold" id="cardRouteDist">3,074 NM</div>
-                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">
-                            Duration: <strong>10.2 Days</strong> • Fuel: <strong>$248k</strong>
+                        <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;" id="cardRouteSummary">
+                            Duration: <strong>10.2 Days</strong> • Bunker: <strong>$248k (389 MT)</strong>
                         </div>
-                        <div style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">
-                            Via Lombok Strait (Deep Draft)
+                        <div style="font-size: 11px; color: var(--text-muted); margin-top: 8px;" id="cardRouteVia">
+                            Corridor: Deep draft Lombok Strait track
                         </div>
                     </div>
                 </div>
 
                 <!-- EXPANDABLE WEATHER DETAILS -->
                 <div class="expandable-drawer" id="drawerWeather">
-                    <h4 style="font-size: 12px; margin-bottom: 8px; color: #FFF;">Open-Meteo 15-Day Maritime Forecast Breakdown:</h4>
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; font-size: 12px;">
-                        <div>Wave Direction: <strong>180° (Swell quartering)</strong></div>
-                        <div>Wind Speed: <strong>18 km/h (Gentle)</strong></div>
-                        <div>Visibility: <strong>> 10 NM (Clear)</strong></div>
-                        <div>Cyclone Risk: <strong>0% (Negligible)</strong></div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <h4 style="font-size: 12px; color: #FFF;" id="drawerWeatherHeading">Route Waypoint Weather & Voyage ETA Progression:</h4>
+                        <span class="data-badge badge-real" id="weatherApiLabel">OPEN-METEO REALTIME MARINE API</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; font-size: 12px; margin-bottom: 12px;" id="drawerWeatherGrid">
+                        <!-- Populated dynamically with live real-time stats -->
+                    </div>
+                    <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; border: 1px solid var(--border);" id="laycanWeatherTimeline">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <div style="font-size: 11px; font-weight: 600; color: var(--gold);">Future Voyage Waypoint Forecast at Vessel ETA:</div>
+                            <span style="font-size: 10px; color: var(--text-muted);">Simulated Vessel Speed: 12.2 Knots</span>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; font-size: 11px;" id="laycanWeatherDays">
+                            <!-- Populated dynamically with future waypoint forecasts -->
+                        </div>
                     </div>
                 </div>
 
                 <!-- EXPANDABLE PORT DETAILS -->
                 <div class="expandable-drawer" id="drawerPort">
-                    <h4 style="font-size: 12px; margin-bottom: 8px; color: #FFF;">East Coast Discharge Terminal Breakdown:</h4>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 12px;">
-                        <div>Max Permissible Draft: <strong>17.5m</strong></div>
-                        <div>Vessels in Queue: <strong>3 Bulk Carriers</strong></div>
-                        <div>Discharge Rate: <strong>50,000 MT / day</strong></div>
+                    <h4 style="font-size: 12px; margin-bottom: 8px; color: #FFF;" id="drawerPortHeading">Origin & Discharge Terminal Operational Parameters:</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 12px;" id="drawerPortGrid">
+                        <!-- Populated dynamically -->
                     </div>
                 </div>
 
@@ -1072,48 +1079,8 @@
                         <span style="font-size: 11px; color: var(--text-muted);">Evaluated on weather risk, nautical distance, fuel cost, and port wait</span>
                     </div>
 
-                    <div class="route-compare-grid">
-                        <!-- Route 1: AI Recommended -->
-                        <div class="route-option-card selected" onclick="pickRoute('A')">
-                            <div style="display: flex; justify-content: space-between;">
-                                <strong style="color: var(--green); font-size: 13px;">AI RECOMMENDED</strong>
-                                <span class="mono up" style="font-size: 11px;">Score 92</span>
-                            </div>
-                            <div style="font-size: 14px; font-weight: 600; margin-top: 6px;">Port Hedland → Paradip</div>
-                            <div style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;">
-                                <div>Duration: <strong>10.2 Days</strong></div>
-                                <div>Freight: <strong>$17.40 / MT</strong></div>
-                                <div>Weather Risk: <span class="up">Low</span></div>
-                            </div>
-                        </div>
-
-                        <!-- Route 2: Alternative Port -->
-                        <div class="route-option-card" onclick="pickRoute('B')">
-                            <div style="display: flex; justify-content: space-between;">
-                                <strong style="color: var(--gold); font-size: 13px;">ALTERNATIVE</strong>
-                                <span class="mono gold" style="font-size: 11px;">Score 84</span>
-                            </div>
-                            <div style="font-size: 14px; font-weight: 600; margin-top: 6px;">Port Hedland → Vizag Outer</div>
-                            <div style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;">
-                                <div>Duration: <strong>10.3 Days</strong></div>
-                                <div>Freight: <strong>$18.10 / MT</strong></div>
-                                <div>Weather Risk: <span class="up">Low</span></div>
-                            </div>
-                        </div>
-
-                        <!-- Route 3: High-Risk Option -->
-                        <div class="route-option-card" onclick="pickRoute('C')">
-                            <div style="display: flex; justify-content: space-between;">
-                                <strong style="color: var(--red); font-size: 13px;">HIGH-RISK OPTION</strong>
-                                <span class="mono down" style="font-size: 11px;">Score 71</span>
-                            </div>
-                            <div style="font-size: 14px; font-weight: 600; margin-top: 6px;">Via Malacca Strait Bypass</div>
-                            <div style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;">
-                                <div>Duration: <strong>11.8 Days</strong></div>
-                                <div>Freight: <strong>$16.90 / MT</strong></div>
-                                <div>Weather Risk: <span class="down">High Squalls</span></div>
-                            </div>
-                        </div>
+                    <div class="route-compare-grid" id="candidateRoutesContainer">
+                        <!-- Populated dynamically by renderCandidateRoutesGrid() -->
                     </div>
 
                     <!-- PROCEED BUTTONS -->
@@ -1135,23 +1102,24 @@
                 <!-- 1 DOMINANT AI RECOMMENDATION CARD -->
                 <div class="hero-mandate-card">
                     <div>
-                        <div class="hero-action-badge"><i class="fa-solid fa-bolt"></i> AI RECOMMENDATION: BOOK NOW</div>
-                        <div class="hero-title">
-                            Charter Capesize (180k DWT) • 18–21 September Window<br>
-                            Direct Ocean Track: Port Hedland → Paradip Port
+                        <div class="hero-action-badge"><i class="fa-solid fa-bolt"></i> AI RECOMMENDATION: BOOK NOW <span class="data-badge badge-modelled" style="color: #000; background: #FFF; margin-left: 6px;">OPTIMAL DECISION</span></div>
+                        <div class="hero-title" id="tab3HeroTitle">
+                            Charter Capesize (180k DWT) • 20–22 September Window<br>
+                            Direct Ocean Track: Port Hedland → Paradip Port (3,074 NM)
                         </div>
-                        <div class="hero-details-row">
-                            <div>Loading Window: <strong>18–21 Sep 2026</strong></div>
-                            <div>Expected Freight: <strong>$17.40 / MT</strong></div>
-                            <div>Landed Cost: <strong>$176.40 / MT</strong></div>
-                            <div>Confidence: <strong class="gold">91%</strong></div>
+                        <div class="hero-details-row" id="tab3HeroDetailsRow">
+                            <div>Laycan: <strong id="tab3HeroLaycan">20–22 Sep 2026</strong></div>
+                            <div>Ocean Freight: <strong id="tab3HeroFreight">$7.46 / MT</strong></div>
+                            <div>Total Landed Cost: <strong id="tab3HeroLanded">$156.66 / MT</strong></div>
+                            <div>Risk Score: <strong class="up" id="tab3HeroRisk">32.4% (Safe)</strong></div>
                         </div>
                     </div>
 
                     <div class="hero-cost-box">
-                        <div class="cost-label">Total Procurement Cost</div>
-                        <div class="cost-num">₹ 222.1 Cr</div>
-                        <div class="savings-tag"><i class="fa-solid fa-arrow-trend-down"></i> Estimated Saving: ₹ 42.8 Cr</div>
+                        <div class="cost-label">Total Landed Consignment Cost</div>
+                        <div class="cost-num" id="tab3HeroCostCr">₹ 197.2 Cr</div>
+                        <div class="savings-tag" id="tab3HeroSavingEarliest"><i class="fa-solid fa-arrow-trend-down"></i> Saved vs Immediate Sailing: ₹ 33.6 Lakh</div>
+                        <div style="font-size: 11px; color: #94A3B8; margin-top: 2px;" id="tab3HeroSavingAlt">Saved vs Alt Route: ₹ 1.8 Cr</div>
                     </div>
                 </div>
 
