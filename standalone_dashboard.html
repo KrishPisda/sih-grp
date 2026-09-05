@@ -814,74 +814,191 @@
 
         <!-- PAGE 3: VESSEL CHARTER OPTIMIZER -->
         <div id="page-optimizer" class="page-content">
-            <div class="grid-2">
-                <div class="card">
-                    <h4 style="margin-bottom: 10px;">Fleet Optimization & Terminal Constraints</h4>
-                    <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 22px; line-height: 1.5;">
-                        Linear Programming (PuLP) evaluates cargo parcel requirements against East Coast draft restrictions (Paradip 17.5m, Vizag 16.5m/14.5m) to minimize landed unit cost.
+            <!-- Section Header -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px;">
+                <div>
+                    <h3 style="font-size: 20px;">Intelligent Vessel Chartering & Bulk Procurement Optimizer</h3>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+                        Interactive route selection, vessel sizing, draft compliance, and landed-cost optimization for overseas bulk cargo into East Coast India.
                     </p>
-
-                    <div class="grid-3" style="margin-bottom: 22px;">
-                        <div style="background: rgba(245, 158, 11, 0.06); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 18px;">
-                            <span class="badge-status badge-amber">Optimal Choice</span>
-                            <h5 style="margin: 12px 0 4px 0; font-size: 15px;">2 × Capesize</h5>
-                            <div class="mono" style="font-size: 22px; font-weight: 700; color: var(--accent-amber);">$17.40 / MT</div>
-                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Total Outlay: ₹198.4 Cr</div>
-                            <div style="font-size: 11px; color: var(--status-emerald); margin-top: 4px;">Paradip Deep Berth (17.5m Draft) OK</div>
-                        </div>
-
-                        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px;">
-                            <span class="badge-status badge-amber">Sub-Optimal</span>
-                            <h5 style="margin: 12px 0 4px 0; font-size: 15px;">4 × Panamax</h5>
-                            <div class="mono" style="font-size: 22px; font-weight: 700; color: var(--text-primary);">$21.10 / MT</div>
-                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Total Outlay: ₹240.5 Cr</div>
-                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Cost delta: +₹42.1 Cr</div>
-                        </div>
-
-                        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px;">
-                            <span class="badge-status badge-red">Inefficient</span>
-                            <h5 style="margin: 12px 0 4px 0; font-size: 15px;">6 × Supramax</h5>
-                            <div class="mono" style="font-size: 22px; font-weight: 700; color: var(--text-primary);">$24.50 / MT</div>
-                            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Total Outlay: ₹279.3 Cr</div>
-                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Excess demurrage & handling fees</div>
-                        </div>
-                    </div>
-
-                    <canvas id="vesselComparisonChart" height="130"></canvas>
                 </div>
+                <div style="display: flex; gap: 8px;">
+                    <span class="badge-status badge-amber"><i class="fa-solid fa-microchip"></i> Optimization Engine: Active</span>
+                    <span class="badge-status badge-green"><i class="fa-solid fa-anchor"></i> East Coast Port Checker: Ready</span>
+                </div>
+            </div>
 
+            <!-- Two Column Layout: User Inputs Form vs AI Optimization Results -->
+            <div class="grid-2">
+                <!-- LEFT COLUMN: INTERACTIVE USER INPUTS -->
                 <div class="card">
-                    <h4 style="margin-bottom: 18px;">Consignment Input</h4>
+                    <h4 style="margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-sliders" style="color: var(--accent-amber);"></i> Consignment & Vessel Parameters
+                    </h4>
+
+                    <!-- 1. Route Selection -->
                     <div class="input-group">
-                        <label>Consignment Cargo</label>
-                        <select class="input-control">
-                            <option>Prime Hard Coking Coal (Australia)</option>
-                            <option>PCI Metallurgical Coal (Russia)</option>
-                            <option>Thermal Coal (Indonesia)</option>
+                        <label>Origin Corridor & Port of Loading</label>
+                        <select class="input-control" id="optOrigin" onchange="solveVesselCharterOptimization()">
+                            <option value="aus_gladstone">Gladstone / Hay Point (Australia) — Coal (4,950 NM)</option>
+                            <option value="indo_kalimantan">Samarinda / Balikpapan (Indonesia) — Thermal Coal (2,380 NM)</option>
+                            <option value="usa_hampton">Hampton Roads (USA) — Met Coal via Cape (9,850 NM)</option>
+                            <option value="moz_maputo">Maputo (Mozambique) — Met / Steam Coal (4,420 NM)</option>
+                            <option value="sa_richards">Richards Bay (South Africa) — RB1 Coal (4,680 NM)</option>
+                            <option value="rus_vostochny">Vostochny (Russia) — PCI / Anthracite (5,200 NM)</option>
                         </select>
                     </div>
 
+                    <!-- 2. Destination Port Selection -->
                     <div class="input-group">
-                        <label>Volume (Metric Tonnes)</label>
-                        <input type="number" class="input-control mono" value="300000">
-                    </div>
-
-                    <div class="input-group">
-                        <label>Discharge Port</label>
-                        <select class="input-control">
-                            <option>Paradip Port (Draft: 17.5m - Capesize)</option>
-                            <option>Visakhapatnam (Outer: 16.5m, Inner: 14.5m)</option>
-                            <option>Ennore / Kamarajar (Draft: 15.5m - Panamax)</option>
+                        <label>Destination Terminal (East Coast India)</label>
+                        <select class="input-control" id="optDest" onchange="solveVesselCharterOptimization()">
+                            <option value="paradip">Paradip Port Authority (Max Draft: 17.5m — Capesize Capable)</option>
+                            <option value="vizag_outer">Visakhapatnam Outer Harbour (Max Draft: 16.5m — Capesize Partial/Panamax)</option>
+                            <option value="vizag_inner">Visakhapatnam Inner Harbour (Max Draft: 14.5m — Panamax/Supramax)</option>
+                            <option value="ennore">Kamarajar / Ennore Port (Max Draft: 15.5m — Panamax/Baby-Cape)</option>
+                            <option value="dhamra">Dhamra Deep Port (Max Draft: 18.0m — Capesize Capable)</option>
                         </select>
                     </div>
 
+                    <!-- 3. Cargo Type & Commodity -->
                     <div class="input-group">
-                        <label>Required Arrival Window</label>
-                        <input type="date" class="input-control mono" value="2026-10-15">
+                        <label>Bulk Commodity Type</label>
+                        <select class="input-control" id="optCargo" onchange="solveVesselCharterOptimization()">
+                            <option value="coking_coal">Prime Hard Coking Coal (FOB ~$135/MT)</option>
+                            <option value="pci_coal">PCI Metallurgical Coal (FOB ~$118/MT)</option>
+                            <option value="thermal_coal">Thermal Steam Coal (FOB ~$88/MT)</option>
+                            <option value="iron_ore">Iron Ore Pellets / Fines (FOB ~$105/MT)</option>
+                        </select>
                     </div>
 
-                    <button class="btn-primary"><i class="fa-solid fa-play"></i> Run PuLP Solver</button>
+                    <!-- 4. Cargo Quantity -->
+                    <div class="input-group">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                            <label style="margin: 0;">Consignment Quantity (Metric Tonnes)</label>
+                            <span class="mono" id="qtyDisplay" style="color: var(--accent-amber); font-weight: 600;">150,000 MT</span>
+                        </div>
+                        <input type="range" class="input-control" id="optQuantity" min="30000" max="350000" step="10000" value="150000" oninput="document.getElementById('qtyDisplay').innerText = Number(this.value).toLocaleString() + ' MT'; solveVesselCharterOptimization();">
+                        <div style="display: flex; gap: 6px; margin-top: 8px;">
+                            <button type="button" class="btn-outline" style="padding: 3px 8px; font-size: 10px;" onclick="setQuantity(75000)">75k (Panamax)</button>
+                            <button type="button" class="btn-outline" style="padding: 3px 8px; font-size: 10px;" onclick="setQuantity(150000)">150k (Capesize)</button>
+                            <button type="button" class="btn-outline" style="padding: 3px 8px; font-size: 10px;" onclick="setQuantity(220000)">220k (Multi-Ship)</button>
+                            <button type="button" class="btn-outline" style="padding: 3px 8px; font-size: 10px;" onclick="setQuantity(300000)">300k (SAIL Batch)</button>
+                        </div>
+                    </div>
+
+                    <!-- 5. Vessel Class Preference -->
+                    <div class="input-group">
+                        <label>Vessel Size & Class Preference</label>
+                        <select class="input-control" id="optVesselPref" onchange="solveVesselCharterOptimization()">
+                            <option value="auto">AI Smart Recommendation (Lowest Landed Cost)</option>
+                            <option value="capesize">Capesize (120k - 180k DWT | Draft ~17.5m)</option>
+                            <option value="panamax">Panamax / Kamsarmax (65k - 85k DWT | Draft ~14.5m)</option>
+                            <option value="supramax">Supramax / Ultramax (50k - 64k DWT | Draft ~12.8m)</option>
+                            <option value="handysize">Handysize (25k - 39k DWT | Draft ~10.5m)</option>
+                        </select>
+                    </div>
+
+                    <!-- 6. Key Dates -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                        <div class="input-group">
+                            <label>Laycan Start Date</label>
+                            <input type="date" class="input-control mono" id="optLaycan" value="2026-09-12" onchange="solveVesselCharterOptimization()">
+                        </div>
+                        <div class="input-group">
+                            <label>Target Delivery Deadline</label>
+                            <input type="date" class="input-control mono" id="optDeadline" value="2026-10-10" onchange="solveVesselCharterOptimization()">
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-primary" onclick="solveVesselCharterOptimization()">
+                        <i class="fa-solid fa-microchip"></i> Re-Calculate Optimal Solution
+                    </button>
                 </div>
+
+                <!-- RIGHT COLUMN: AI OPTIMIZATION SOLUTION & METRICS -->
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <!-- WINNER SOLUTION HERO CARD -->
+                    <div class="card" style="border-color: var(--border-accent); background: linear-gradient(135deg, rgba(26, 26, 36, 0.95) 0%, rgba(40, 32, 20, 0.7) 100%);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <span class="badge-status badge-amber" id="resBadge" style="margin-bottom: 8px;">OPTIMAL AI RECOMMENDATION</span>
+                                <h3 id="resVesselTitle" style="font-size: 20px; color: var(--text-primary); margin-top: 4px;">1 × Capesize (160,000 DWT)</h3>
+                                <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;" id="resRouteSubtitle">Gladstone (Aus) → Paradip Port Authority</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <span style="font-size: 11px; color: var(--text-muted); text-transform: uppercase;">Freight Rate</span>
+                                <div class="mono" id="resFreightRate" style="font-size: 24px; font-weight: 700; color: var(--accent-amber);">$17.40 / MT</div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Metrics Grid -->
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+                            <div>
+                                <div style="font-size: 11px; color: var(--text-muted);">Total Landed Cost</div>
+                                <div class="mono" id="resLandedPerTon" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-top: 2px;">$179.00 / MT</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 11px; color: var(--text-muted);">Total Budget Outlay</div>
+                                <div class="mono" id="resTotalCostCr" style="font-size: 15px; font-weight: 600; color: var(--accent-amber); margin-top: 2px;">₹ 198.4 Cr</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 11px; color: var(--text-muted);">Voyage Transit</div>
+                                <div class="mono" id="resTransitDays" style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-top: 2px;">16.5 Days</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 11px; color: var(--text-muted);">Projected Savings</div>
+                                <div class="mono" id="resSavingsCr" style="font-size: 15px; font-weight: 600; color: var(--status-emerald); margin-top: 2px;">+₹ 42.1 Cr</div>
+                            </div>
+                        </div>
+
+                        <!-- Draft & Operational Risk Alert -->
+                        <div id="resDraftAlert" style="margin-top: 18px; padding: 12px 14px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md); font-size: 12px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-circle-check" style="color: var(--status-emerald); font-size: 16px;"></i>
+                            <span id="resDraftText">Draft Compliant: Vessel arrival draft (16.8m) safely clears Paradip Deep Berth permissible limit (17.5m). Direct berthing allowed.</span>
+                        </div>
+
+                        <!-- Schedule Feasibility Alert -->
+                        <div id="resScheduleAlert" style="margin-top: 10px; padding: 12px 14px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-md); font-size: 12px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-calendar-check" style="color: var(--accent-amber); font-size: 16px;"></i>
+                            <span id="resScheduleText">Schedule Feasible: Projected Arrival Sep 29 is 11 days ahead of deadline. Booking window: Sep 08-12 recommended.</span>
+                        </div>
+                    </div>
+
+                    <!-- COST BREAKDOWN CHART CARD -->
+                    <div class="card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                            <h4>Consignment Cost Breakdown by Component ($/MT)</h4>
+                            <span style="font-size: 11px; color: var(--text-muted); font-family: var(--font-mono);">Landed Cost Model</span>
+                        </div>
+                        <canvas id="vesselComparisonChart" height="120"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALL VESSEL CLASSES SIDE-BY-SIDE COMPARISON TABLE -->
+            <div class="card" style="margin-top: 24px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <h4>Multi-Class Fleet Feasibility & Cost Comparison</h4>
+                    <span style="font-size: 11px; color: var(--text-muted);">Evaluates Capesize, Panamax, Supramax, and Handysize for selected parameters</span>
+                </div>
+                <table class="table-custom" id="vesselCompareTable">
+                    <thead>
+                        <tr>
+                            <th>Vessel Classification</th>
+                            <th>DWT Capacity</th>
+                            <th>Voyages Required</th>
+                            <th>Ocean Freight</th>
+                            <th>Net Landed Cost</th>
+                            <th>Total Outlay (₹ Cr)</th>
+                            <th>Port Draft Status</th>
+                            <th>Recommendation</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vesselTableBody">
+                        <!-- Populated dynamically by JavaScript -->
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -1273,30 +1390,240 @@
             }
         });
 
-        // Chart 3: Vessel Cost Comparison
-        const ctx3 = document.getElementById('vesselComparisonChart').getContext('2d');
-        new Chart(ctx3, {
-            type: 'bar',
-            data: {
-                labels: ['Capesize (170k DWT)', 'Panamax (80k DWT)', 'Supramax (58k DWT)'],
-                datasets: [
-                    {
-                        label: 'Unit Landed Cost ($/MT)',
-                        data: [17.4, 21.1, 24.5],
-                        backgroundColor: [amberColor, '#3F3F46', '#27272A'],
-                        borderRadius: 6
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { grid: { display: false }, ticks: { color: '#FAFAFA', font: { family: 'Inter' } } },
-                    y: { grid: { color: gridColor }, ticks: { color: textMuted, font: { family: 'Inter' } } }
+        
+        // =========================================================
+        // DYNAMIC VESSEL CHARTER OPTIMIZATION ENGINE (SIH26006)
+        // =========================================================
+        const routeData = {
+            aus_gladstone: { name: "Gladstone / Hay Point (Australia)", dist: 4950, bunkerFactor: 1.0, speed: 12.5, weather: 1.04 },
+            indo_kalimantan: { name: "Samarinda / Balikpapan (Indonesia)", dist: 2380, bunkerFactor: 0.96, speed: 12.0, weather: 1.02 },
+            usa_hampton: { name: "Hampton Roads (USA)", dist: 9850, bunkerFactor: 1.05, speed: 13.0, weather: 1.08 },
+            moz_maputo: { name: "Maputo (Mozambique)", dist: 4420, bunkerFactor: 0.98, speed: 12.5, weather: 1.03 },
+            sa_richards: { name: "Richards Bay (South Africa)", dist: 4680, bunkerFactor: 0.99, speed: 12.5, weather: 1.05 },
+            rus_vostochny: { name: "Vostochny (Russia)", dist: 5200, bunkerFactor: 1.04, speed: 12.5, weather: 1.06 }
+        };
+
+        const portData = {
+            paradip: { name: "Paradip Port Authority", maxDraft: 17.5, queueDays: 2.1, dischargeRate: 50000, handlingPerTon: 14.2, demurrageRate: 22000, capesizeAllowed: true },
+            vizag_outer: { name: "Visakhapatnam Outer Harbour", maxDraft: 16.5, queueDays: 3.8, dischargeRate: 35000, handlingPerTon: 15.5, demurrageRate: 20000, capesizeAllowed: true },
+            vizag_inner: { name: "Visakhapatnam Inner Harbour", maxDraft: 14.5, queueDays: 2.5, dischargeRate: 25000, handlingPerTon: 14.8, demurrageRate: 16000, capesizeAllowed: false },
+            ennore: { name: "Kamarajar (Ennore) Port", maxDraft: 15.5, queueDays: 1.4, dischargeRate: 30000, handlingPerTon: 13.9, demurrageRate: 18000, capesizeAllowed: false },
+            dhamra: { name: "Dhamra Deep Port", maxDraft: 18.0, queueDays: 1.8, dischargeRate: 45000, handlingPerTon: 14.5, demurrageRate: 23000, capesizeAllowed: true }
+        };
+
+        const cargoBasePrice = {
+            coking_coal: 135.00,
+            pci_coal: 118.00,
+            thermal_coal: 88.00,
+            iron_ore: 105.00
+        };
+
+        const vesselClasses = [
+            { id: "capesize", name: "Capesize", avgDWT: 160000, draft: 17.5, baseDailyHire: 26500, fuelDaily: 42, baseRateRatio: 1.0 },
+            { id: "panamax", name: "Panamax / Kamsarmax", avgDWT: 75000, draft: 14.5, baseDailyHire: 14250, fuelDaily: 28, baseRateRatio: 1.21 },
+            { id: "supramax", name: "Supramax / Ultramax", avgDWT: 55000, draft: 12.8, baseDailyHire: 12100, fuelDaily: 22, baseRateRatio: 1.41 },
+            { id: "handysize", name: "Handysize", avgDWT: 32000, draft: 10.5, baseDailyHire: 9800, fuelDaily: 16, baseRateRatio: 1.72 }
+        ];
+
+        let vesselChart = null;
+
+        function setQuantity(qty) {
+            document.getElementById('optQuantity').value = qty;
+            document.getElementById('qtyDisplay').innerText = Number(qty).toLocaleString() + ' MT';
+            solveVesselCharterOptimization();
+        }
+
+        function solveVesselCharterOptimization() {
+            const originKey = document.getElementById('optOrigin').value;
+            const destKey = document.getElementById('optDest').value;
+            const cargoKey = document.getElementById('optCargo').value;
+            const quantity = parseFloat(document.getElementById('optQuantity').value) || 150000;
+            const vesselPref = document.getElementById('optVesselPref').value;
+            const laycanVal = document.getElementById('optLaycan').value || '2026-09-12';
+            const deadlineVal = document.getElementById('optDeadline').value || '2026-10-10';
+
+            const route = routeData[originKey] || routeData.aus_gladstone;
+            const port = portData[destKey] || portData.paradip;
+            const fobPrice = cargoBasePrice[cargoKey] || 135.00;
+
+            // Base rate scaled by distance from benchmark Australia (4950 NM)
+            const distRatio = route.dist / 4950;
+            const baseCapesizeFreight = 17.40 * distRatio * route.bunkerFactor;
+
+            let evaluations = [];
+
+            vesselClasses.forEach(v => {
+                const voyages = Math.ceil(quantity / v.avgDWT);
+                const freightRate = parseFloat((baseCapesizeFreight * v.baseRateRatio).toFixed(2));
+                
+                // Transit days
+                const steamingDays = parseFloat(((route.dist / (v.speed * 24)) * route.weather).toFixed(1));
+                const portDays = parseFloat(((quantity / (voyages * port.dischargeRate)) + port.queueDays).toFixed(1));
+                const totalVoyageDays = steamingDays + portDays;
+
+                // Demurrage & port risks
+                let draftRestricted = false;
+                let lighteringPenalty = 0;
+                if (v.draft > port.maxDraft) {
+                    draftRestricted = true;
+                    // Lightering penalty $/MT if vessel exceeds port permissible draft
+                    lighteringPenalty = 3.80;
                 }
+
+                const demurrageRiskBuffer = parseFloat((port.queueDays * 0.85).toFixed(2));
+                const inlandFreight = 8.90;
+                const portTariff = port.handlingPerTon;
+                const netLandedPerTon = parseFloat((fobPrice + freightRate + portTariff + demurrageRiskBuffer + inlandFreight + lighteringPenalty).toFixed(2));
+                const totalCostCr = parseFloat(((netLandedPerTon * quantity * 83.95) / 10000000).toFixed(1));
+
+                // Score for recommendation (Lower cost is better, penalties if draft restricted or user specified preference)
+                let score = netLandedPerTon;
+                if (draftRestricted) score += 50; // Heavy penalty if draft incompatible
+                if (vesselPref !== 'auto' && vesselPref !== v.id) score += 100; // Deprioritize if not user preferred
+
+                evaluations.push({
+                    vessel: v,
+                    voyages: voyages,
+                    freightRate: freightRate,
+                    steamingDays: steamingDays,
+                    portDays: portDays,
+                    totalDays: totalVoyageDays,
+                    draftRestricted: draftRestricted,
+                    lighteringPenalty: lighteringPenalty,
+                    demurrageBuffer: demurrageRiskBuffer,
+                    portTariff: portTariff,
+                    inlandFreight: inlandFreight,
+                    fobPrice: fobPrice,
+                    netLandedPerTon: netLandedPerTon,
+                    totalCostCr: totalCostCr,
+                    score: score
+                });
+            });
+
+            // Sort by score to find the optimal solution
+            evaluations.sort((a, b) => a.score - b.score);
+            const winner = evaluations[0];
+            const worst = evaluations[evaluations.length - 1];
+            const savingsCr = Math.max(0, (worst.totalCostCr - winner.totalCostCr)).toFixed(1);
+
+            // Update Winner Hero Card
+            document.getElementById('resVesselTitle').innerText = `${winner.voyages} × ${winner.vessel.name} (${Number(winner.vessel.avgDWT).toLocaleString()} DWT)`;
+            document.getElementById('resRouteSubtitle').innerText = `${route.name} → ${port.name}`;
+            document.getElementById('resFreightRate').innerText = `$${winner.freightRate.toFixed(2)} / MT`;
+            document.getElementById('resLandedPerTon').innerText = `$${winner.netLandedPerTon.toFixed(2)} / MT`;
+            document.getElementById('resTotalCostCr').innerText = `₹ ${Number(winner.totalCostCr).toLocaleString()} Cr`;
+            document.getElementById('resTransitDays').innerText = `${winner.steamingDays} Days`;
+            document.getElementById('resSavingsCr').innerText = `+₹ ${savingsCr} Cr`;
+
+            // Draft Alert
+            const draftAlertBox = document.getElementById('resDraftAlert');
+            const draftText = document.getElementById('resDraftText');
+            if (winner.draftRestricted) {
+                draftAlertBox.style.background = "rgba(244, 63, 94, 0.1)";
+                draftAlertBox.style.borderColor = "rgba(244, 63, 94, 0.3)";
+                draftAlertBox.innerHTML = `<i class="fa-solid fa-triangle-exclamation" style="color: var(--status-rose); font-size: 16px;"></i>
+                    <span>Draft Alert: Vessel arrival draft (${winner.vessel.draft}m) exceeds ${port.name} max permissible limit (${port.maxDraft}m). Lighterage required at anchorage (+$3.80/MT).</span>`;
+            } else {
+                draftAlertBox.style.background = "rgba(16, 185, 129, 0.08)";
+                draftAlertBox.style.borderColor = "rgba(16, 185, 129, 0.25)";
+                draftAlertBox.innerHTML = `<i class="fa-solid fa-circle-check" style="color: var(--status-emerald); font-size: 16px;"></i>
+                    <span>Draft Compliant: Vessel arrival draft (${winner.vessel.draft}m) safely clears ${port.name} permissible limit (${port.maxDraft}m). Direct berthing approved.</span>`;
             }
-        });
+
+            // Schedule Feasibility
+            const laycan = new Date(laycanVal);
+            const arrivalDate = new Date(laycan);
+            arrivalDate.setDate(arrivalDate.getDate() + Math.round(winner.steamingDays));
+            const deadline = new Date(deadlineVal);
+            const diffDays = Math.round((deadline - arrivalDate) / (1000 * 60 * 60 * 24));
+
+            const schedBox = document.getElementById('resScheduleAlert');
+            if (diffDays >= 0) {
+                schedBox.style.background = "rgba(245, 158, 11, 0.08)";
+                schedBox.style.borderColor = "rgba(245, 158, 11, 0.25)";
+                schedBox.innerHTML = `<i class="fa-solid fa-calendar-check" style="color: var(--accent-amber); font-size: 16px;"></i>
+                    <span>Schedule Feasible: Projected Arrival ${arrivalDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} is ${diffDays} days ahead of deadline. Optimal booking window: Next 5 days.</span>`;
+            } else {
+                schedBox.style.background = "rgba(244, 63, 94, 0.1)";
+                schedBox.style.borderColor = "rgba(244, 63, 94, 0.3)";
+                schedBox.innerHTML = `<i class="fa-solid fa-triangle-exclamation" style="color: var(--status-rose); font-size: 16px;"></i>
+                    <span>Tight Schedule: Projected Arrival is ${Math.abs(diffDays)} days past deadline. Recommended: Fast steaming (13.5 kts) or advance laycan.</span>`;
+            }
+
+            // Update Comparison Table
+            const tbody = document.getElementById('vesselTableBody');
+            if (tbody) {
+                tbody.innerHTML = '';
+                evaluations.forEach((item, idx) => {
+                    const isOptimal = idx === 0;
+                    const draftBadge = item.draftRestricted 
+                        ? `<span class="badge-status badge-red">Draft Exceeded (-${(item.vessel.draft - port.maxDraft).toFixed(1)}m)</span>`
+                        : `<span class="badge-status badge-green">Fully Compliant (${item.vessel.draft}m)</span>`;
+
+                    const recBadge = isOptimal
+                        ? `<span class="badge-status badge-amber"><i class="fa-solid fa-crown"></i> Optimal Choice</span>`
+                        : item.draftRestricted ? `<span class="badge-status badge-red">Restricted</span>` : `<span class="badge-status badge-amber">Viable Alternative</span>`;
+
+                    const tr = document.createElement('tr');
+                    if (isOptimal) tr.style.background = 'rgba(245, 158, 11, 0.06)';
+                    tr.innerHTML = `
+                        <td><strong>${item.vessel.name}</strong></td>
+                        <td class="mono">${Number(item.vessel.avgDWT).toLocaleString()} MT</td>
+                        <td class="mono">${item.voyages} Ship${item.voyages > 1 ? 's' : ''}</td>
+                        <td class="mono">$${item.freightRate.toFixed(2)}/T</td>
+                        <td class="mono" style="color: ${isOptimal ? 'var(--accent-amber)' : 'inherit'};">$${item.netLandedPerTon.toFixed(2)}/T</td>
+                        <td class="mono">₹ ${item.totalCostCr} Cr</td>
+                        <td>${draftBadge}</td>
+                        <td>${recBadge}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+
+            // Update Chart
+            updateVesselBreakdownChart(winner);
+        }
+
+        function updateVesselBreakdownChart(winner) {
+            const ctx = document.getElementById('vesselComparisonChart').getContext('2d');
+            const dataValues = [
+                winner.fobPrice,
+                winner.freightRate,
+                winner.portTariff,
+                winner.demurrageBuffer,
+                winner.inlandFreight
+            ];
+
+            if (vesselChart) {
+                vesselChart.data.datasets[0].data = dataValues;
+                vesselChart.update();
+            } else {
+                vesselChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['FOB Commodity', 'Ocean Freight', 'Port Tariff', 'Demurrage Provision', 'Inland Rail'],
+                        datasets: [{
+                            label: 'Cost ($/MT)',
+                            data: dataValues,
+                            backgroundColor: ['#52525B', '#F59E0B', '#3F3F46', '#F43F5E', '#27272A'],
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: { 
+                            legend: { display: false },
+                            tooltip: { callbacks: { label: (ctx) => `$${ctx.parsed.y.toFixed(2)} / MT` } }
+                        },
+                        scales: {
+                            x: { grid: { display: false }, ticks: { color: '#FAFAFA', font: { family: 'Inter', size: 11 } } },
+                            y: { grid: { color: 'rgba(255, 255, 255, 0.04)' }, ticks: { color: '#71717A', font: { family: 'Inter' } } }
+                        }
+                    }
+                });
+            }
+        }
+
 
         // Chart 4: Procurement Split
         const ctx4 = document.getElementById('procurementSplitChart').getContext('2d');
@@ -1403,6 +1730,9 @@
             const sign = diff >= 0 ? '+' : '';
             document.getElementById('simulatedSavings').innerText = `Baseline delta: ${sign}$${diff} / MT`;
         }
-    </script>
+    
+        // Initialize Optimizer on Load
+        setTimeout(() => { if (typeof solveVesselCharterOptimization === 'function') solveVesselCharterOptimization(); }, 250);
+</script>
 </body>
 </html>
